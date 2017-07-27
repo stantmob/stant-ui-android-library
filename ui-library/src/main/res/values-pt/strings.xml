@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Stant UI Android</string>
+
+    <string name="executed_percent_bar.title_pt1">Exec</string>
+    <string name="executed_percent_bar.title_pt2">utado</string>
+
+    <string name="service_inspection_form_filled_detail_frag.toolbar_title">Título</string>
+    <string name="service_inspection_form_filled_detail_frag.team">Equipe</string>
+    <string name="service_inspection_form_filled_detail_frag.team_holder">Clique para ver sua Equipe</string>
+    <string name="service_inspection_form_filled_detail_frag.quantity">Quantidade(%s)</string>
+    <string name="service_inspection_form_filled_detail_frag.quantity_holder">Quantidade</string>
+    <string name="service_inspection_form_filled_detail_frag.observation">Observação</string>
+    <string name="service_inspection_form_filled_detail_frag.observation_holder">Observação</string>
+    <string name="service_inspection_form_filled_detail_frag.verified_unit">Unidade Verificada</string>
+    <string name="service_inspection_form_filled_detail_frag.verified_unit_holder">Nome da Unidade</string>
+    <string name="service_inspection_form_filled_detail_frag.residue">Residuo(m3)</string>
+    <string name="service_inspection_form_filled_detail_frag.residue_holder">número do residuo</string>
+    <string name="service_inspection_form_filled_detail_frag.btn_end_text">Finalizar</string>
+
+    <string name="add_service_inspection_form_filled_frag.date_hint">00/00/00</string>
+    <string name="add_service_inspection_form_filled_frag.start_at_text">Início :</string>
+    <string name="add_service_inspection_form_filled_frag.end_at_text">Fim :</string>
+    <string name="add_service_inspection_form_filled_frag.residue">Resíduo(m3)</string>
+</resources>
