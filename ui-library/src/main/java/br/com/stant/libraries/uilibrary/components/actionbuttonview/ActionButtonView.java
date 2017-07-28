@@ -8,21 +8,37 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import br.com.stant.libraries.uilibrary.R;
-import br.com.stant.libraries.uilibrary.databinding.ActionButtonBinding;
+import br.com.stant.libraries.uilibrary.databinding.ActionButtonViewBinding;
 
 /**
  * Created by denisvieira on 26/07/17.
  */
 
-public class ActionButton extends LinearLayout implements ActionButtonViewContract{
+public class ActionButtonView extends LinearLayout implements ActionButtonViewContract{
 
     private ActionButtonViewContract.OnClickActionButtonListener mOnClickActionButtonListener;
 
-    public ActionButton(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        ActionButtonBinding mActionButtonBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.action_button, this, true);
-        mActionButtonBinding.setHandler(this);
+    private ActionButtonViewBinding mActionButtonViewBinding;
+
+    public ActionButtonView(Context context) {
+        super(context);
+        init(context);
     }
+
+    public ActionButtonView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
+    }
+
+    public ActionButtonView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
+
+    private void init(Context context) {
+        mActionButtonViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.action_button_view, this, true);
+    }
+
 
     @Override
     public void setOnClickActionButtonListener(OnClickActionButtonListener onClickActionButtonListener) {
@@ -33,4 +49,5 @@ public class ActionButton extends LinearLayout implements ActionButtonViewContra
     public void onClickActionButton(View view) {
         mOnClickActionButtonListener.onClick();
     }
+
 }

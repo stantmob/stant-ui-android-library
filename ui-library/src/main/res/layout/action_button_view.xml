@@ -6,15 +6,15 @@
 
         <variable
             name="handler"
-            type="br.com.stant.libraries.uilibrary.elements.actionbuttonview.ActionButton"/>
+            type="br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonView"/>
 
         <variable
             name="actionText"
-            type="String"/>
+            type="java.lang.String"/>
 
         <variable
             name="stateColor"
-            type="Integer"/>
+            type="java.lang.Integer"/>
 
     </data>
 
@@ -45,7 +45,7 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:textColor="@color/green_base"
-                tools:text="@string/service_inspection_form_filled_detail_frag.approve_form"
+                tools:text="@string/action_button_view.text_button_example"
                 />
 
         </LinearLayout>

@@ -4,10 +4,10 @@
     >
 
     <data>
+
         <variable
             name="handler"
-            type="br.com.stant.libraries.uilibrary.elements.expandabletextview.ExpandableTextView"/>
-
+            type="br.com.stant.libraries.uilibrary.components.expandabletextview.ExpandableTextView"/>
 
     </data>
 
