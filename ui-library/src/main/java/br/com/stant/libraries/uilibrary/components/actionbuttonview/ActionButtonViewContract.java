@@ -1,5 +1,6 @@
 package br.com.stant.libraries.uilibrary.components.actionbuttonview;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 
 /**
@@ -8,8 +9,11 @@ import android.view.View;
 
 public interface ActionButtonViewContract {
 
+    void setIcon(int iconResourceId);
     void setOnClickActionButtonListener(OnClickActionButtonListener onClickActionButtonListener);
     void onClickActionButton(View view);
+    void withVerticalConfiguration();
+    void withHorizontalConfiguration();
 
     interface OnClickActionButtonListener {
         void onClick();

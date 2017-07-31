@@ -12,10 +12,6 @@
             name="actionText"
             type="java.lang.String"/>
 
-        <variable
-            name="stateColor"
-            type="java.lang.Integer"/>
-
     </data>
 
     <android.support.v7.widget.CardView
@@ -26,17 +22,17 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center"
             android:background="@drawable/shape_white_with_green_border"
             android:padding="20dp"
             >
 
             <ImageView
+                android:id="@+id/action_button_view_icon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
                 tools:src="@drawable/ic_ok_circle"/>
 
             <TextView
@@ -45,6 +41,7 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:textColor="@color/green_base"
+                android:text="@{actionText}"
                 tools:text="@string/action_button_view.text_button_example"
                 />
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,6 +14,20 @@
     <br.com.stant.libraries.uilibrary.components.executedpercentbarview.ExecutedPercentBarView
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        />
+
+    <br.com.stant.libraries.uilibrary.components.infoactioncardview.InfoActionCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:infoText="titulo"
+        app:actionName="action name"
+        />
+
+    <br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:actionText="@string/app_name"
+        app:iconResource="@drawable/ic_ok_circle"
         />
 
 </LinearLayout>

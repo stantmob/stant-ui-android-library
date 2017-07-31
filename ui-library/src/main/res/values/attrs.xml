@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--<declare-styleable name="InfoActionCardView">-->
-        <!--<attr name="info_action_card_view.info_title" format="string"/>-->
-        <!--<attr name="info_action_card_view.action_title" format="string"/>-->
-    <!--</declare-styleable>-->
+    <declare-styleable name="InfoActionCardView">
+        <attr name="infoText" format="string" />
+        <attr name="actionName" format="string" />
+    </declare-styleable>
 
-    <!--<declare-styleable name="ExecutedPercentBarView">-->
-        <!--<attr name="executed_percenter_bar_view.percent_quantity" format="integer"/>-->
-    <!--</declare-styleable>-->
-
-    <!--<declare-styleable name="ExpandableTextView">-->
-        <!--<attr name="expandable_text_view.text" format="string"/>-->
-    <!--</declare-styleable>-->
-
-    <!--<declare-styleable name="BasicToolbarView">-->
-        <!--<attr name="basic_toolbar_view.title" format="string"/>-->
-        <!--<attr name="basic_toolbar_view.subtitle" format="string"/>-->
-    <!--</declare-styleable>-->
+    <declare-styleable name="ActionButtonView">
+        <attr name="actionText" format="string" />
+    </declare-styleable>
 
 </resources>

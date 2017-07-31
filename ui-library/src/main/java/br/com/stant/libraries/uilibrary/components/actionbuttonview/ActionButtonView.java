@@ -2,6 +2,7 @@ package br.com.stant.libraries.uilibrary.components.actionbuttonview;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.LinearLayout;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.ActionButtonViewBinding;
+import br.com.stant.libraries.uilibrary.utils.ViewUtils;
 
 /**
  * Created by denisvieira on 26/07/17.
@@ -16,29 +18,37 @@ import br.com.stant.libraries.uilibrary.databinding.ActionButtonViewBinding;
 
 public class ActionButtonView extends LinearLayout implements ActionButtonViewContract{
 
-    private ActionButtonViewContract.OnClickActionButtonListener mOnClickActionButtonListener;
-
     private ActionButtonViewBinding mActionButtonViewBinding;
+    private ActionButtonViewContract.OnClickActionButtonListener mOnClickActionButtonListener;
+    private int mIconResource;
+    private String mActionText;
 
-    public ActionButtonView(Context context) {
-        super(context);
-        init(context);
-    }
 
     public ActionButtonView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        mActionButtonViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
+                R.layout.action_button_view, this, true);
+
+        getAttributes(attrs);
+        setAttributes();
     }
 
-    public ActionButtonView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(context);
+    private void getAttributes(AttributeSet attrs){
+
+        mActionText = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.ActionButtonView,
+                attrs, R.styleable.ActionButtonView_actionText);
     }
 
-    private void init(Context context) {
-        mActionButtonViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.action_button_view, this, true);
+    private void setAttributes() {
+        mActionButtonViewBinding.setHandler(this);
+        mActionButtonViewBinding.setActionText(mActionText);
     }
 
+
+    @Override
+    public void setIcon(int iconResourceId) {
+        mActionButtonViewBinding.actionButtonViewIcon.setImageResource(iconResourceId);
+    }
 
     @Override
     public void setOnClickActionButtonListener(OnClickActionButtonListener onClickActionButtonListener) {
@@ -48,6 +58,16 @@ public class ActionButtonView extends LinearLayout implements ActionButtonViewCo
     @Override
     public void onClickActionButton(View view) {
         mOnClickActionButtonListener.onClick();
+    }
+
+    @Override
+    public void withVerticalConfiguration() {
+
+    }
+
+    @Override
+    public void withHorizontalConfiguration() {
+
     }
 
 }
