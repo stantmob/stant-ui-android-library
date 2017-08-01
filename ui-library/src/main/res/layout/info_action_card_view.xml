@@ -18,47 +18,48 @@
 
     </data>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <merge>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="30dp">
+            android:layout_height="65dp">
 
             <TextView
                 android:id="@+id/info_action_card_view_title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:textSize = "13sp"
                 android:textStyle="bold"
-                android:textColor="@color/gray"
-                android:layout_marginEnd="10dp"
                 tools:text="@string/info_action_card_view.title_example"
                 android:text="@{infoText}"
-                />
+                android:textColor="@color/gray"/>
 
-            <TextView
-                android:id="@+id/info_action_card_view_action_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                tools:text="@string/info_action_card_view.action_name_example"
-                android:text="@{actionText}"
-                android:textAllCaps="true"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                tools:textColor="@color/green_base"
-                android:textColor="@color/gray"
-                android:onClick="@{handler::onClickActionCard}"
-                />
+            <LinearLayout
+                android:id="@+id/service_inspection_form_filled_detail_frag_undo_finished_inspection_linear_layout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/info_action_card_view_action_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    tools:text="@string/info_action_card_view.action_name_example"
+                    android:text="@{actionText}"
+                    android:textStyle="bold"
+                    android:textColor="@color/green_base"
+                    android:onClick="@{handler::onClickActionCard}"
+                    />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </merge>
 
 </layout>

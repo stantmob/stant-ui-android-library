@@ -2,6 +2,7 @@ package br.com.stant.libraries.uilibrary.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
 /**
@@ -10,18 +11,47 @@ import android.util.AttributeSet;
 
 public class ViewUtils {
 
-    public static Integer getResourceFromTypedArray(Context context, int[] styleableView, AttributeSet attrs, int styleableAttribute){
+    public static Integer getColorFromTypedArray(Context context, int[] styleableView, AttributeSet attrs, int styleableAttribute){
         Integer valueFromTyped;
         TypedArray typedArray = context.getTheme().obtainStyledAttributes(
                 attrs,
                 styleableView,
                 0, 0);
         try {
-            valueFromTyped = typedArray.getResourceId(styleableAttribute,0);
+            valueFromTyped = typedArray.getColor(styleableAttribute,0);
         } finally {
             typedArray.recycle();
         }
 
+        return valueFromTyped;
+    }
+
+    public static Drawable getDrawableFromTypedArray(Context context, int[] styleableView, AttributeSet attrs, int styleableAttribute){
+        Drawable valueFromTyped;
+        TypedArray typedArray = context.getTheme().obtainStyledAttributes(
+                attrs,
+                styleableView,
+                0, 0);
+        try {
+            valueFromTyped = typedArray.getDrawable(styleableAttribute);
+        } finally {
+            typedArray.recycle();
+        }
+
+        return valueFromTyped;
+    }
+
+    public static String getStringFromTypedArray(Context context, int[] styleableView, AttributeSet attrs, int styleableAttribute){
+        String valueFromTyped = "";
+        TypedArray typedArray = context.getTheme().obtainStyledAttributes(
+                attrs,
+                styleableView,
+                0, 0);
+        try {
+            valueFromTyped = typedArray.getString(styleableAttribute);
+        } finally {
+            typedArray.recycle();
+        }
         return valueFromTyped;
     }
 
@@ -36,35 +66,7 @@ public class ViewUtils {
         } finally {
             typedArray.recycle();
         }
-
         return valueFromTyped;
     }
-
-    public static String getStringFromTypedArray(Context context, int[] styleableView, AttributeSet attrs, int styleableAttribute){
-        String titleFromTyped = "";
-        TypedArray typedArray = context.getTheme().obtainStyledAttributes(
-                attrs,
-                styleableView,
-                0, 0);
-        try {
-            titleFromTyped = typedArray.getString(styleableAttribute);
-        } finally {
-            typedArray.recycle();
-        }
-        return titleFromTyped;
-    }
-
-    public static boolean getBooleanFromTypedArray(Context context, int[] styleableView, AttributeSet attrs, int styleableAttribute){
-        boolean booleanAttribute;
-        TypedArray typedArray = context.getTheme().obtainStyledAttributes(
-                attrs,
-                styleableView,
-                0, 0);
-        try {
-            booleanAttribute = typedArray.getBoolean(styleableAttribute,false);
-        } finally {
-            typedArray.recycle();
-        }
-        return booleanAttribute;
-    }
 }
+

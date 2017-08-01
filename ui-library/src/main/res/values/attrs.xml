@@ -6,8 +6,21 @@
         <attr name="actionName" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="SimpleInformationsCardView">
+        <attr name="firstTitle" format="string" />
+        <attr name="firstValue" format="string" />
+        <attr name="secondTitle" format="string" />
+        <attr name="secondValue" format="string" />
+        <attr name="informationsColor" format="color" />
+    </declare-styleable>
+
     <declare-styleable name="ActionButtonView">
         <attr name="actionText" format="string" />
+        <attr name="actionIcon" format="reference" />
+        <attr name="cardStyle" format="enum">
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="2"/>
+        </attr>
     </declare-styleable>
 
 </resources>

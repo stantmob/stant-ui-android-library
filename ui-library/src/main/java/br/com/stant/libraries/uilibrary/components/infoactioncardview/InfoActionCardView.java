@@ -2,12 +2,10 @@ package br.com.stant.libraries.uilibrary.components.infoactioncardview;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.databinding.InverseBindingMethod;
-import android.databinding.InverseBindingMethods;
+import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.InfoActionCardViewBinding;
@@ -17,7 +15,7 @@ import br.com.stant.libraries.uilibrary.utils.ViewUtils;
  * Created by denisvieira on 27/07/17.
  */
 
-public class InfoActionCardView extends LinearLayout implements InfoActionCardViewContract {
+public class InfoActionCardView extends CardView implements InfoActionCardViewContract {
 
     private InfoActionCardViewBinding mInfoActionCardViewBinding;
     private OnClickActionCardListener mOnClickActionCardListener;
@@ -50,11 +48,11 @@ public class InfoActionCardView extends LinearLayout implements InfoActionCardVi
 
     @Override
     public void setOnClickActionCardListener(OnClickActionCardListener onClickActionCardListener) {
-        setActiveActionColor();
+        setActiveColorOnAction();
         mOnClickActionCardListener = onClickActionCardListener;
     }
 
-    private void setActiveActionColor(){
+    private void setActiveColorOnAction(){
         if(actionActiveTextColor != null)
             mInfoActionCardViewBinding.infoActionCardViewActionText.setTextColor(actionActiveTextColor);
         else
@@ -72,4 +70,5 @@ public class InfoActionCardView extends LinearLayout implements InfoActionCardVi
     public void setActionActiveTextColor(int color) {
         actionActiveTextColor = getResources().getColor(color);
     }
+
 }

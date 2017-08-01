@@ -9,44 +9,86 @@
             type="br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonView"/>
 
         <variable
+            name="actionIcon"
+            type="android.graphics.drawable.Drawable"/>
+
+        <variable
             name="actionText"
             type="java.lang.String"/>
 
     </data>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="@{handler::onClickActionButton}">
+    <merge>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/shape_white_with_green_border"
-            android:padding="20dp"
             >
 
-            <ImageView
-                android:id="@+id/action_button_view_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                tools:src="@drawable/ic_ok_circle"/>
+            <RelativeLayout
+                android:id="@+id/action_button_view_horizontal_container_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize = "13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green_base"
+                    android:text="@{actionText}"
+                    tools:text="@string/action_button_view.text_button_example"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@{actionIcon}"
+                    tools:src="@drawable/ic_ok_circle"/>
+                />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/action_button_view_vertical_container_linear_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textColor="@color/green_base"
-                android:text="@{actionText}"
-                tools:text="@string/action_button_view.text_button_example"
-                />
+                android:padding="20dp"
+                android:onClick="@{handler::onClickActionButton}"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@{actionIcon}"
+                    tools:src="@drawable/ic_ok_circle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/green_base"
+                    android:layout_marginTop="5dp"
+                    android:text="@{actionText}"
+                    tools:text="@string/action_button_view.text_button_example"
+                    />
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </merge>
 
 </layout>

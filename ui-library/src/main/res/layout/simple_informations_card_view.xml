@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.simpleinformationscardview.SimpleInformationsCardView"/>
+
+        <variable
+            name="firstTitle"
+            type="String"/>
+
+        <variable
+            name="firstValue"
+            type="String"/>
+
+        <variable
+            name="secondTitle"
+            type="String"/>
+
+        <variable
+            name="secondValue"
+            type="String"/>
+
+        <variable
+            name="informationsColor"
+            type="Integer"/>
+
+    </data>
+
+    <merge>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize ="13sp"
+                    tools:text="@string/info_action_card_view.title_example"
+                    android:text="@{firstTitle}"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@{informationsColor == null ? @color/gray : informationsColor}"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:text="@string/info_action_card_view.action_name_example"
+                    android:text="@{firstValue}"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@{informationsColor == null ? @color/gray : informationsColor}"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/simple_informations_card_view_second_info_container_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:text="@{secondTitle}"
+                    android:textColor="@{informationsColor == null ? @color/gray : informationsColor}"
+                    android:textSize="13sp"
+                    tools:text="@string/info_action_card_view.title_example" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@{secondValue}"
+                    android:textColor="@{informationsColor == null ? @color/gray : informationsColor}"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:text="@string/info_action_card_view.action_name_example" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </merge>
+
+</layout>
