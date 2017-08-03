@@ -23,13 +23,43 @@ public class InfoActionCardView extends CardView implements InfoActionCardViewCo
     private String mInfoText;
     private String mActionText;
 
+    public InfoActionCardView(Context context) {
+        super(context);
+        if(!isInEditMode()) {
+            mInfoActionCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
+                    R.layout.info_action_card_view, this, true);
+        }
+    }
+
     public InfoActionCardView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        if(!isInEditMode())
+            init(context,attrs);
+    }
+
+    public InfoActionCardView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        if(!isInEditMode())
+            init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs){
         mInfoActionCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
                 R.layout.info_action_card_view, this, true);
+        mInfoActionCardViewBinding.setHandler(this);
 
         getAttributes(attrs);
         setAttributes();
+    }
+
+    public void setInfoText(String infoText) {
+        this.mInfoText = infoText;
+        mInfoActionCardViewBinding.setInfoText(infoText);
+    }
+
+    public void setActionText(String actionText) {
+        this.mActionText = actionText;
+        mInfoActionCardViewBinding.setActionText(actionText);
     }
 
     private void getAttributes(AttributeSet attrs){
@@ -40,11 +70,9 @@ public class InfoActionCardView extends CardView implements InfoActionCardViewCo
     }
 
     private void setAttributes() {
-        mInfoActionCardViewBinding.setHandler(this);
-        mInfoActionCardViewBinding.setInfoText(mInfoText);
-        mInfoActionCardViewBinding.setActionText(mActionText);
+        setInfoText(mInfoText);
+        setActionText(mActionText);
     }
-
 
     @Override
     public void setOnClickActionCardListener(OnClickActionCardListener onClickActionCardListener) {

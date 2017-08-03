@@ -24,8 +24,28 @@ public class SimpleInformationsCardView extends CardView implements SimpleInform
     private String mSecondValue;
     private Integer mInformationsColor;
 
+    public SimpleInformationsCardView(Context context) {
+        super(context);
+
+        if(!isInEditMode()) {
+            mSimpleInformationsCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
+                    R.layout.simple_informations_card_view, this, true);
+        }
+    }
+
+    public SimpleInformationsCardView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        if(!isInEditMode())
+            init(context,attrs);
+    }
+
     public SimpleInformationsCardView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        if(!isInEditMode())
+            init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs){
         mSimpleInformationsCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
                 R.layout.simple_informations_card_view, this, true);
 

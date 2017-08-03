@@ -3,6 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="percentDescriptionPt1"
+            type="String"/>
+
+        <variable
+            name="percentDescriptionPt2"
+            type="String"/>
+
+        <variable
+            name="percentValuePt1"
+            type="String"/>
+
+        <variable
+            name="percentValuePt2"
+            type="String"/>
+
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -14,12 +34,14 @@
             android:weightSum="100">
 
             <LinearLayout
+                android:id="@+id/executed_percent_bar_green_bar_percent_linear_layout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="15"
+                android:layout_weight="3"
+                tools:layout_weight="15"
                 android:background="@color/green_base"
                 android:orientation="horizontal"
-                tools:layout_weight="15"/>
+                />
 
         </LinearLayout>
 
@@ -39,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="@string/executed_percent_bar.title_pt1"
-                    android:text="@string/executed_percent_bar.title_pt1"
+                    android:text="@{percentDescriptionPt1}"
                     android:textSize="18dp"
                     android:textColor="@color/white"
                     tools:textColor="@color/white" />
@@ -48,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="@string/executed_percent_bar.title_pt2"
-                    android:text="@string/executed_percent_bar.title_pt2"
+                    android:text="@{percentDescriptionPt2}"
                     android:textSize="18dp"
                     android:textColor="@color/green_base"/>
 
@@ -68,16 +90,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="6"
-                    android:text="6"
+                    android:text="@{percentValuePt1}"
                     android:textSize="18sp"
-                    android:textColor="@color/green_base"/>
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/executed_percent_bar_percent_number_value_pt2_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="%"
-                    android:text="%"
+                    android:text="@{percentValuePt2}"
                     android:textSize="18sp"
                     android:textColor="@color/green_base" />
 

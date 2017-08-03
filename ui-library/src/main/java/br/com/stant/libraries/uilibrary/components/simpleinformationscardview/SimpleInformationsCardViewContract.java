@@ -1,7 +1,5 @@
 package br.com.stant.libraries.uilibrary.components.simpleinformationscardview;
 
-import android.view.View;
-
 import br.com.stant.libraries.uilibrary.BaseView;
 
 /**
@@ -9,5 +7,4 @@ import br.com.stant.libraries.uilibrary.BaseView;
  */
 
 public interface SimpleInformationsCardViewContract extends BaseView {
-
 }

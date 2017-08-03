@@ -2,8 +2,12 @@ package br.com.stant.libraries.uilibrary.components.expandabletextview;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.text.Layout;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
 import br.com.stant.libraries.uilibrary.R;
@@ -13,7 +17,9 @@ import br.com.stant.libraries.uilibrary.databinding.ExpandableTextViewBinding;
  * Created by denisvieira on 26/07/17.
  */
 public class ExpandableTextView extends LinearLayout implements ExpandableTextViewContract{
+
     private ExpandableTextViewBinding mExpandableTextViewBinding;
+    private String mExpandableText;
 
     public ExpandableTextView(Context context) {
         super(context);
@@ -32,33 +38,47 @@ public class ExpandableTextView extends LinearLayout implements ExpandableTextVi
 
     private void init(Context context) {
         mExpandableTextViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.expandable_text_view, this, true);
+        mExpandableTextViewBinding.setHandler(this);
+        setHiddenTextState(this);
+        hiddenArrowIconIfIsEllipsize();
+    }
 
+
+    @Override
+    public void setExpandableTextState(View view) {
+        mExpandableTextViewBinding.setTextViewState(ExpandableTextViewStyleEnum.EXPANDABLE);
+    }
+
+
+    @Override
+    public void setHiddenTextState(View view) {
+        mExpandableTextViewBinding.setTextViewState(ExpandableTextViewStyleEnum.HIDDEN);
     }
 
     @Override
-    public void setExpandableTextState() {
-
+    public void setNoLongTextState() {
+        mExpandableTextViewBinding.expandableTextViewArrowContainerLinearLayout.setVisibility(View.GONE);
     }
 
     @Override
-    public void setHiddenTextState() {
+    public void setExpandableText(String expandableText) {
+        mExpandableTextViewBinding.setExpandableText(expandableText);
 
     }
 
-//    public ExpandableTextView(Context context) {
-//        this(context);
-//        ExpandableTextViewBinding expandableTextViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.expandable_text_view, this, true);
-//    }
-//
-//    public ExpandableTextView(Context context, AttributeSet attrs) {
-//        this(context, attrs, R.attr.ExpandableTextView);
-//    }
-//
-//    public ExpandableTextView(Context context, AttributeSet attrs, int defStyle) {
-//        super(context, attrs, defStyle);
-//        init(context, attrs, defStyle);
-//    }
-//    private void init(Context context, AttributeSet attrs, int defStyle) {
-//    }
+    private void hiddenArrowIconIfIsEllipsize(){
+        ViewTreeObserver vto = mExpandableTextViewBinding.expandableTextViewHiddenTextView.getViewTreeObserver();
+
+        vto.addOnGlobalLayoutListener(() -> {
+            Layout layout = mExpandableTextViewBinding.expandableTextViewHiddenTextView.getLayout();
+            if(layout != null) {
+                int lines = layout.getLineCount();
+                int ellipsisCount = layout.getEllipsisCount(lines-1);
+                if ( ellipsisCount == 0)
+                    setNoLongTextState();
+            }
+        });
+
+    }
 
 }

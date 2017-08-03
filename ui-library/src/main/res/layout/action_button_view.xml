@@ -13,7 +13,7 @@
             type="android.graphics.drawable.Drawable"/>
 
         <variable
-            name="actionText"
+            name="actionName"
             type="java.lang.String"/>
 
     </data>
@@ -39,7 +39,7 @@
                     android:textSize = "13sp"
                     android:textStyle="bold"
                     android:textColor="@color/green_base"
-                    android:text="@{actionText}"
+                    android:text="@{actionName}"
                     tools:text="@string/action_button_view.text_button_example"
                     />
 
@@ -79,7 +79,7 @@
                     android:gravity="center"
                     android:textColor="@color/green_base"
                     android:layout_marginTop="5dp"
-                    android:text="@{actionText}"
+                    android:text="@{actionName}"
                     tools:text="@string/action_button_view.text_button_example"
                     />
 

@@ -1,17 +1,17 @@
 package br.com.stant.libraries.uilibrary.components.executedpercentbarview;
 
 import android.content.Context;
-import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import java.util.Locale;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.ExecutedPercentBarViewBinding;
+import br.com.stant.libraries.uilibrary.utils.ViewUtils;
 
 /**
  * Created by stant on 25/07/17.
@@ -20,44 +20,127 @@ import br.com.stant.libraries.uilibrary.databinding.ExecutedPercentBarViewBindin
 public class ExecutedPercentBarView extends CardView implements ExecutedPercentBarViewContract{
 
     private ExecutedPercentBarViewBinding mExecutedPercentBarViewBinding;
+    private String mPercentDescriptionStringpt1;
+    private String mPercentDescriptionStringpt2;
+    private String mPercentValueStringpt1;
+    private String mPercentValueStringpt2;
+    private Integer mPercentValue;
 
     public ExecutedPercentBarView(Context context) {
         super(context);
-        isInEditMode();
-            init(context);
+        if(!isInEditMode())
+            mExecutedPercentBarViewBinding = DataBindingUtil.inflate(LayoutInflater.from(
+                    context), R.layout.executed_percent_bar_view, this, true);
     }
 
     public ExecutedPercentBarView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        isInEditMode();
-        init(context);
+        if(!isInEditMode())
+            init(context, attrs);
     }
 
     public ExecutedPercentBarView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        isInEditMode();
-        init(context);
+        if(!isInEditMode())
+            init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        mExecutedPercentBarViewBinding = DataBindingUtil.inflate(LayoutInflater.from(
+                context), R.layout.executed_percent_bar_view, this, true);
+
+        getAttributesFromView(attrs);
+        setAttributesIntoView();
     }
 
     @Override
-    protected void onLayout(boolean changed,
-                            int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right, bottom);
-
+    public void getAttributesFromView(AttributeSet attrs) {
+        mPercentValue = ViewUtils.getIntegerFromTypedArray(getContext(), R.styleable.ExecutedPercentBarView,
+                attrs, R.styleable.ExecutedPercentBarView_percentValue);
     }
 
-    private void init(Context context) {
-        mExecutedPercentBarViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.executed_percent_bar_view, this, true);
-//        setBackgroundColor(getResources().getColor(R.color.bg_gray));
-//        mExecutedPercentBarViewBinding.filterPositionCheck.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//            mExecutedPercentBarViewBinding.filterPositionValue.setEnabled(isChecked);
-//            if (!isChecked) mExecutedPercentBarViewBinding.filterPositionValue.setText("");
-//        });
+    @Override
+    public void setAttributesIntoView() {
+        setPercentValue(mPercentValue);
     }
 
-    @BindingAdapter("executed_percent_bar_view_percent_value")
-    public static void setInfoActionCardViewInfoTitle(ExecutedPercentBarView view, int percentValue) {
-        Log.i("percentValue", String.valueOf(percentValue));
+    @Override
+    public void setPercentValue(Integer percentValue) {
+        executedPercentDescriptionListener(percentValue);
+        executedPercentValueListener(percentValue);
+        setGreenBarWeight(percentValue);
+//        executedPercentageCardsConfiguration(integerPercentage);
     }
 
+    private void setGreenBarWeight(float percentValue){
+        LinearLayout.LayoutParams greenPercentBarLayoutParams = new LinearLayout.LayoutParams(0,
+                LayoutParams.MATCH_PARENT, percentValue);
+        mExecutedPercentBarViewBinding.executedPercentBarGreenBarPercentLinearLayout.setLayoutParams(greenPercentBarLayoutParams);
+    }
+
+    public void executedPercentDescriptionListener(float percentage){
+        mPercentDescriptionStringpt1 = "";
+        mPercentDescriptionStringpt2 = "";
+        String percentDescriptionLabel = getResources().getString(R.string.executed_percent_bar_bar_title);
+        String language = Locale.getDefault().getDisplayLanguage();
+
+        if (percentage <= 6)
+            generatePercentDescriptionStringParts(0);
+        else if(percentage > 6 && percentage <= 8)
+            generatePercentDescriptionStringParts(1);
+        else if(percentage > 8 && percentage <= 11)
+            generatePercentDescriptionStringParts(2);
+        else if(percentage > 11 && percentage <= 13)
+            generatePercentDescriptionStringParts(3);
+        else if(percentage > 13 && percentage <= 16)
+            generatePercentDescriptionStringParts(4);
+        else if(percentage > 16 && percentage <= 18)
+            generatePercentDescriptionStringParts(5);
+        else if(percentage > 18 && percentage <= 21)
+            generatePercentDescriptionStringParts(6);
+        else if(percentage > 21 && percentage <= 23)
+            generatePercentDescriptionStringParts(7);
+        else if(percentage > 23 && percentage <= 28)
+            generatePercentDescriptionStringParts(8);
+        else if(percentage > 28 && percentage <= 30 && language.equals("português"))
+            generatePercentDescriptionStringParts(9);
+        else
+            generatePercentDescriptionStringParts(percentDescriptionLabel.length());
+
+        mExecutedPercentBarViewBinding.setPercentDescriptionPt1(mPercentDescriptionStringpt1);
+        mExecutedPercentBarViewBinding.setPercentDescriptionPt2(mPercentDescriptionStringpt2);
+    }
+
+    public void executedPercentValueListener(float percentage){
+        mPercentValueStringpt1 = "";
+        mPercentValueStringpt2 = "";
+
+        if (percentage <= 46)
+            generatePercentValueStringParts(percentage,0);
+        else if(percentage > 46 && percentage <= 49)
+            generatePercentValueStringParts(percentage,1);
+        else if(percentage > 49 && percentage <= 53)
+            generatePercentValueStringParts(percentage,2);
+        else if(percentage == 100)
+            generatePercentValueStringParts(percentage,4);
+        else
+            generatePercentValueStringParts(percentage,3);
+
+        mExecutedPercentBarViewBinding.setPercentValuePt1(mPercentValueStringpt1);
+        mExecutedPercentBarViewBinding.setPercentValuePt2(mPercentValueStringpt2);
+    }
+
+    public void generatePercentValueStringParts(float percentage, Integer limit){
+        int intPercentage = (int) percentage;
+        String percentValueLabel = intPercentage+"%";
+
+        mPercentValueStringpt1 = percentValueLabel.substring(0, limit);
+        mPercentValueStringpt2 = percentValueLabel.substring(limit);
+    }
+
+    public void generatePercentDescriptionStringParts(Integer limit){
+        String percentDescriptionLabel = getResources().getString(R.string.executed_percent_bar_bar_title);
+        mPercentDescriptionStringpt1 = percentDescriptionLabel.substring(0, limit);
+        mPercentDescriptionStringpt2 = percentDescriptionLabel.substring(limit);
+    }
 }

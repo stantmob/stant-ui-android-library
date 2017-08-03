@@ -26,9 +26,28 @@ public class ActionButtonView extends CardView implements ActionButtonViewContra
     private Drawable mActionIcon;
     private int mCardStyle;
 
+    public ActionButtonView(Context context) {
+        super(context);
+
+        if(!isInEditMode())
+            mActionButtonViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
+                    R.layout.action_button_view, this, true);
+    }
+
+    public ActionButtonView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        if(!isInEditMode())
+            init(context,attrs);
+    }
 
     public ActionButtonView(Context context, AttributeSet attrs) {
         super(context, attrs);
+
+        if(!isInEditMode())
+            init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs){
         mActionButtonViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
                 R.layout.action_button_view, this, true);
 
@@ -37,7 +56,6 @@ public class ActionButtonView extends CardView implements ActionButtonViewContra
 
         getAttributesFromView(attrs);
         setAttributesIntoView();
-
     }
 
     @Override
@@ -53,7 +71,7 @@ public class ActionButtonView extends CardView implements ActionButtonViewContra
     @Override
     public void setAttributesIntoView() {
         mActionButtonViewBinding.setHandler(this);
-        mActionButtonViewBinding.setActionText(mActionText);
+        mActionButtonViewBinding.setActionName(mActionText);
         mActionButtonViewBinding.setActionIcon(mActionIcon);
         setCardStyle(mCardStyle);
     }
