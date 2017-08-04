@@ -10,4 +10,7 @@
     <string name="info_action_card_view.title_example">Service Inspection Form Filled Finished</string>
     <string name="info_action_card_view.action_name_example">Undo</string>
 
+    <string name="viewing_users_dialog._title_text">Team Members</string>
+    <string name="viewing_users_dialog.ok_hint">Ok</string>
+
 </resources>

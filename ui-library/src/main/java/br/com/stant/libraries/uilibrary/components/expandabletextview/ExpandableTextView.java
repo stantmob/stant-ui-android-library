@@ -3,7 +3,6 @@ package br.com.stant.libraries.uilibrary.components.expandabletextview;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.text.Layout;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,5 +79,4 @@ public class ExpandableTextView extends LinearLayout implements ExpandableTextVi
         });
 
     }
-
 }

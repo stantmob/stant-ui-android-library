@@ -11,7 +11,6 @@ import java.util.Locale;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.ExecutedPercentBarViewBinding;
-import br.com.stant.libraries.uilibrary.utils.ViewUtils;
 
 /**
  * Created by stant on 25/07/17.
@@ -49,27 +48,17 @@ public class ExecutedPercentBarView extends CardView implements ExecutedPercentB
         mExecutedPercentBarViewBinding = DataBindingUtil.inflate(LayoutInflater.from(
                 context), R.layout.executed_percent_bar_view, this, true);
 
-        getAttributesFromView(attrs);
-        setAttributesIntoView();
-    }
-
-    @Override
-    public void getAttributesFromView(AttributeSet attrs) {
-        mPercentValue = ViewUtils.getIntegerFromTypedArray(getContext(), R.styleable.ExecutedPercentBarView,
-                attrs, R.styleable.ExecutedPercentBarView_percentValue);
-    }
-
-    @Override
-    public void setAttributesIntoView() {
-        setPercentValue(mPercentValue);
     }
 
     @Override
     public void setPercentValue(Integer percentValue) {
+        if(percentValue == null)
+            percentValue = 0;
+
+        mPercentValue = percentValue;
         executedPercentDescriptionListener(percentValue);
         executedPercentValueListener(percentValue);
         setGreenBarWeight(percentValue);
-//        executedPercentageCardsConfiguration(integerPercentage);
     }
 
     private void setGreenBarWeight(float percentValue){

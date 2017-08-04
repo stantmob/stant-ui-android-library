@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUsersDialog"/>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp"
+        android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/viewing_users_dialog_close_members_dialog_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="top|right"
+                android:paddingBottom="30dp"
+                android:src="@drawable/ic_close_dialog"
+                android:onClick="@{handler::closeDialog}"
+                />
+
+        <TextView
+            android:text="@string/viewing_users_dialog._title_text"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            tools:textColor="@color/black"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/viewing_users_dialog_search_horizontal_bottom_line_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/shape_rounded_white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/viewing_users_dialog_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/viewing_users_dialog_btn_members_close_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/shape_rounded_white"
+            android:textColor="@color/blue_btn_neutral"
+            android:text="@string/viewing_users_dialog.ok_hint"/>
+
+    </LinearLayout>
+
+
+</layout>
