@@ -18,7 +18,6 @@ import br.com.stant.libraries.uilibrary.databinding.ExpandableTextViewBinding;
 public class ExpandableTextView extends LinearLayout implements ExpandableTextViewContract{
 
     private ExpandableTextViewBinding mExpandableTextViewBinding;
-    private String mExpandableText;
 
     public ExpandableTextView(Context context) {
         super(context);
@@ -38,19 +37,19 @@ public class ExpandableTextView extends LinearLayout implements ExpandableTextVi
     private void init(Context context) {
         mExpandableTextViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.expandable_text_view, this, true);
         mExpandableTextViewBinding.setHandler(this);
-        setHiddenTextState(this);
+        showHiddenTextState(this);
         hiddenArrowIconIfIsEllipsize();
     }
 
 
     @Override
-    public void setExpandableTextState(View view) {
+    public void showExpandableTextState(View view) {
         mExpandableTextViewBinding.setTextViewState(ExpandableTextViewStyleEnum.EXPANDABLE);
     }
 
 
     @Override
-    public void setHiddenTextState(View view) {
+    public void showHiddenTextState(View view) {
         mExpandableTextViewBinding.setTextViewState(ExpandableTextViewStyleEnum.HIDDEN);
     }
 
