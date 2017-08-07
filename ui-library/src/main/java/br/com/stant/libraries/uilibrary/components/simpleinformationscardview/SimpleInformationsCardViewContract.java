@@ -7,4 +7,6 @@ import br.com.stant.libraries.uilibrary.BaseView;
  */
 
 public interface SimpleInformationsCardViewContract extends BaseView {
+    void setFirstValue(String firstTitle);
+    void setSecondValue(String secondTitle);
 }

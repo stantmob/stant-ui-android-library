@@ -49,6 +49,7 @@ public class SimpleInformationsCardView extends CardView implements SimpleInform
         mSimpleInformationsCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
                 R.layout.simple_informations_card_view, this, true);
 
+        mSimpleInformationsCardViewBinding.setHandler(this);
         getAttributesFromView(attrs);
         setAttributesIntoView();
     }
@@ -57,12 +58,8 @@ public class SimpleInformationsCardView extends CardView implements SimpleInform
     public void getAttributesFromView(AttributeSet attrs){
         mFirstTitle = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.SimpleInformationsCardView,
                 attrs, R.styleable.SimpleInformationsCardView_firstTitle);
-        mFirstValue = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.SimpleInformationsCardView,
-                attrs, R.styleable.SimpleInformationsCardView_firstValue);
         mSecondTitle = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.SimpleInformationsCardView,
                 attrs, R.styleable.SimpleInformationsCardView_secondTitle);
-        mSecondValue = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.SimpleInformationsCardView,
-                attrs, R.styleable.SimpleInformationsCardView_secondValue);
         mInformationsColor = ViewUtils.getColorFromTypedArray(getContext(), R.styleable.SimpleInformationsCardView,
                 attrs, R.styleable.SimpleInformationsCardView_informationsColor);
     }
@@ -72,13 +69,20 @@ public class SimpleInformationsCardView extends CardView implements SimpleInform
         mSimpleInformationsCardViewBinding.setHandler(this);
         mSimpleInformationsCardViewBinding.setInformationsColor(mInformationsColor);
         mSimpleInformationsCardViewBinding.setFirstTitle(mFirstTitle);
-        mSimpleInformationsCardViewBinding.setFirstValue(mFirstValue);
-        if(mSecondTitle != null && mSecondValue != null){
-            mSimpleInformationsCardViewBinding.setSecondTitle(mSecondTitle);
-            mSimpleInformationsCardViewBinding.setSecondValue(mSecondValue);
-        }else{
-            mSimpleInformationsCardViewBinding.simpleInformationsCardViewSecondInfoContainerLinearLayout.setVisibility(GONE);
-        }
+        mSimpleInformationsCardViewBinding.setSecondTitle(mSecondTitle);
+    }
+
+    @Override
+    public void setFirstValue(String firstValue) {
+        mFirstValue = firstValue;
+        mSimpleInformationsCardViewBinding.setFirstValue(firstValue);
+    }
+
+    @Override
+    public void setSecondValue(String secondValue) {
+        mSecondValue = secondValue;
+        mSimpleInformationsCardViewBinding.setSecondValue(secondValue);
+        mSimpleInformationsCardViewBinding.simpleInformationsCardViewSecondInfoContainerLinearLayout.setVisibility(VISIBLE);
     }
 
 }

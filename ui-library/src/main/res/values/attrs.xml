@@ -8,9 +8,7 @@
 
     <declare-styleable name="SimpleInformationsCardView">
         <attr name="firstTitle" format="string" />
-        <attr name="firstValue" format="string" />
         <attr name="secondTitle" format="string" />
-        <attr name="secondValue" format="string" />
         <attr name="informationsColor" format="color" />
     </declare-styleable>
 
