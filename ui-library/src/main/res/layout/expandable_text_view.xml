@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:onClick="@{handler::setExpandableTextState}"
+                    android:onClick="@{handler::showExpandableTextState}"
                     android:visibility="@{textViewState == ExpandableTextViewStyleEnum.HIDDEN ? View.VISIBLE : View.GONE }">
 
                     <ImageView
@@ -85,7 +85,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:visibility="@{textViewState == ExpandableTextViewStyleEnum.EXPANDABLE ? View.VISIBLE : View.GONE }"
-                    android:onClick="@{handler::setHiddenTextState}">
+                    android:onClick="@{handler::showHiddenTextState}">
 
                     <ImageView
                         android:id="@+id/expandable_text_view_up_arrow_image_view"
