@@ -28,4 +28,4 @@ dependencies {
 ## Components
 ======================
 
-* [Expandable TextView](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/expandabletextview.md)
+* [Expandable TextView](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/expandabletextview.md)
