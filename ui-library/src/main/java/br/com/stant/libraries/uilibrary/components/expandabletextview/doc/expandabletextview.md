@@ -6,8 +6,8 @@
 ### Demo
 
 <p>
-  <img src="ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/hidden.png" width="250">
-  <img src="ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/expandable.png" width="250">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/expandable.png" width="250">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/hidden.png" width="250">
 </p>
 
 ### How to use

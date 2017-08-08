@@ -23,9 +23,8 @@ dependencies {
 
 ```
 
-### How to use
+## How to use
 
 ## Components
-======================
 
 * [Expandable TextView](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/expandabletextview.md)
