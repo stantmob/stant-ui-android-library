@@ -18,7 +18,7 @@ and on your project dependencies:
 
 ```gradle
 dependencies {
-    compile 'com.github.stantmob:stant-ui-android-library:v0.0.5'
+    compile 'com.github.stantmob:stant-ui-android-library:{last-version}'
 }
 
 ```

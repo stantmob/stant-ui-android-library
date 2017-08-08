@@ -31,7 +31,7 @@ dependencies {
     })
 
     compile project(":ui-library")
-
+//    compile 'com.github.stantmob:stant-ui-android-library:v0.0.5'
     testCompile 'junit:junit:4.12'
 
     // Dependencies for local unit tests

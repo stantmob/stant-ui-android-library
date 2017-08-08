@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        String text = "In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.In lobortis quam sit amet.";
+        String text = "Você compra o equipamento";
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setExpandableText(text);
 

@@ -59,9 +59,13 @@ public class ExpandableTextView extends LinearLayout implements ExpandableTextVi
     }
 
     @Override
+    public void setActiveLongTextState() {
+        mExpandableTextViewBinding.expandableTextViewArrowContainerLinearLayout.setVisibility(View.VISIBLE);
+    }
+
+    @Override
     public void setExpandableText(String expandableText) {
         mExpandableTextViewBinding.setExpandableText(expandableText);
-
     }
 
     private void hiddenArrowIconIfIsEllipsize(){
@@ -74,6 +78,8 @@ public class ExpandableTextView extends LinearLayout implements ExpandableTextVi
                 int ellipsisCount = layout.getEllipsisCount(lines-1);
                 if ( ellipsisCount == 0)
                     setNoLongTextState();
+                else if(ellipsisCount > 0)
+                    setActiveLongTextState();
             }
         });
 
