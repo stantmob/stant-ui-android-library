@@ -11,6 +11,7 @@ public interface ExpandableTextViewContract {
     void showExpandableTextState(View view);
     void showHiddenTextState(View view);
     void setNoLongTextState();
+    void setActiveLongTextState();
     void setExpandableText(String expandableText);
 
 }
