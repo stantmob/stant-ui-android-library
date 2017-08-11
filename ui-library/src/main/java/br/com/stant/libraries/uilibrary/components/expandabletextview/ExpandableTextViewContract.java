@@ -8,8 +8,8 @@ import android.view.View;
 
 public interface ExpandableTextViewContract {
 
-    void showExpandableTextState(View view);
-    void showHiddenTextState(View view);
+    void expandLongText(View view);
+    void hideLongText(View view);
     void setNoLongTextState();
     void setActiveLongTextState();
     void setExpandableText(String expandableText);

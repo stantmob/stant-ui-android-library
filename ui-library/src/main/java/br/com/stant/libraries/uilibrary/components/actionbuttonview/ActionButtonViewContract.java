@@ -12,7 +12,7 @@ import br.com.stant.libraries.uilibrary.BaseView;
 public interface ActionButtonViewContract extends BaseView {
 
     void setCardStyle(int cardStyleReference);
-    void setOnClickActionButtonListener(OnClickActionButtonListener onClickActionButtonListener);
+    void setOnClickActionButtonListener(final OnClickActionButtonListener onClickActionButtonListener);
     void onClickActionButton(View view);
 
     interface OnClickActionButtonListener {

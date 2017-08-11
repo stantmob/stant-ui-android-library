@@ -1,7 +1,12 @@
 package br.com.stant.libraries.uilibrary.components.executedpercentbarview;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.databinding.DataBindingUtil;
+import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -128,8 +133,9 @@ public class ExecutedPercentBarView extends CardView implements ExecutedPercentB
     }
 
     public void generatePercentDescriptionStringParts(Integer limit){
-        String percentDescriptionLabel = getResources().getString(R.string.executed_percent_bar_bar_title);
+        String percentDescriptionLabel = getContext().getResources().getString(R.string.executed_percent_bar_bar_title);
         mPercentDescriptionStringpt1 = percentDescriptionLabel.substring(0, limit);
         mPercentDescriptionStringpt2 = percentDescriptionLabel.substring(limit);
     }
+
 }

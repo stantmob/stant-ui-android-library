@@ -41,7 +41,7 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:visibility="@{textViewState == ExpandableTextViewStyleEnum.HIDDEN ? View.VISIBLE : View.GONE }"
-                    android:text="@={expandableText}"
+                    android:text="@{expandableText}"
                     tools:text="In lobortis quam sit amet elit cursus cursus. Duis ultrices odio ac sapien vulputate, sed blandit felis mattis. Morbi a malesuada augue, quis rutrum est. Vivamus condimentum libero in massa tempor facilisis. Nullam semper a enim at pretium. Nam laoreet velit et sagittis egestas. Nam id metus consequat, iaculis ante nec, ornare lacus. Proin nec diam elit. Nulla sed fringilla nunc, quis pretium justo. Maecenas ultrices neque quis magna pretium porttitor. Nam ex mauris, feugiat id lectus eget, ultricies sodales dolor. Curabitur mollis in justo quis pellentesque."
                     />
 
@@ -50,7 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:visibility="@{textViewState == ExpandableTextViewStyleEnum.EXPANDABLE ? View.VISIBLE : View.GONE }"
-                    android:text="@={expandableText}"
+                    android:text="@{expandableText}"
                     tools:text="In lobortis quam sit amet elit cursus cursus. Duis ultrices odio ac sapien vulputate, sed blandit felis mattis. Morbi a malesuada augue, quis rutrum est. Vivamus condimentum libero in massa tempor facilisis. Nullam semper a enim at pretium. Nam laoreet velit et sagittis egestas. Nam id metus consequat, iaculis ante nec, ornare lacus. Proin nec diam elit. Nulla sed fringilla nunc, quis pretium justo. Maecenas ultrices neque quis magna pretium porttitor. Nam ex mauris, feugiat id lectus eget, ultricies sodales dolor. Curabitur mollis in justo quis pellentesque."
                     />
 
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:onClick="@{handler::showExpandableTextState}"
+                    android:onClick="@{handler::expandLongText}"
                     android:visibility="@{textViewState == ExpandableTextViewStyleEnum.HIDDEN ? View.VISIBLE : View.GONE }">
 
                     <ImageView
@@ -85,7 +85,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:visibility="@{textViewState == ExpandableTextViewStyleEnum.EXPANDABLE ? View.VISIBLE : View.GONE }"
-                    android:onClick="@{handler::showHiddenTextState}">
+                    android:onClick="@{handler::hideLongText}">
 
                     <ImageView
                         android:id="@+id/expandable_text_view_up_arrow_image_view"

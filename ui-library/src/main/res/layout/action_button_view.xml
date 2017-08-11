@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
+            android:onClick="@{handler::onClickActionButton}"
             >
 
             <RelativeLayout
@@ -62,7 +63,6 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:padding="20dp"
-                android:onClick="@{handler::onClickActionButton}"
                 >
 
                 <ImageView

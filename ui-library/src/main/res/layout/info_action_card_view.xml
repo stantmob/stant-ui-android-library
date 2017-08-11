@@ -36,11 +36,12 @@
                 android:textColor="@color/gray"/>
 
             <LinearLayout
-                android:id="@+id/service_inspection_form_filled_detail_frag_undo_finished_inspection_linear_layout"
+                android:id="@+id/info_action_card_action_container_linear_layout"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true">
+                android:layout_alignParentEnd="true"
+                android:onClick="@{handler::onClickActionCard}">
 
                 <TextView
                     android:id="@+id/info_action_card_view_action_text"
@@ -54,7 +55,6 @@
                     android:text="@{actionText}"
                     android:textStyle="bold"
                     android:textColor="@color/green_base"
-                    android:onClick="@{handler::onClickActionCard}"
                     />
 
             </LinearLayout>

@@ -37,19 +37,19 @@ public class ExpandableTextView extends LinearLayout implements ExpandableTextVi
     private void init(Context context) {
         mExpandableTextViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.expandable_text_view, this, true);
         mExpandableTextViewBinding.setHandler(this);
-        showHiddenTextState(this);
+        hideLongText(this);
         hiddenArrowIconIfIsEllipsize();
     }
 
 
     @Override
-    public void showExpandableTextState(View view) {
+    public void expandLongText(View view) {
         mExpandableTextViewBinding.setTextViewState(ExpandableTextViewStyleEnum.EXPANDABLE);
     }
 
 
     @Override
-    public void showHiddenTextState(View view) {
+    public void hideLongText(View view) {
         mExpandableTextViewBinding.setTextViewState(ExpandableTextViewStyleEnum.HIDDEN);
     }
 

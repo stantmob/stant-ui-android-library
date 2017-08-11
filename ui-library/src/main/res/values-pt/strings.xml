@@ -3,6 +3,7 @@
 
     <string name="executed_percent_bar.title_pt1">Exec</string>
     <string name="executed_percent_bar.title_pt2">utado</string>
+    <string name="executed_percent_bar.bar_title">Executado</string>
 
     <string name="action_button_view.text_button_example">Aprovar Formulário</string>
 
