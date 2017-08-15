@@ -1,30 +1,49 @@
 package br.com.stant.libraries.uilibrary.components.basictoolbarview;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
+import br.com.stant.libraries.uilibrary.R;
+import br.com.stant.libraries.uilibrary.databinding.BasicToolbarViewBinding;
+
 /**
- * Created by stant on 25/07/17.
+ * Created by denisvieira on 25/07/17.
  */
 
-//public class BasicToolbarView extends LinearLayout implements BasicToolbarViewContract{
-//    public BasicToolbarView(Context context) {
-//        super(context);
-//    }
-//
-//    public BasicToolbarView(Context context) {
-//        this(context);
-//        BasicToolbarViewBinding basicToolbarViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.expandable_text_view, this, true);
-//    }
-//
-//    public BasicToolbarView(Context context, AttributeSet attrs) {
-//        this(context, attrs, R.attr.BasicToolbarView);
-//    }
-//
-//    public BasicToolbarView(Context context, AttributeSet attrs, int defStyle) {
-//        super(context, attrs, defStyle);
-//        init(context, attrs, defStyle);
-//    }
-//    private void init(Context context, AttributeSet attrs, int defStyle) {
-//    }
-//}
+public class BasicToolbarView extends LinearLayout implements BasicToolbarViewContract {
+
+
+    private BasicToolbarViewBinding mBasicToolbarViewBinding;
+
+    public BasicToolbarView(Context context) {
+        super(context);
+        init(context);
+    }
+
+    public BasicToolbarView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
+    }
+
+    public BasicToolbarView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
+
+    private void init(Context context) {
+        mBasicToolbarViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.basic_toolbar_view, this, true);
+    }
+
+    @Override
+    public void setTitle(String title) {
+        mBasicToolbarViewBinding.setTitle(title);
+    }
+
+    @Override
+    public void setSubtitle(String subtitle) {
+        mBasicToolbarViewBinding.setSubtitle(subtitle);
+    }
+}

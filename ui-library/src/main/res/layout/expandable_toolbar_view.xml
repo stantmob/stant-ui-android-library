@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext="br.com.stant.stant.accompaniment.serviceinspectionformfilled.serviceinspectionformfilleddetail.ServiceInspectionFormFilledDetailFragment">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="title"
+            type="java.lang.String"/>
+
+        <variable
+            name="subtitle"
+            type="java.lang.String"/>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/service_inspections_form_filled_general_content_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_gray">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/service_inspection_form_filled_detail_normal_frag_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:theme="@style/AppTheme.ActionBarTheme"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/service_inspection_form_filled_detail_frag_normal_title_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:text="Service inspection form filled Title"
+                    android:textColor="@color/orange_stant"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{title}"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/service_inspection_form_filled_detail_frag_normal_subtitle_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/orange_stant"
+                    tools:text="subtitle"
+                    android:textSize="14dp"
+                    android:text="@{subtitle}"
+                    android:visibility="@{subtitle != null ? View.VISIBLE : View.GONE}"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/service_inspection_form_filled_detail_frag_coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/service_inspection_form_filled_detail_frag_appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:background="@color/bg_gray">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/service_inspections_form_filled_collapsing_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:expandedTitleMarginEnd="64dp">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/service_inspection_form_filled_detail_expanded_frag_toolbar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:theme="@style/AppTheme.ActionBarTheme"
+                        android:elevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/service_inspection_form_filled_detail_frag_title_expanded_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:text="Service inspection form filled Title"
+                                android:textColor="@color/orange_stant"
+                                android:textSize="16sp"
+                                android:text="@{title}"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/service_inspection_form_filled_detail_frag_expanded_subtitle_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/orange_stant"
+                                tools:text="subtitle"
+                                android:textSize="14dp"
+                                android:text="@{subtitle}"
+                                android:visibility="@{subtitle != null ? View.VISIBLE : View.GONE}"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.Toolbar>
+
+                    <RelativeLayout
+                        android:id="@+id/expandable_toolbar_view_child_container_relative_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </RelativeLayout>
+
+
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

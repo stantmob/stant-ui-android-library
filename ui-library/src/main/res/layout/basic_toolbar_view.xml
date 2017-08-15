@@ -4,6 +4,8 @@
 
     <data>
 
+        <import type="android.view.View"/>
+
         <variable
             name="title"
             type="java.lang.String"/>
@@ -43,13 +45,16 @@
                 />
 
             <TextView
+                android:id="@+id/basic_toolbar_subtitle_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/orange_stant"
                 tools:text="subtitle"
                 android:text="@{subtitle}"
+                android:visibility="@{subtitle != null ? View.VISIBLE : View.GONE}"
                 android:textSize="14sp"
+                tools:visibility="visible"
                 />
 
         </LinearLayout>
