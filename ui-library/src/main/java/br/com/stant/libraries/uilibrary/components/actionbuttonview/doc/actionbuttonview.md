@@ -1,7 +1,7 @@
 # Stant UI Android Library
 
 ## Action Button View
-> A custom view to expand and hidden big texts with simple button.
+> A custom view to action button styleable with icon.
 
 ### Demo
 
