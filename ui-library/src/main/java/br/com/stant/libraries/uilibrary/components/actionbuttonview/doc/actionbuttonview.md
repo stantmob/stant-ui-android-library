@@ -32,7 +32,7 @@
 
 3. Set action when on click button .
 ```java
-    mServiceInspectionFormFilledDetailFragBinding.serviceInspectionFormFilledDetailApproveSiffActionButtonView.
+    mBinding.actionButtonView.
             setOnClickActionButtonListener(new ActionButtonViewContract.OnClickActionButtonListener() {
                 @Override
                 public void onClick() {
