@@ -44,6 +44,7 @@
     <color name="green">#74c36a</color>
     <color name="green_weak">#86d072</color>
     <color name="green_base">#4cb69f</color>
+    <color name="green_strength">#007E73</color>
     <color name="green_success">#00ca13</color>
     <color name="blue_btn_neutral">#48a79c</color>
     <color name="blue_pool">#44bdd3</color>

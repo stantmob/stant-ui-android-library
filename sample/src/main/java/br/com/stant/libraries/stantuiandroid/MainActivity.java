@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setExpandableText(text);
         activityMainBinding.setTitle("titulo test");
+        activityMainBinding.setValue(0);
 //        activityMainBinding.setSubtitle("subtitulo test");
 
     }
