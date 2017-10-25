@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.increasedecreasebuttonsview.IncreaseDecreaseButtonsView"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:text="-"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:onClick="@{handler::onPressDecreaseButton}"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:onClick="@{handler::onPressIncreaseButton}"
+            />
+
+    </LinearLayout>
+
+</layout>

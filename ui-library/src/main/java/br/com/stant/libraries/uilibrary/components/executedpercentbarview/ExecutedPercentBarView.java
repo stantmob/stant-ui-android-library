@@ -1,12 +1,7 @@
 package br.com.stant.libraries.uilibrary.components.executedpercentbarview;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.databinding.DataBindingUtil;
-import android.os.Build;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
