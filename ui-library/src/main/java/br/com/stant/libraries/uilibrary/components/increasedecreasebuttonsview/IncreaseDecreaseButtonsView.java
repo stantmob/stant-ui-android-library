@@ -36,6 +36,7 @@ public class IncreaseDecreaseButtonsView extends LinearLayout implements Increas
     private void init(Context context) {
         mIncreaseDecreaseButtonsViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.increase_decrease_buttons_view, this, true);
         mIncreaseDecreaseButtonsViewBinding.setHandler(this);
+        setOrientation(HORIZONTAL);
     }
 
     @Override
@@ -50,11 +51,13 @@ public class IncreaseDecreaseButtonsView extends LinearLayout implements Increas
 
     @Override
     public void onPressIncreaseButton(View view) {
-        onPressIncreaseButton.onClick(view);
+        if(onPressIncreaseButton != null)
+            onPressIncreaseButton.onClick(view);
     }
 
     @Override
     public void onPressDecreaseButton(View view) {
-        onPressDecreaseButton.onClick(view);
+        if(onPressDecreaseButton != null)
+            onPressDecreaseButton.onClick(view);
     }
 }

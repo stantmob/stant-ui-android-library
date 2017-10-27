@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.selectdatepickerview.SelectDatePickerView" />
+
+        <variable
+            name="date"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/select_date_picker_view_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:text="@{date}"
+            tools:text="@string/select_date_picker_view_date_hint"
+            />
+
+        <ImageView
+            android:id="@+id/inspection_data_card_reprove_general_add_item_inspection_reproved_deadline_calendar_image_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="7dp"
+            android:src="@drawable/ic_weekly_calendar"
+            />
+
+    </LinearLayout>
+</layout>

@@ -46,6 +46,10 @@
             severityLevel="@{severityLevelValue}"
             />
 
+        <br.com.stant.libraries.uilibrary.components.selectdatepickerview.SelectDatePickerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 
