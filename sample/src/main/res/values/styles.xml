@@ -8,4 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Hover">
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
 </resources>
