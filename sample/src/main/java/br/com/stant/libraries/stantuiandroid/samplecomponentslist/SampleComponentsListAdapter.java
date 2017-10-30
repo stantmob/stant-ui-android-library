@@ -1,14 +1,17 @@
-package br.com.stant.libraries.stantuiandroid;
+package br.com.stant.libraries.stantuiandroid.samplecomponentslist;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
 
+import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.SampleComponenentsListItemBinding;
+import br.com.stant.libraries.stantuiandroid.entities.UiComponent;
 
 /**
  * Created by denisvieira on 29/10/17.
@@ -17,11 +20,13 @@ import br.com.stant.libraries.stantuiandroid.databinding.SampleComponenentsListI
 public class SampleComponentsListAdapter extends RecyclerView.Adapter<SampleComponentsListAdapter.ViewHolder> {
 
     private final Context mContext;
-    private List<String> mComponents;
+    private List<UiComponent> mComponents;
+    private SampleComponentsListContract.View mView;
 
-    public SampleComponentsListAdapter(Context context, List<String> components) {
-        mContext  = context;
+    public SampleComponentsListAdapter(Context context, List<UiComponent> components, SampleComponentsListContract.View view) {
+        mContext    = context;
         mComponents = components;
+        mView       = view;
     }
 
     @Override
@@ -38,9 +43,15 @@ public class SampleComponentsListAdapter extends RecyclerView.Adapter<SampleComp
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         ViewHolder viewHolder = holder;
-        String component = mComponents.get(position);
+        final UiComponent component = mComponents.get(position);
 
-        viewHolder.mSampleComponenentsListItemBinding.setComponentName(component);
+        viewHolder.mSampleComponenentsListItemBinding.setComponentName(component.getName());
+        viewHolder.mSampleComponenentsListItemBinding.sampleComponentListItemRelativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mView.goToComponentDetail(component);
+            }
+        });
         viewHolder.mSampleComponenentsListItemBinding.executePendingBindings();
     }
 
