@@ -6,10 +6,6 @@
 
     <data>
 
-        <variable
-            name="handler"
-            type="br.com.stant.libraries.stantuiandroid.SampleComponentsList" />
-
     </data>
 
     <LinearLayout
@@ -20,7 +16,7 @@
 
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/planning_services_frag_toolbar"
+            android:id="@+id/sample_component_list_main_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"

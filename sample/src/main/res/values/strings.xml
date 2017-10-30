@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Stant UI Sample</string>
+    <string name="workspace">Workspace</string>
 </resources>
