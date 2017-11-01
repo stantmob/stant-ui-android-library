@@ -19,5 +19,7 @@ public class WorkspaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mSampleWorkspaceActBinding = DataBindingUtil.setContentView(this, R.layout.sample_workspace_act);
+        mSampleWorkspaceActBinding.setExecutedPercent(50f);
+        mSampleWorkspaceActBinding.setSelectedPercent(25.5f);
     }
 }
