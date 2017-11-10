@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="componentName"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/sample_component_list_item_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/Hover"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{componentName}"
+            tools:text="Component Name"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_right_arrow_circular_button"
+            android:tint="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</layout>

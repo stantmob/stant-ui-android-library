@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.stantuiandroid.workspace.WorkspaceActivity" />
+
+        <variable
+            name="selectedPercent"
+            type="Float" />
+
+        <variable
+            name="executedPercent"
+            type="Float" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WORKSPACE"
+            android:textSize="20sp"
+            android:layout_marginBottom="50dp"
+            />
+
+        <br.com.stant.libraries.uilibrary.components.simplepercentagebarview.SimplePercentageBarView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            app:selectedPercent="@{selectedPercent}"
+            app:executedPercent="@{executedPercent}"
+            />
+
+    </LinearLayout>
+</layout>
