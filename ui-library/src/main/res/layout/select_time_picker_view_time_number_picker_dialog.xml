@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.selecttimepickerview.SelectTimePickerView" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:minWidth="250dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/select_time_picker_view.rework_time" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <NumberPicker
+                android:id="@+id/select_time_picker_view_time_number_picker_dialog_rework_hours_number_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:text=":"
+                    android:textSize="30sp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <NumberPicker
+                android:id="@+id/select_time_picker_view_time_number_picker_dialog_rework_minutes_number_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            >
+
+            <TextView
+                android:id="@+id/select_time_picker_view_time_number_picker_dialog_ok_button_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="@{handler::onPressOkButtonOnNumberPickerDialog}"
+                android:textColor="@color/blue_base"
+                android:textAllCaps="true"
+                android:text="@string/viewing_users_dialog.ok_hint" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</layout>
