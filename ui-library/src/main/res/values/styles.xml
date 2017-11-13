@@ -34,7 +34,13 @@
         <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
     </style>
 
+
     <!-- Components Styles -->
+
+
+    <style name="NumberPickerDialogTheme">
+        <item name="android:background">@drawable/shape_rounded_white</item>
+    </style>
 
 
 </resources>
