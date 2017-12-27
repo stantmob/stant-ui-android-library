@@ -1,5 +1,6 @@
 package br.com.stant.libraries.uilibrary.components.buttoncomponent;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import br.com.stant.libraries.uilibrary.BaseView;
@@ -11,8 +12,8 @@ import br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButton
 
 public interface ButtonComponentViewContract extends BaseView {
 
-    void setButtonText();
-    void setButtonShape();
-    void setButtonShadowShape();
+    void setButtonText(String buttonText);
+    void setButtonShape(Drawable buttonShape);
+    void setButtonShadowShape(Drawable buttonShadowShape);
 
 }

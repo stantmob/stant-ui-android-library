@@ -2,6 +2,7 @@ package br.com.stant.libraries.uilibrary.components.buttoncomponent;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -18,7 +19,6 @@ import br.com.stant.libraries.uilibrary.utils.ViewUtils;
 public class ButtonComponentView extends CardView implements ButtonComponentViewContract {
 
     private ButtonComponentBinding mButtonComponentBinding;
-    private String mActionText;
 
     public ButtonComponentView(Context context) {
         super(context);
@@ -53,20 +53,21 @@ public class ButtonComponentView extends CardView implements ButtonComponentView
 
     @Override
     public void setAttributesIntoView() {
+
     }
 
     @Override
-    public void setButtonText() {
-        mButtonComponentBinding.buttonComponentTextview.setText("Button text to be changed");
+    public void setButtonText(String buttonText) {
+        mButtonComponentBinding.setButtonText(buttonText);
     }
 
     @Override
-    public void setButtonShape() {
-        mButtonComponentBinding.buttonShape.setBackground(getResources().getDrawable(R.drawable.shape_round_blue));
+    public void setButtonShape(Drawable buttonShape) {
+        mButtonComponentBinding.setButtonShape(buttonShape);
     }
 
     @Override
-    public void setButtonShadowShape() {
-        mButtonComponentBinding.buttonShadowShape.setBackground(getResources().getDrawable(R.drawable.shape_round_dark_blue));
+    public void setButtonShadowShape(Drawable buttonShadowShape) {
+        mButtonComponentBinding.setButtonShadowShape(buttonShadowShape);
     }
 }

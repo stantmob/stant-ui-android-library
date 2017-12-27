@@ -19,6 +19,18 @@
             name="test"
             type="Float" />
 
+        <variable
+            name="buttonText"
+            type="String" />
+
+        <variable
+            name="buttonShape"
+            type="android.graphics.drawable.Drawable"/>
+
+        <variable
+            name="buttonShadowShape"
+            type="android.graphics.drawable.Drawable"/>
+
     </data>
 
     <LinearLayout
@@ -45,7 +57,10 @@
         <br.com.stant.libraries.uilibrary.components.buttoncomponent.ButtonComponentView
             android:id="@+id/button_component"
             android:layout_width="match_parent"
-            android:layout_height="67dp"/>
+            app:buttonText="@{buttonText}"
+            app:buttonShape="@{buttonShape}"
+            app:buttonShadowShape="@{buttonShadowShape}"
+            android:layout_height="57dp"/>
 
     </LinearLayout>
 </layout>

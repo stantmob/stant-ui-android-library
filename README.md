@@ -30,3 +30,4 @@ dependencies {
 * [Expandable TextView](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/expandabletextview.md)
 * [Action Button View](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/actionbuttonview/doc/actionbuttonview.md)
 * [Simple Percentage Bar View](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simplepercentagebarview/doc/simplepercentagebarview.md)
+* [Button Component View](ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/buttoncomponentview/doc/buttoncomponentview.md)

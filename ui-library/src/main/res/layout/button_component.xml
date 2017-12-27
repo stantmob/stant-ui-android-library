@@ -20,14 +20,14 @@
     <FrameLayout
         android:id="@+id/button_component"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="57dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/button_shadow_shape"
             android:layout_width="match_parent"
             android:layout_height="17dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:orientation="vertical"
             android:background="@{buttonShadowShape}"
             tools:background="@drawable/shape_round_dark_blue"
@@ -36,7 +36,7 @@
         <LinearLayout
             android:id="@+id/button_shape"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="vertical"
             android:gravity="center"
             android:background="@{buttonShape}"
@@ -49,11 +49,14 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
                 android:textColor="@color/white"
-                android:textSize="13sp"
+                android:textSize="15sp"
                 android:text="@{buttonText}"
                 tools:text="Button Text" />
 
         </LinearLayout>
 
+
     </FrameLayout>
+
+
 </layout>
