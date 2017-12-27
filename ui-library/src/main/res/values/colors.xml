@@ -50,6 +50,8 @@
     <color name="blue_pool">#44bdd3</color>
     <color name="blue_base">#42a5f5</color>
     <color name="blue_siff_selected">#2196f3</color>
+    <color name="blue_button">#1b8ae1</color>
+    <color name="blue_shadow">#0a385c</color>
     <color name="text_blue_siff_selected">#90CBF9</color>
     <color name="green_online">#00c713</color>
     <color name="green_approved">#3baa2d</color>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
@@ -14,11 +15,16 @@
             name="executedPercent"
             type="Float" />
 
+        <variable
+            name="test"
+            type="Float" />
+
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:padding="30dp">
 
         <TextView
@@ -35,6 +41,11 @@
             app:selectedPercent="@{selectedPercent}"
             app:executedPercent="@{executedPercent}"
             />
+
+        <br.com.stant.libraries.uilibrary.components.buttoncomponent.ButtonComponentView
+            android:id="@+id/button_component"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"/>
 
     </LinearLayout>
 </layout>
