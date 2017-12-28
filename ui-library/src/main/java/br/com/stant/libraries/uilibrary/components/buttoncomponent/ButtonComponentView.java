@@ -43,17 +43,6 @@ public class ButtonComponentView extends CardView implements ButtonComponentView
         mButtonComponentBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
                 R.layout.button_component, this, true);
 
-        getAttributesFromView(attrs);
-        setAttributesIntoView();
-    }
-
-    @Override
-    public void getAttributesFromView(AttributeSet attrs) {
-    }
-
-    @Override
-    public void setAttributesIntoView() {
-
     }
 
     @Override
@@ -70,4 +59,5 @@ public class ButtonComponentView extends CardView implements ButtonComponentView
     public void setButtonShadowShape(Drawable buttonShadowShape) {
         mButtonComponentBinding.setButtonShadowShape(buttonShadowShape);
     }
+
 }

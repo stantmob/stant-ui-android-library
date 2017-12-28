@@ -58,7 +58,6 @@ public class ActionButtonView extends CardView implements ActionButtonViewContra
         setAttributesIntoView();
     }
 
-    @Override
     public void getAttributesFromView(AttributeSet attrs){
         mActionText = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.ActionButtonView,
                 attrs, R.styleable.ActionButtonView_actionText);
@@ -68,7 +67,6 @@ public class ActionButtonView extends CardView implements ActionButtonViewContra
                 attrs, R.styleable.ActionButtonView_cardStyle);
     }
 
-    @Override
     public void setAttributesIntoView() {
         mActionButtonViewBinding.setHandler(this);
         mActionButtonViewBinding.setActionName(mActionText);

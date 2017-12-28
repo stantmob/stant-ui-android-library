@@ -21,8 +21,4 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="ButtonComponentView">
-        <attr name="buttonText" format="string" />
-    </declare-styleable>
-
 </resources>
