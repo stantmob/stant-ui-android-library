@@ -54,7 +54,7 @@
             app:executedPercent="@{executedPercent}"
             />
 
-        <br.com.stant.libraries.uilibrary.components.buttoncomponent.ButtonComponentView
+        <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
             android:id="@+id/button_component"
             android:layout_width="match_parent"
             app:buttonText="@{buttonText}"
