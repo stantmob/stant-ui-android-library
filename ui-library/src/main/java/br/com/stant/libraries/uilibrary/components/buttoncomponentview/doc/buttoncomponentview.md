@@ -41,3 +41,24 @@
             });
 
 ```
+
+4. Set Inactive State on Button
+
+```java
+
+    mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
+
+```
+
+5. Returning to Active State on Button
+
+```java
+
+    mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(WorkspaceActivity.this, "Actived Again", Toast.LENGTH_SHORT).show();
+        }
+    });
+
+```
