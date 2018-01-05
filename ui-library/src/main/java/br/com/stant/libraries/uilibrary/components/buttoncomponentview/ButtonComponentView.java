@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.ButtonComponentBinding;
@@ -15,7 +16,7 @@ import br.com.stant.libraries.uilibrary.databinding.ButtonComponentBinding;
  * Created by liu on 26/12/17.
  */
 
-public class ButtonComponentView extends CardView implements ButtonComponentViewContract {
+public class ButtonComponentView extends LinearLayout implements ButtonComponentViewContract {
 
     private ButtonComponentBinding mButtonComponentBinding;
 

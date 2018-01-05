@@ -34,7 +34,6 @@ public class WorkspaceActivity extends AppCompatActivity {
             }
         });
 
-        mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
 
         mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
             @Override
@@ -42,6 +41,9 @@ public class WorkspaceActivity extends AppCompatActivity {
                 Toast.makeText(WorkspaceActivity.this, "NOVO TESTE", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
 
     }
 }
