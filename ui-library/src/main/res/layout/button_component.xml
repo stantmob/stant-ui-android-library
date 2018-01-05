@@ -20,7 +20,7 @@
     <FrameLayout
         android:id="@+id/button_component"
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
