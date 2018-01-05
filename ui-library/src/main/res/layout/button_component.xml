@@ -33,6 +33,7 @@
             tools:background="@drawable/shape_round_dark_blue"
             >
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/button_shape"
             android:layout_width="match_parent"

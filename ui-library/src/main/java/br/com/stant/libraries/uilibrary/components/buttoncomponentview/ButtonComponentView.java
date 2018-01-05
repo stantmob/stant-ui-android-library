@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.ButtonComponentBinding;
@@ -56,6 +57,18 @@ public class ButtonComponentView extends CardView implements ButtonComponentView
     @Override
     public void setButtonShadowShape(Drawable buttonShadowShape) {
         mButtonComponentBinding.setButtonShadowShape(buttonShadowShape);
+    }
+
+    @Override
+    public void setInactiveStatusOnButton() {
+        mButtonComponentBinding.buttonShadowShape.setVisibility(View.GONE);
+        setOnClickListener(v -> {});
+    }
+
+    @Override
+    public void setActiveStatusOnButton(OnClickListener onClickButton) {
+        setOnClickListener(onClickButton);
+        mButtonComponentBinding.buttonShadowShape.setVisibility(View.VISIBLE);
     }
 
 }

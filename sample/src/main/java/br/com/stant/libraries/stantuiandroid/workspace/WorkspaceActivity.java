@@ -30,7 +30,16 @@ public class WorkspaceActivity extends AppCompatActivity {
         mSampleWorkspaceActBinding.buttonComponent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(WorkspaceActivity.this, "TESTE", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
+
+        mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(WorkspaceActivity.this, "NOVO TESTE", Toast.LENGTH_SHORT).show();
             }
         });
 
