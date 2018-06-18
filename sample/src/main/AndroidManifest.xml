@@ -26,6 +26,9 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".componentsactivities.actionbuttonview.ActionButtonViewActivity"
+            android:screenOrientation="portrait" />
+
         <activity android:name=".workspace.WorkspaceActivity"
             android:screenOrientation="portrait">
         </activity>
