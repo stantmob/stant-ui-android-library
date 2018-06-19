@@ -25,55 +25,37 @@ import br.com.stant.libraries.uilibrary.databinding.ViewingUsersDialogBinding;
 public class WorkspaceActivity extends AppCompatActivity {
 
     private  SampleWorkspaceActBinding mSampleWorkspaceActBinding;
-    private Dialog mViewingUsersDialog;
-    private ViewingUsersDialogBinding mViewingUsersDialogBinding;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mSampleWorkspaceActBinding = DataBindingUtil.setContentView(this, R.layout.sample_workspace_act);
-        mSampleWorkspaceActBinding.teste.setOnClickListener(new View.OnClickListener() {
+
+        mSampleWorkspaceActBinding.setExecutedPercent(50f);
+        mSampleWorkspaceActBinding.setSelectedPercent(25.5f);
+        mSampleWorkspaceActBinding.setButtonText("Button Text");
+        mSampleWorkspaceActBinding.setButtonShape(getResources().getDrawable(R.drawable.shape_round_blue));
+        mSampleWorkspaceActBinding.setButtonShadowShape(getResources().getDrawable(R.drawable.shape_round_dark_blue));
+
+        mSampleWorkspaceActBinding .buttonComponent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogConfiguration();
-                mViewingUsersDialog.show();
+                Toast.makeText(WorkspaceActivity.this, "TESTE", Toast.LENGTH_SHORT).show();
             }
         });
 
 
+        mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(WorkspaceActivity.this, "NOVO TESTE", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-//        mSampleWorkspaceActBinding.setExecutedPercent(50f);
-//        mSampleWorkspaceActBinding.setSelectedPercent(25.5f);
-//        mSampleWorkspaceActBinding.setButtonText("Button Text");
-//        mSampleWorkspaceActBinding.setButtonShape(getResources().getDrawable(R.drawable.shape_round_blue));
-//        mSampleWorkspaceActBinding.setButtonShadowShape(getResources().getDrawable(R.drawable.shape_round_dark_blue));
-//
-//        mSampleWorkspaceActBinding .buttonComponent.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(WorkspaceActivity.this, "TESTE", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//
-//        mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(WorkspaceActivity.this, "NOVO TESTE", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//
-//        mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
+
+        mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
 
     }
-
-    public void dialogConfiguration() {
-        mViewingUsersDialog = new Dialog(WorkspaceActivity.this);
-        mViewingUsersDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(WorkspaceActivity.this), R.layout.viewing_users_dialog, null, false);
-
-    }
-
 
 }

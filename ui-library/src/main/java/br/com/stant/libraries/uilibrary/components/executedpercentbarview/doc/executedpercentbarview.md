@@ -1,13 +1,12 @@
-CHANGE!
 # Stant UI Android Library
 
-## Button Component
-> A custom view to action button with shadow.
+## Executed Percent Bar 
+> A custom dinamic bar that shows the percentage executed.
 
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/buttoncomponent/doc/button_component.jpeg"  width="350">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/executedpercentbarview/doc/executed_percent_bar.png"  width="266">
 </p>
 
 ### How to use
@@ -16,50 +15,37 @@ CHANGE!
 * [Back to Repository Readme](https://github.com/stantmob/stant-ui-android-library#how-add-into-your-project) .
 
 
-2. Add component to view file setting custom components (button text, shape and shadow shape) as you want.
-   Note that buttonShape and buttonShadowShape are drawable shapes.
+2. Create your string variable, they will correspond for the string value for title and subtitle.
 ```xml
-
-     <br.com.stant.libraries.uilibrary.components.buttoncomponent.ButtonComponentView
-                android:id="@+id/button_component"
-                android:layout_width="match_parent"
-                app:buttonText="@{buttonText}"
-                app:buttonShape="@{buttonShape}"
-                app:buttonShadowShape="@{buttonShadowShape}"
-                android:layout_height="57dp"/>
-
+    <data>
+            <variable
+                name="percentDescriptionPt1"
+                type="String"/>
+            <variable
+                name="percentDescriptionPt2"
+                type="String"/>
+            <variable
+                name="percentValuePt1"
+                type="String"/>
+            <variable
+                name="percentValuePt2"
+                type="String"/>
+        </data>
 ```
 
-3. Set action when on click button .
-```java
-
-    mBinding.buttonComponent.
-            setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //  put your actions here
-                }
-            });
-
+3. Add component to view file with your strings view variable. In case you want to use library component as it is shown, you don't need to send this parameters. 
+```xml
+        <br.com.stant.libraries.uilibrary.components.executedpercentbarview.ExecutedPercentBarView
+                    android:id="@+id/executed_percent_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:percentDescriptionPt1 = "{@percentDescriptionPt1}"
+                    app:percentDescriptionPt2 = "{@percentDescriptionPt2}"
+                    app:percentValuePt1 = "{@percentValuePt1}"
+                    app:percentValuePt2 = "{@percentValuePt2}"/>
 ```
 
-4. Set Inactive State on Button
-
+4. Set percentage to be shown on your Activity or Fragment.
 ```java
-
-    mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
-
-```
-
-5. Returning to Active State on Button
-
-```java
-
-    mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Toast.makeText(WorkspaceActivity.this, "Actived Again", Toast.LENGTH_SHORT).show();
-        }
-    });
-
+   executedPercentBarView.setPercentValue(70);      
 ```

@@ -50,29 +50,6 @@
             android:layout_marginBottom="50dp"
             />
 
-        <Button
-            android:id="@+id/teste"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-        <br.com.stant.libraries.uilibrary.components.increasedecreasebuttonsview.IncreaseDecreaseButtonsView
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"/>
-
-        <br.com.stant.libraries.uilibrary.components.executedpercentbarview.ExecutedPercentBarView
-            android:id="@+id/executed_percent_bar_view"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginBottom="10dp"/>
-
-        <br.com.stant.libraries.uilibrary.components.simplepercentagebarview.SimplePercentageBarView
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            app:selectedPercent="@{selectedPercent}"
-            app:executedPercent="@{executedPercent}"
-            />
-
         <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
             android:id="@+id/button_component"
             android:layout_width="match_parent"
