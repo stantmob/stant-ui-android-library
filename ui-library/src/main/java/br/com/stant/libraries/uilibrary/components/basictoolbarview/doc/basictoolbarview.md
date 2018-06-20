@@ -6,7 +6,7 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/basictoolbarview/doc/basic_toolbar.png"  width="454">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/basictoolbarview/doc/basic_toolbar.png"  width="450">
 </p>
 
 ### How to use
@@ -27,19 +27,19 @@
     </data>
 ```
 
-3. Add component to view file with both your string view variable
+3. Add component to view file with both your string view variable.
 ```xml
         <br.com.stant.libraries.uilibrary.components.basictoolbarview.BasicToolbarView
                     android:id="@+id/basic_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:title = "{@title}"
-                    app:subtitle = "{@subtitle"/>
+                    app:title = "@{title}"
+                    app:subtitle = "@{subtitle}"/>
 ```
 
 4. You can also set strings on your Activity or Fragment
 ```java
     mBasicToolbarViewBinding.setTitle("Title value");
-            mBasicToolbarViewBinding.setSubtitle("Subtitle value");
+    mBasicToolbarViewBinding.setSubtitle("Subtitle value");
             
 ```

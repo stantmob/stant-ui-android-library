@@ -12,10 +12,17 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.SampleWorkspaceActBinding;
 import br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.SeverityLevelEnum;
 import br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.SeverityLevelIndicatorView;
+import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbar;
+import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbarTypeEnum;
+import br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUserDto;
+import br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUsersDialog;
 import br.com.stant.libraries.uilibrary.databinding.ViewingUsersDialogBinding;
 
 /**
@@ -25,6 +32,8 @@ import br.com.stant.libraries.uilibrary.databinding.ViewingUsersDialogBinding;
 public class WorkspaceActivity extends AppCompatActivity {
 
     private  SampleWorkspaceActBinding mSampleWorkspaceActBinding;
+    private ViewingUsersDialog mViewingUsersDialog;
+    private List<ViewingUserDto> users;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +47,25 @@ public class WorkspaceActivity extends AppCompatActivity {
         mSampleWorkspaceActBinding.setButtonShape(getResources().getDrawable(R.drawable.shape_round_blue));
         mSampleWorkspaceActBinding.setButtonShadowShape(getResources().getDrawable(R.drawable.shape_round_dark_blue));
 
-        mSampleWorkspaceActBinding .buttonComponent.setOnClickListener(new View.OnClickListener() {
+        setUsers();
+        mViewingUsersDialog = new ViewingUsersDialog(this);
+        mViewingUsersDialog.setViewingUsers(users);
+
+        mSampleWorkspaceActBinding.buttonComponent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(WorkspaceActivity.this, "TESTE", Toast.LENGTH_SHORT).show();
+             mViewingUsersDialog.show();
             }
         });
 
+    }
 
-        mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(WorkspaceActivity.this, "NOVO TESTE", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-        mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
-
+    private void setUsers() {
+        List<ViewingUserDto> users;
+        users = new ArrayList<>();
+        users.add(new ViewingUserDto("User 1", null, "Role 1"));
+        users.add(new ViewingUserDto("User 2", null, "Role 2"));
+        users.add(new ViewingUserDto("User 3", null, "Role 3"));
     }
 
 }

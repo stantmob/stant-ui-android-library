@@ -6,8 +6,8 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/selecttimepickerview/doc/select_time_picker.png"  width="59">
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/selecttimepickerview/doc/select_time_picker_time_number_picker_dialog.png"  width="268">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/selecttimepickerview/doc/select_time_picker.png"  width="60">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/selecttimepickerview/doc/select_time_picker_time_number_picker_dialog.png"  width="270">
 </p>
 
 ### How to use
@@ -28,10 +28,10 @@
 3. Add component to view file with your strings view variable.
 ```xml
         <br.com.stant.libraries.uilibrary.components.selecttimepickerview.selectTimePickerView
-                    android:id="@+id/select_time_picker"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:timeText = "{@timeText}"/>
+            android:id="@+id/select_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:timeText = "@{timeText}"/>
 ```
 
 4. Text setting can also be done using databinding on Activity or Fragment.

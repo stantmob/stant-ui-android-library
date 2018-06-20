@@ -6,7 +6,7 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/severitylevelindicatorview/doc/severity_level_indicator.png"  width="131">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/severitylevelindicatorview/doc/severity_level_indicator.png"  width="130">
 </p>
 
 ### How to use

@@ -6,7 +6,7 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/infoactioncardview/doc/info_action_card.png"  width="428">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/infoactioncardview/doc/info_action_card.png"  width="430">
 </p>
 
 ### How to use
@@ -28,14 +28,14 @@
         </data>
 ```
 
-3. Add component to view file with your strings view variable. In case you want to use library component as it is shown, you don't need to send this parameters. 
+3. Add component to view file with your strings view variable. 
 ```xml
         <br.com.stant.libraries.uilibrary.components.infoactioncardview.InfoActionCardView
                     android:id="@+id/info_action_card"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:infoText = "{@infoText}"
-                    app:actionText = "{@actionText}"/>
+                    app:infoText = "@{infoText}"
+                    app:actionText = "@{actionText}"/>
 ```
 
 4. Text setting can also be done using databinding on Activity or Fragment.

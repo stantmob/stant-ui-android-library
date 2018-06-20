@@ -18,7 +18,6 @@
 2. Add component to view file setting custom components (button text, shape and shadow shape) as you want.
    Note that buttonShape and buttonShadowShape are drawable shapes.
 ```xml
-
      <br.com.stant.libraries.uilibrary.components.buttoncomponent.ButtonComponentView
                 android:id="@+id/button_component"
                 android:layout_width="match_parent"
@@ -26,12 +25,10 @@
                 app:buttonShape="@{buttonShape}"
                 app:buttonShadowShape="@{buttonShadowShape}"
                 android:layout_height="57dp"/>
-
 ```
 
 3. Set action when on click button .
 ```java
-
     mBinding.buttonComponent.
             setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -39,26 +36,19 @@
                     //  put your actions here
                 }
             });
-
 ```
 
 4. Set Inactive State on Button
-
 ```java
-
-    mSampleWorkspaceActBinding.buttonComponent.setInactiveStatusOnButton();
-
+    mBinding.buttonComponent.setInactiveStatusOnButton();
 ```
 
 5. Returning to Active State on Button
-
 ```java
-
-    mSampleWorkspaceActBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
+    mBinding.buttonComponent.setActiveStatusOnButton(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Toast.makeText(WorkspaceActivity.this, "Actived Again", Toast.LENGTH_SHORT).show();
         }
     });
-
 ```

@@ -7,7 +7,7 @@
 
 <p>
   <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationcardview/doc/simple_informations_card_first_state.png"  width="435">
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationcardview/doc/simple_informations_card_second_state.png"  width="442">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationcardview/doc/simple_informations_card_second_state.png"  width="440">
 </p>
 
 ### How to use
@@ -37,17 +37,17 @@
     </data>
 ```
 
-3. Add component to view file with your strings view variable. In case you want to use library component as it is shown, you don't need to send this parameters. 
+3. Add component to view file with your strings view variable.  
 ```xml
         <br.com.stant.libraries.uilibrary.components.simpleinformationcardview.SimpleInformationCardView
-                    android:id="@+id/simple_information_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    app:firstTitle = "{@firstTitle}"
-                    app:firstValue = "{@firstValue}"
-                    app:secondTitle = "{@secondTitle}"
-                    app:secondValue = "{@secondValue}"
-                    app:informationsColor = "{@informationsColor}"/>
+            android:id="@+id/simple_information_card"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:firstTitle = "@{firstTitle}"
+            app:firstValue = "@{firstValue}"
+            app:secondTitle = "@{secondTitle}"
+            app:secondValue = "@{secondValue}"
+            app:informationsColor = "@{informationsColor}"/>
 ```
 
 4. Text setting can also be done using databinding on Activity or Fragment.

@@ -6,7 +6,7 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/executedpercentbarview/doc/executed_percent_bar.png"  width="266">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/executedpercentbarview/doc/executed_percent_bar.png"  width="270">
 </p>
 
 ### How to use
@@ -15,7 +15,7 @@
 * [Back to Repository Readme](https://github.com/stantmob/stant-ui-android-library#how-add-into-your-project) .
 
 
-2. Create your string variable, they will correspond for the string value for title and subtitle.
+2. Create your string variable, they will correspond for the string value for description and percentage.
 ```xml
     <data>
             <variable
@@ -39,10 +39,10 @@
                     android:id="@+id/executed_percent_bar"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:percentDescriptionPt1 = "{@percentDescriptionPt1}"
-                    app:percentDescriptionPt2 = "{@percentDescriptionPt2}"
-                    app:percentValuePt1 = "{@percentValuePt1}"
-                    app:percentValuePt2 = "{@percentValuePt2}"/>
+                    app:percentDescriptionPt1 = "@{percentDescriptionPt1}"
+                    app:percentDescriptionPt2 = "@{percentDescriptionPt2}"
+                    app:percentValuePt1 = "@{percentValuePt1}"
+                    app:percentValuePt2 = "@{percentValuePt2}"/>
 ```
 
 4. Set percentage to be shown on your Activity or Fragment.
