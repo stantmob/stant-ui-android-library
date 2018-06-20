@@ -5,7 +5,8 @@
     <string name="executed_percent_bar.title_pt2">uted</string>
     <string name="executed_percent_bar.bar_title">Executed</string>
 
-    <string name="action_button_view.text_button_example">Approve form</string>
+    <string name="action_button_view.text_button_vertical_example">Action Button View Vertical Button</string>
+    <string name="action_button_view.text_button_horizontal_example">Action Button View Horizontal Button</string>
 
     <string name="info_action_card_view.title_example">Service Inspection Form Filled Finished</string>
     <string name="info_action_card_view.action_name_example">Undo</string>

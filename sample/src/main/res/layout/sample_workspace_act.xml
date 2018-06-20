@@ -33,12 +33,14 @@
 
     </data>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/gray_bg_light"
         android:padding="30dp">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,13 +50,6 @@
             android:layout_marginBottom="50dp"
             />
 
-        <br.com.stant.libraries.uilibrary.components.simplepercentagebarview.SimplePercentageBarView
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            app:selectedPercent="@{selectedPercent}"
-            app:executedPercent="@{executedPercent}"
-            />
-
         <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
             android:id="@+id/button_component"
             android:layout_width="match_parent"
@@ -62,6 +57,8 @@
             app:buttonShape="@{buttonShape}"
             app:buttonShadowShape="@{buttonShadowShape}"
             android:layout_height="57dp"/>
+
+
 
     </LinearLayout>
 </layout>

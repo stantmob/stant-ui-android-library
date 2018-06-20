@@ -28,8 +28,6 @@
         />
 ```
 
-
-
 3. Set action when on click button .
 ```java
     mBinding.actionButtonView.

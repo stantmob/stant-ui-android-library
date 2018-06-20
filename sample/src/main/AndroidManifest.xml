@@ -15,19 +15,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".samplecomponentslist.SampleComponentsListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".samplecomponentdetail.SampleComponentDetailActivity"
             android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".componentsactivities.actionbuttonview.ActionButtonViewActivity"
+            android:screenOrientation="portrait" />
+
         <activity android:name=".workspace.WorkspaceActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
     </application>
