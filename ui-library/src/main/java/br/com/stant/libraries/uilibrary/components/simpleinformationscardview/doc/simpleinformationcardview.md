@@ -6,8 +6,8 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationcardview/doc/simple_informations_card_first_state.png"  width="435">
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationcardview/doc/simple_informations_card_second_state.png"  width="440">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationscardview/doc/simple_informations_card_first_state.png"  width="435">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/simpleinformationscardview/doc/simple_informations_card_second_state.png"  width="440">
 </p>
 
 ### How to use

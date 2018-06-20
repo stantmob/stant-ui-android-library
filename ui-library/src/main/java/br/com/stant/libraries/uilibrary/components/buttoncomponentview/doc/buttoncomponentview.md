@@ -6,7 +6,7 @@
 ### Demo
 
 <p>
-  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/buttoncomponent/doc/button_component.jpeg"  width="350">
+  <img src="https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/buttoncomponentview/doc/button_component.jpeg"  width="460">
 </p>
 
 ### How to use
