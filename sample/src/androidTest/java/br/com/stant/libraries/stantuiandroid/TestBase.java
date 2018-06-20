@@ -1,7 +1,5 @@
 package br.com.stant.libraries.stantuiandroid;
 
-import android.content.Context;
-
 import org.junit.After;
 import org.junit.Before;
 
