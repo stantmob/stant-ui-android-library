@@ -64,11 +64,11 @@ public class ActionButtonViewActivityTest {
 
         @Test
         public void It_should_show_horizontal_text_correctly() {
-            String horizontalText = InstrumentationRegistry.getTargetContext().getString(R.string.action_button_view_text_button_horizontal_example)
+            String horizontalText = InstrumentationRegistry.getTargetContext().getString(R.string.action_button_view_text_button_horizontal_example);
             onView(allOf(
                     withId(R.id.action_button_view_horizontal_main_title_text_view),
                     isDescendantOfA(withId(R.id.action_button_view_horizontal_component))))
-                    .check(matches(withText(horizontalText));
+                    .check(matches(withText(horizontalText)));
         }
 
         @Test
@@ -76,7 +76,7 @@ public class ActionButtonViewActivityTest {
             onView(allOf(
                     withId(R.id.action_button_view_horizontal_icon_image_view),
                     isDescendantOfA(withId(R.id.action_button_view_horizontal_component))))
-                    .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE));
+                    .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
         }
 
     }
