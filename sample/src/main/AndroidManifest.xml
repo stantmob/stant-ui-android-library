@@ -29,6 +29,12 @@
         <activity android:name=".componentsactivities.actionbuttonview.ActionButtonViewActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".componentsactivities.basictoolbarview.BasicToolbarViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".componentsactivities.buttoncomponentview.ButtonComponentViewActivity"
+            android:screenOrientation="portrait" />
+
         <activity android:name=".workspace.WorkspaceActivity"
             android:screenOrientation="portrait"/>
 
