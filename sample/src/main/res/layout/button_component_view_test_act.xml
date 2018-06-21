@@ -25,7 +25,7 @@
         >
 
         <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
-            android:id="@+id/button_component"
+            android:id="@+id/button_component_view"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             app:buttonText="@{buttonText}"

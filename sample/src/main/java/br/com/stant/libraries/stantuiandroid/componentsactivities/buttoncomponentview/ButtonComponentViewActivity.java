@@ -3,8 +3,11 @@ package br.com.stant.libraries.stantuiandroid.componentsactivities.buttoncompone
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Toast;
 
 import br.com.stant.libraries.stantuiandroid.R;
+import br.com.stant.libraries.stantuiandroid.componentsactivities.actionbuttonview.ActionButtonViewActivity;
 import br.com.stant.libraries.stantuiandroid.databinding.ButtonComponentViewTestActBinding;
 import br.com.stant.libraries.uilibrary.databinding.ButtonComponentBinding;
 
@@ -21,21 +24,14 @@ public class ButtonComponentViewActivity extends AppCompatActivity {
         mButtonComponentViewTestActBinding.setButtonShape(getResources().getDrawable(R.drawable.shape_round_blue));
         mButtonComponentViewTestActBinding.setButtonText(getResources().getString(R.string.button_component_text));
 
-//        mButtonComponentBinding = DataBindingUtil.setContentView(this, R.layout.);
-//
-//
-//
-//        mButtonComponentBinding.buttonComponent.setAc(new OnClickActionButtonListener() {
-//            @Override
-//            public void onClick() {
-//                Toast.makeText(ButtonComponentViewActivity.this, "Horizontal Component", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        mButtonComponentBinding.actionButtonViewVerticalComponent.setOnClickActionButtonListener(new OnClickActionButtonListener() {
-//            @Override
-//            public void onClick() {
-//                Toast.makeText(ButtonComponentViewActivity.this, "Vertical Component", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        mButtonComponentViewTestActBinding.buttonComponentView.setActiveStatusOnButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ButtonComponentViewActivity.this, "Button", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
+
 }

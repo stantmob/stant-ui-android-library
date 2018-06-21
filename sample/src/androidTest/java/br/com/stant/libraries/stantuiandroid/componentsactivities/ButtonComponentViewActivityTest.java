@@ -7,6 +7,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.test.suitebuilder.annotation.LargeTest;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
@@ -27,6 +28,8 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static br.com.stant.libraries.stantuiandroid.testutils.ColorUtils.withBackgroundColor;
+import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.AllOf.allOf;
 import static org.hamcrest.core.Is.is;
@@ -48,6 +51,7 @@ public class ButtonComponentViewActivityTest {
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(ButtonComponentViewActivity.class);
             mActivity.launchActivity(intent);
+            waitEspresso(500);
         }
 
     }
@@ -60,50 +64,46 @@ public class ButtonComponentViewActivityTest {
 
             onView(allOf(
                     withId(R.id.button_component_textview),
-                    isDescendantOfA(withId(R.id.button_component))))
+                    isDescendantOfA(withId(R.id.button_component_view))))
                     .check(matches(withText(buttonText)));
         }
 
-//        @Test
-//        public void It_should_show_has_correct_shape() {
-//
-//        }
-//
-//        @Test
-//        public void It_should_show_has_correct_shadow() {
-//
-//        }
+        @Ignore
+        @Test
+        public void It_should_show_correct_shape() {
+            onView(allOf(
+                    withId(R.id.button_shape),
+                    isDescendantOfA(withId(R.id.button_component_view))))
+                    .check(matches(withBackgroundColor(R.drawable.shape_round_blue)));
+        }
+
+        @Ignore
+        @Test
+        public void It_should_show_correct_shadow() {
+            onView(allOf(
+                    withId(R.id.button_shadow_shape),
+                    isDescendantOfA(withId(R.id.button_component_view))))
+                    .check(matches(withBackgroundColor(R.drawable.shape_round_dark_blue)));
+        }
 
 
     }
 
-//    public static class Context_when_click_on_button_component_view extends Describe_Button_Component_View_Activity_content {
-//        @Before
-//        public void clickOnButton() {
-////            onView(withId(R.id.action_button_view_horizontal_component))
-////                    .perform(click());
-//        }
-//
-//        @Test
-//        public void It_should_show_toast_when_click() {
-////            String horizontalToastText = "Horizontal Component";
-////            onView(withText(horizontalToastText)).
-////                    inRoot(withDecorView(not(is(mActivity.getActivity().getWindow().
-////                            getDecorView())))).check(matches(isDisplayed()));
-//        }
-//    }
-//
-//    public static class Context_when_set_inactive_status_button_component_view extends Describe_Button_Component_View_Activity_content {
-//        @Before
-//        public void setInactive() {
-//
-//        }
-//
-//        @Test
-//        public void It_should_not_be_able_to_click() {
-//
-//        }
-//    }
+    public static class Context_when_click_on_button_component_view extends Describe_Button_Component_View_Activity_content {
+        @Before
+        public void clickOnButton() {
+            onView(withId(R.id.button_component_view))
+                    .perform(click());
+        }
+
+        @Test
+        public void It_should_show_toast_when_click() {
+            String buttonText = "Button";
+            onView(withText(buttonText)).
+                    inRoot(withDecorView(not(is(mActivity.getActivity().getWindow().
+                            getDecorView())))).check(matches(isDisplayed()));
+        }
+    }
 
 
 }

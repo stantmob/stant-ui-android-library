@@ -27,6 +27,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVi
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.findAndClick;
+import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.AllOf.allOf;
 import static org.hamcrest.core.Is.is;
@@ -48,6 +49,7 @@ public class ActionButtonViewActivityTest {
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(ActionButtonViewActivity.class);
             mActivity.launchActivity(intent);
+            waitEspresso(300);
         }
 
     }
