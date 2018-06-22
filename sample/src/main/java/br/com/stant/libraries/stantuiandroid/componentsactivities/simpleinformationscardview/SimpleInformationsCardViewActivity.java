@@ -20,6 +20,8 @@ public class SimpleInformationsCardViewActivity extends AppCompatActivity {
 
         mSimpleInformationsCardViewTestActBinding.simpleInformationCard.setFirstValue("First Value");
         mSimpleInformationsCardViewTestActBinding.simpleInformationCard.setSecondValue("Second Value");
+
+
     }
 
 }

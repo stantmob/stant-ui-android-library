@@ -33,13 +33,21 @@ public class BasicToolbarViewActivityTest {
 
     public abstract static class Describe_Basic_Toolbar_View_Activity_content extends TestBase {
 
+        static final String TITLE = InstrumentationRegistry.getTargetContext().getResources().getString(R.string.basic_toolbar_view_text_title);
+        static final String SUBTITLE = InstrumentationRegistry.getTargetContext().getResources().getString(R.string.basic_toolbar_view_text_subtitle);
+
         @Rule
         public ActivityTestRule<BasicToolbarViewActivity> mActivity = new ActivityTestRule<>(BasicToolbarViewActivity.class);
 
         @Before
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(BasicToolbarViewActivity.class);
+            setTitleAndSubtitle();
             mActivity.launchActivity(intent);
+        }
+
+        private void setTitleAndSubtitle() {
+            mActivity.getActivity().setTitleAndSubtittle(TITLE, SUBTITLE);
         }
 
     }
@@ -48,22 +56,18 @@ public class BasicToolbarViewActivityTest {
 
         @Test
         public void It_should_show_title_text_correctly() {
-            String titleText = InstrumentationRegistry.getTargetContext().getString(R.string.basic_toolbar_view_text_title);
-
             onView(allOf(
                     withId(R.id.basic_toolbar_title_text_view),
                     isDescendantOfA(withId(R.id.basic_toolbar))))
-                    .check(matches(withText(titleText)));
+                    .check(matches(withText(TITLE)));
         }
 
         @Test
         public void It_should_show_subtitle_text_correctly() {
-            String subtitleText = InstrumentationRegistry.getTargetContext().getString(R.string.basic_toolbar_view_text_subtitle);
-
             onView(allOf(
                     withId(R.id.basic_toolbar_subtitle_text_view),
                     isDescendantOfA(withId(R.id.basic_toolbar))))
-                    .check(matches(withText(subtitleText)));
+                    .check(matches(withText(SUBTITLE)));
         }
 
     }

@@ -18,8 +18,11 @@ public class BasicToolbarViewActivity extends AppCompatActivity {
 
         mBasicToolbarViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.basic_toolbar_view_test_act);
 
-        mBasicToolbarViewTestActBinding.setTitle(getString(R.string.basic_toolbar_view_text_title));
-        mBasicToolbarViewTestActBinding.setSubtitle(getString(R.string.basic_toolbar_view_text_subtitle));
-
     }
+
+    public void setTitleAndSubtittle(String title, String subtitle) {
+        mBasicToolbarViewTestActBinding.basicToolbar.setTitle(title);
+        mBasicToolbarViewTestActBinding.basicToolbar.setSubtitle(subtitle);
+    }
+
 }

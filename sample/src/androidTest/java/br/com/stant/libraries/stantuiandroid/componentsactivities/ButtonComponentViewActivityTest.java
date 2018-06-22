@@ -1,6 +1,7 @@
 package br.com.stant.libraries.stantuiandroid.componentsactivities;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
@@ -43,6 +44,9 @@ import static org.hamcrest.core.Is.is;
 public class ButtonComponentViewActivityTest {
 
     public abstract static class Describe_Button_Component_View_Activity_content extends TestBase {
+        static final Drawable SHADOW_SHAPE = InstrumentationRegistry.getTargetContext().getDrawable(R.drawable.shape_round_dark_blue);
+        static final Drawable SHAPE = InstrumentationRegistry.getTargetContext().getDrawable(R.drawable.shape_round_blue);
+        static final String TEXT = InstrumentationRegistry.getTargetContext().getString(R.string.button_component_text);
 
         @Rule
         public ActivityTestRule<ButtonComponentViewActivity> mActivity = new ActivityTestRule<>(ButtonComponentViewActivity.class);
@@ -52,6 +56,12 @@ public class ButtonComponentViewActivityTest {
             Intent intent = IntentFactory.createIntentWithoutBundle(ButtonComponentViewActivity.class);
             mActivity.launchActivity(intent);
             waitEspresso(500);
+
+            setButtonDesign();
+        }
+
+        private void setButtonDesign() {
+            mActivity.getActivity().setButtonDesign(SHADOW_SHAPE, SHAPE, TEXT);
         }
 
     }
@@ -60,32 +70,11 @@ public class ButtonComponentViewActivityTest {
 
         @Test
         public void It_should_show_text_correctly() {
-            String buttonText = InstrumentationRegistry.getTargetContext().getString(R.string.button_component_text);
-
             onView(allOf(
                     withId(R.id.button_component_textview),
                     isDescendantOfA(withId(R.id.button_component_view))))
-                    .check(matches(withText(buttonText)));
+                    .check(matches(withText(TEXT)));
         }
-
-        @Ignore
-        @Test
-        public void It_should_show_correct_shape() {
-            onView(allOf(
-                    withId(R.id.button_shape),
-                    isDescendantOfA(withId(R.id.button_component_view))))
-                    .check(matches(withBackgroundColor(R.drawable.shape_round_blue)));
-        }
-
-        @Ignore
-        @Test
-        public void It_should_show_correct_shadow() {
-            onView(allOf(
-                    withId(R.id.button_shadow_shape),
-                    isDescendantOfA(withId(R.id.button_component_view))))
-                    .check(matches(withBackgroundColor(R.drawable.shape_round_dark_blue)));
-        }
-
 
     }
 

@@ -1,6 +1,7 @@
 package br.com.stant.libraries.stantuiandroid.componentsactivities.buttoncomponentview;
 
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,9 +21,6 @@ public class ButtonComponentViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mButtonComponentViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.button_component_view_test_act);
-        mButtonComponentViewTestActBinding.setButtonShadowShape(getResources().getDrawable(R.drawable.shape_round_dark_blue));
-        mButtonComponentViewTestActBinding.setButtonShape(getResources().getDrawable(R.drawable.shape_round_blue));
-        mButtonComponentViewTestActBinding.setButtonText(getResources().getString(R.string.button_component_text));
 
         mButtonComponentViewTestActBinding.buttonComponentView.setActiveStatusOnButton(new View.OnClickListener() {
             @Override
@@ -32,6 +30,12 @@ public class ButtonComponentViewActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void setButtonDesign(Drawable shadowShape, Drawable shape, String text) {
+        mButtonComponentViewTestActBinding.buttonComponentView.setButtonShadowShape(shadowShape);
+        mButtonComponentViewTestActBinding.buttonComponentView.setButtonShape(shape);
+        mButtonComponentViewTestActBinding.buttonComponentView.setButtonText(text);
     }
 
 }

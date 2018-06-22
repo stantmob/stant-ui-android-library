@@ -45,9 +45,16 @@ public class ViewingUserDialogActivityTest {
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(ViewingUserDialogActivity.class);
             mActivity.launchActivity(intent);
+            createUsers();
         }
 
+        private void createUsers(){
+            ViewingUserDto user1 = new ViewingUserDto("User 1", null, "Role 1");
+            ViewingUserDto user2 = new ViewingUserDto("User 2", null, "Role 2");
+        }
     }
+
+
 
     public abstract static class Context_when_click_on_horizontal_action_button_view extends Describe_Viewing_User_Activity_content {
         @Before

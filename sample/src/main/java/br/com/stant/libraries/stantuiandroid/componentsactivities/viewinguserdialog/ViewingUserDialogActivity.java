@@ -24,12 +24,9 @@ public class ViewingUserDialogActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mViewingUsersDialog = new ViewingUsersDialog(this);
 
         mActionButtonViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.action_button_view_test_act);
-
-        setUsers();
-        mViewingUsersDialog = new ViewingUsersDialog(this);
-        mViewingUsersDialog.setViewingUsers(users);
 
         mActionButtonViewTestActBinding.actionButtonViewHorizontalComponent.setOnClickActionButtonListener(new OnClickActionButtonListener() {
             @Override
@@ -40,10 +37,11 @@ public class ViewingUserDialogActivity extends AppCompatActivity {
 
     }
 
-    private void setUsers() {
+    private void setUsers(ViewingUserDto user1, ViewingUserDto user2) {
         users = new ArrayList<>();
-        users.add(new ViewingUserDto("User 1", null, "Role 1"));
-        users.add(new ViewingUserDto("User 2", null, "Role 2"));
-        users.add(new ViewingUserDto("User 3", null, "Role 3"));
+        users.add(user1);
+        users.add(user2);
+
+        mViewingUsersDialog.setViewingUsers(users);
     }
 }

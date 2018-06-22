@@ -41,7 +41,6 @@ public class SimpleInformationsCardViewActivityTest {
 
     public abstract static class Describe_Simple_Informations_Card_View_Activity_content extends TestBase {
 
-
         @Rule
         public ActivityTestRule<SimpleInformationsCardViewActivity> mActivity = new ActivityTestRule<>(SimpleInformationsCardViewActivity.class);
 
@@ -56,7 +55,6 @@ public class SimpleInformationsCardViewActivityTest {
     public static class Context_when_check_simple_informations_card_view extends Describe_Simple_Informations_Card_View_Activity_content {
 
         //TODO refactor
-        @Ignore
         @Test
         public void It_should_show_first_title_text_correctly() {
             String horizontalText = InstrumentationRegistry.getTargetContext().getString(R.string.action_button_view_text_button_horizontal_example);

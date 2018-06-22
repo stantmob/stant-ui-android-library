@@ -41,7 +41,6 @@ public class ActionButtonViewActivityTest {
 
     public abstract static class Describe_Action_Button_View_Activity_content extends TestBase {
 
-
         @Rule
         public ActivityTestRule<ActionButtonViewActivity> mActivity = new ActivityTestRule<>(ActionButtonViewActivity.class);
 

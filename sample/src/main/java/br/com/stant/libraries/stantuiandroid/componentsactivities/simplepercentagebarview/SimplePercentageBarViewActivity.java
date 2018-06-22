@@ -17,8 +17,11 @@ public class SimplePercentageBarViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mSimplePercentageBarViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.simple_percentage_bar_view_test_act);
-        mSimplePercentageBarViewTestActBinding.simplePercentageBar.setExecutedPercent(10);
-        mSimplePercentageBarViewTestActBinding.simplePercentageBar.setSelectedPercent(30);
+
     }
 
+    public void setPercentage(int executed, int selected){
+        mSimplePercentageBarViewTestActBinding.simplePercentageBar.setExecutedPercent(executed);
+        mSimplePercentageBarViewTestActBinding.simplePercentageBar.setSelectedPercent(selected);
+    }
 }
