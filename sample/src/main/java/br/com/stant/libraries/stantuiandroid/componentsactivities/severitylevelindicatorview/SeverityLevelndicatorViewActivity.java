@@ -18,8 +18,10 @@ public class SeverityLevelndicatorViewActivity extends AppCompatActivity {
 
         mSeverityLevelIndicatorViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.severity_level_indicator_view_test_act);
 
-        mSeverityLevelIndicatorViewTestActBinding.severityLevelIndicatorView.setSeverityLevel(SeverityLevelEnum.LIGHT);
+    }
 
+    public void setSeverityLevel(SeverityLevelEnum level) {
+        mSeverityLevelIndicatorViewTestActBinding.severityLevelIndicatorView.setSeverityLevel(level);
     }
 
 }

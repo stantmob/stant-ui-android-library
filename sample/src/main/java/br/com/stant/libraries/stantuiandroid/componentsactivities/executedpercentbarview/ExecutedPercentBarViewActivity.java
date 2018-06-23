@@ -16,7 +16,11 @@ public class ExecutedPercentBarViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mExecutedPercentBarViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.executed_percent_bar_view_test_act);
-        mExecutedPercentBarViewTestActBinding.executedPercentBar.setPercentValue(60);
+
+    }
+
+    public void setPercentage(int percentage) {
+        mExecutedPercentBarViewTestActBinding.executedPercentBar.setPercentValue(percentage);
 
     }
 }

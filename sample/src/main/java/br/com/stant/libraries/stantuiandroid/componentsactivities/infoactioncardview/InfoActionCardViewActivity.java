@@ -19,9 +19,6 @@ public class InfoActionCardViewActivity extends AppCompatActivity {
 
         mInfoActionCardViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.info_action_card_view_test_act);
 
-        mInfoActionCardViewTestActBinding.infoActionCard.setInfoText(getResources().getString(R.string.info_action_card_information_text));
-        mInfoActionCardViewTestActBinding.infoActionCard.setActionText(getResources().getString(R.string.info_action_card_action_text));
-
         mInfoActionCardViewTestActBinding.infoActionCard.setOnClickActionCardListener(new InfoActionCardViewContract.OnClickActionCardListener() {
             @Override
             public void onClick() {
@@ -29,6 +26,11 @@ public class InfoActionCardViewActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void setText(String infoText, String actionText) {
+        mInfoActionCardViewTestActBinding.infoActionCard.setInfoText(infoText);
+        mInfoActionCardViewTestActBinding.infoActionCard.setActionText(actionText);
     }
 
 }

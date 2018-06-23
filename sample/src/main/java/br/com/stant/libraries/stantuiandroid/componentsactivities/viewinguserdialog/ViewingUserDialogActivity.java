@@ -37,7 +37,7 @@ public class ViewingUserDialogActivity extends AppCompatActivity {
 
     }
 
-    private void setUsers(ViewingUserDto user1, ViewingUserDto user2) {
+    public void setUsers(ViewingUserDto user1, ViewingUserDto user2) {
         users = new ArrayList<>();
         users.add(user1);
         users.add(user2);

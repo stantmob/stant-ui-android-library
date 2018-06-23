@@ -39,6 +39,8 @@ import static org.hamcrest.core.AllOf.allOf;
 public class InfoActionCardViewActivityTest {
 
     public abstract static class Describe_Info_Action_Card_View_Activity_content extends TestBase {
+        static final String INFORMATION_TEXT = InstrumentationRegistry.getTargetContext().getResources().getString(R.string.info_action_card_information_text);
+        static final String ACTION_TEXT = InstrumentationRegistry.getTargetContext().getResources().getString(R.string.info_action_card_action_text);
 
         @Rule
         public ActivityTestRule<InfoActionCardViewActivity> mActivity = new ActivityTestRule<>(InfoActionCardViewActivity.class);
@@ -47,6 +49,8 @@ public class InfoActionCardViewActivityTest {
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(InfoActionCardViewActivity.class);
             mActivity.launchActivity(intent);
+            mActivity.getActivity().setText(INFORMATION_TEXT, ACTION_TEXT);
+            waitEspresso(1000);
         }
 
     }

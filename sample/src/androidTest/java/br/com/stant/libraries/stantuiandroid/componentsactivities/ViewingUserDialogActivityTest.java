@@ -1,6 +1,8 @@
 package br.com.stant.libraries.stantuiandroid.componentsactivities;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -51,6 +53,7 @@ public class ViewingUserDialogActivityTest {
         private void createUsers(){
             ViewingUserDto user1 = new ViewingUserDto("User 1", null, "Role 1");
             ViewingUserDto user2 = new ViewingUserDto("User 2", null, "Role 2");
+            mActivity.getActivity().setUsers(user1, user2);
         }
     }
 
@@ -94,18 +97,6 @@ public class ViewingUserDialogActivityTest {
                     .check(matches(withText("Role 2")));
         }
 
-        @Test
-        public void It_should_show_correct_user_information_on_third_user() {
-            onView(Matchers.allOf(withId(R.id.viewing_users_dialog_item_user_name_text_view),
-                    isDescendantOfA(withRecyclerView(R.id.viewing_users_dialog_recycler).
-                            atPosition(2))))
-                    .check(matches(withText("User 3")));
-
-            onView(Matchers.allOf(withId(R.id.viewing_users_dialog_item_user_function_text_view),
-                    isDescendantOfA(withRecyclerView(R.id.viewing_users_dialog_recycler).
-                            atPosition(2))))
-                    .check(matches(withText("Role 3")));
-        }
 
     }
 

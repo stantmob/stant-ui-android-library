@@ -21,6 +21,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
 import static org.hamcrest.core.AllOf.allOf;
 
 /**
@@ -42,20 +43,21 @@ public class BasicToolbarViewActivityTest {
         @Before
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(BasicToolbarViewActivity.class);
-            setTitleAndSubtitle();
             mActivity.launchActivity(intent);
-        }
-
-        private void setTitleAndSubtitle() {
-            mActivity.getActivity().setTitleAndSubtittle(TITLE, SUBTITLE);
         }
 
     }
 
     public static class Context_when_check_basic_toolbar_view extends Describe_Basic_Toolbar_View_Activity_content {
 
+        @Before
+        public void setTitleAndSubtitle() {
+            mActivity.getActivity().setTitleAndSubtittle(TITLE, SUBTITLE);
+        }
+
         @Test
         public void It_should_show_title_text_correctly() {
+            waitEspresso(500);
             onView(allOf(
                     withId(R.id.basic_toolbar_title_text_view),
                     isDescendantOfA(withId(R.id.basic_toolbar))))
@@ -64,6 +66,7 @@ public class BasicToolbarViewActivityTest {
 
         @Test
         public void It_should_show_subtitle_text_correctly() {
+            waitEspresso(500);
             onView(allOf(
                     withId(R.id.basic_toolbar_subtitle_text_view),
                     isDescendantOfA(withId(R.id.basic_toolbar))))

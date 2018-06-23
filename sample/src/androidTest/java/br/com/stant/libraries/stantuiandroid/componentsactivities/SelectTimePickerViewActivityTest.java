@@ -1,7 +1,7 @@
 package br.com.stant.libraries.stantuiandroid.componentsactivities;
 
 import android.content.Intent;
-import android.support.test.espresso.contrib.PickerActions;
+
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -93,7 +93,7 @@ public class SelectTimePickerViewActivityTest {
 
 
     public static class Context_when_choose_a_diferent_time extends Context_when_click_on_time_text {
-        static final String TIME_CHANGED = "04:56";
+        static final String TIME_CHANGED = "03:56";
         @Test
         public void It_should_change_time_text() {
             onView(allOf(

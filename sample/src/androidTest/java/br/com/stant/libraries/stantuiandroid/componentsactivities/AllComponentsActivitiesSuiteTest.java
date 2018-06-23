@@ -19,7 +19,6 @@ import org.junit.runners.Suite;
         SelectDatePickerViewActivityTest.class,
         SelectTimePickerViewActivityTest.class,
         SeverityLevelIndicatorViewActivityTest.class,
-        SimpleInformationsCardViewActivityTest.class,
         SimplePercentageBarViewActivityTest.class,
         SimpleRequestInfoSnackbarActivityTest.class,
         ViewingUserDialogActivityTest.class

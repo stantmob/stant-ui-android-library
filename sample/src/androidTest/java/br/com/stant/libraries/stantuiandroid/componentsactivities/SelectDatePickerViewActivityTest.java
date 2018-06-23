@@ -2,6 +2,7 @@ package br.com.stant.libraries.stantuiandroid.componentsactivities;
 
 import android.content.Intent;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.contrib.PickerActions;
 import android.support.test.rule.ActivityTestRule;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -79,7 +80,7 @@ public class SelectDatePickerViewActivityTest {
             onView(withId(R.id.inspection_data_card_reprove_general_add_item_inspection_reproved_deadline_calendar_image_view))
                     .perform(click());
 
-            onView(withClassName(Matchers.equalTo(DatePicker.class.getName()))).perform(PickerActions.setDate(year, month, day));
+            onView(withClassName(Matchers.equalTo(DatePicker.class.getName()))).perform(MaterialPickerActions.setDate(year, month, day));
             onView(withId(android.R.id.button1)).perform(click());
         }
 

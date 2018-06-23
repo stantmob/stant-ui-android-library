@@ -24,6 +24,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withSpinnerText;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.core.AllOf.allOf;
 
@@ -36,6 +37,7 @@ import static org.hamcrest.core.AllOf.allOf;
 public class ExpandableTextViewActivityTest {
 
     public abstract static class Describe_Expandable_Text_View_Activity_content extends TestBase {
+        static final String EXPANDABLE_TEXT = InstrumentationRegistry.getTargetContext().getResources().getString(R.string.expandable_text);
 
         @Rule
         public ActivityTestRule<ExpandableTextViewActivity> mActivity = new ActivityTestRule<>(ExpandableTextViewActivity.class);
@@ -43,7 +45,13 @@ public class ExpandableTextViewActivityTest {
         @Before
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(ExpandableTextViewActivity.class);
+            setText();
             mActivity.launchActivity(intent);
+        }
+
+        public void setText() {
+            mActivity.getActivity().setExpandableText(EXPANDABLE_TEXT);
+            waitEspresso(500);
         }
 
     }
@@ -66,16 +74,15 @@ public class ExpandableTextViewActivityTest {
         public void clickOnTextView() {
             onView(withId(R.id.expandable_text_view_down_arrow_image_view))
                     .perform(click());
+            waitEspresso(500);
         }
 
         @Test
         public void It_should_show_all_text() {
-            String buttonText = InstrumentationRegistry.getTargetContext().getString(R.string.expandable_text);
-
             onView(allOf(
                     withId(R.id.expandable_text_view_hidden_text_view),
                     isDescendantOfA(withId(R.id.expandable_text_view))))
-                    .check(matches(withText(buttonText)));
+                    .check(matches(withText(EXPANDABLE_TEXT)));
         }
     }
 

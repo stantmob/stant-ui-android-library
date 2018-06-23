@@ -57,7 +57,6 @@ public class SimplePercentageBarViewActivityTest {
         @Ignore
         @Test
         public void It_should_executed_percent_correctly() {
-            InstrumentationRegistry.getTargetContext().getResources().getLayout(R.layout.simple_percentage_bar_view);
             onView(allOf(
                     withId(R.id.simple_percentage_bar_view_executed_linear_layout),
                     isDescendantOfA(withId(R.id.simple_percentage_bar))))

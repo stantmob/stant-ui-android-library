@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
-import br.com.stant.libraries.stantuiandroid.databinding.SimpleInformationsCardViewTestActBinding;
 import br.com.stant.libraries.stantuiandroid.databinding.SimplePercentageBarViewTestActBinding;
 
 public class SimplePercentageBarViewActivity extends AppCompatActivity {

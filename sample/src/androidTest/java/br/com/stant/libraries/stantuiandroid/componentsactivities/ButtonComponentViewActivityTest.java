@@ -57,21 +57,22 @@ public class ButtonComponentViewActivityTest {
             mActivity.launchActivity(intent);
             waitEspresso(500);
 
-            setButtonDesign();
-        }
-
-        private void setButtonDesign() {
-            mActivity.getActivity().setButtonDesign(SHADOW_SHAPE, SHAPE, TEXT);
         }
 
     }
 
     public static class Context_when_check_button_component_view extends Describe_Button_Component_View_Activity_content {
 
+        @Before
+        public void setButtonDesign() {
+            mActivity.getActivity().setButtonDesign(SHADOW_SHAPE, SHAPE, TEXT);
+        }
+
+        //TODO: Later, implement this test for drawable as well.
         @Test
         public void It_should_show_text_correctly() {
-            onView(allOf(
-                    withId(R.id.button_component_textview),
+            waitEspresso(500);
+            onView(allOf(withId(R.id.button_component_textview),
                     isDescendantOfA(withId(R.id.button_component_view))))
                     .check(matches(withText(TEXT)));
         }

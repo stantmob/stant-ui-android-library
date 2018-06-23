@@ -17,8 +17,10 @@ public class ExpandableTextViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mExpandableTextViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.expandable_text_view_test_act);
-        mExpandableTextViewTestActBinding.setExpandableText(getResources().getString(R.string.expandable_text));
+    }
 
+    public void setExpandableText(String text) {
+        mExpandableTextViewTestActBinding.setExpandableText(text);
 
     }
 }
