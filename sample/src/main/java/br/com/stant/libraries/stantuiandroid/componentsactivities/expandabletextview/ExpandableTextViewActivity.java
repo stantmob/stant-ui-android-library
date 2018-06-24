@@ -11,16 +11,19 @@ import br.com.stant.libraries.stantuiandroid.databinding.ExpandableTextViewTestA
 public class ExpandableTextViewActivity extends AppCompatActivity {
 
     private ExpandableTextViewTestActBinding mExpandableTextViewTestActBinding;
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String EXPANDABLE_TEXT = this.getResources().getString(R.string.expandable_text);
 
         mExpandableTextViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.expandable_text_view_test_act);
+        setExpandableText(EXPANDABLE_TEXT);
     }
 
-    public void setExpandableText(String text) {
-        mExpandableTextViewTestActBinding.setExpandableText(text);
+    private void setExpandableText(String text) {
+        mExpandableTextViewTestActBinding.expandableTextView.setExpandableText(text);
 
     }
 }

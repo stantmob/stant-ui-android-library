@@ -45,18 +45,15 @@ public class ExpandableTextViewActivityTest {
         @Before
         public void before() {
             Intent intent = IntentFactory.createIntentWithoutBundle(ExpandableTextViewActivity.class);
-            setText();
+
             mActivity.launchActivity(intent);
         }
 
-        public void setText() {
-            mActivity.getActivity().setExpandableText(EXPANDABLE_TEXT);
-            waitEspresso(500);
-        }
 
     }
 
     public static class Context_when_check_expandable_text_view extends Describe_Expandable_Text_View_Activity_content {
+
         @Test
         public void It_should_show_hidden_text_correctly() {
             String buttonText = "In lobortis";

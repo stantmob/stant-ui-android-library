@@ -93,13 +93,13 @@ public class SelectTimePickerViewActivityTest {
 
 
     public static class Context_when_choose_a_diferent_time extends Context_when_click_on_time_text {
-        static final String TIME_CHANGED = "03:56";
+
         @Test
         public void It_should_change_time_text() {
             onView(allOf(
                     withId(R.id.select_time_picker_view_time_value_text_view),
                     isDescendantOfA(withId(R.id.select_time_picker))))
-                    .check(matches(withText(TIME_CHANGED)));
+                    .check(matches(withText(not(TIME))));
         }
     }
 

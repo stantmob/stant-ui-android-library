@@ -3,9 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <variable
-            name="expandableText"
-            type="String"/>
+
     </data>
 
     <LinearLayout
@@ -19,9 +17,7 @@
         <br.com.stant.libraries.uilibrary.components.expandabletextview.ExpandableTextView
             android:id="@+id/expandable_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:expandableText="@{expandableText}"
-            />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </layout>

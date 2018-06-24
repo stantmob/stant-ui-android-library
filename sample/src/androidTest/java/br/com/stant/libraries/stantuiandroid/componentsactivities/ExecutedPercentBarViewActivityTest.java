@@ -35,13 +35,13 @@ public class ExecutedPercentBarViewActivityTest {
 
     public abstract static class Describe_Executed_Percent_Bar_View_Activity_content extends TestBase {
         static final String PERCENTAGE = "60%";
-        static final int PERCENTAGE_VALUE = 60;
 
         @Rule
         public ActivityTestRule<ExecutedPercentBarViewActivity> mActivity = new ActivityTestRule<>(ExecutedPercentBarViewActivity.class);
 
         @Before
         public void before() {
+
             Intent intent = IntentFactory.createIntentWithoutBundle(ExecutedPercentBarViewActivity.class);
             mActivity.launchActivity(intent);
             waitEspresso(500);
@@ -50,13 +50,6 @@ public class ExecutedPercentBarViewActivityTest {
     }
 
     public static class Context_when_check_executed_percent_bar_view extends Describe_Executed_Percent_Bar_View_Activity_content {
-
-        @Before
-        public void setPercentage() {
-            waitEspresso(500);
-            mActivity.getActivity().setPercentage(PERCENTAGE_VALUE);
-
-        }
 
         @Test
         public void It_should_show_percentage_correctly() {
