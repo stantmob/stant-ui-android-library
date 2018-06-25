@@ -1,4 +1,4 @@
-package br.com.stant.libraries.stantuiandroid.componentsactivities.actionbuttonview;
+package br.com.stant.libraries.stantuiandroid.componentsactivities.simplerequestinfosnackbar;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -8,8 +8,10 @@ import android.widget.Toast;
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.ActionButtonViewTestActBinding;
 import br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonViewContract.OnClickActionButtonListener;
+import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbar;
+import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbarTypeEnum;
 
-public class ActionButtonViewActivity extends AppCompatActivity {
+public class SimpleRequestInfoSnackbarActivity extends AppCompatActivity {
 
     private ActionButtonViewTestActBinding mActionButtonViewTestActBinding;
     
@@ -18,16 +20,22 @@ public class ActionButtonViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mActionButtonViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.action_button_view_test_act);
+
         mActionButtonViewTestActBinding.actionButtonViewHorizontalComponent.setOnClickActionButtonListener(new OnClickActionButtonListener() {
             @Override
             public void onClick() {
-                Toast.makeText(ActionButtonViewActivity.this, "Horizontal Component", Toast.LENGTH_SHORT).show();
+                SimpleRequestInfoSnackbar snackbar = new SimpleRequestInfoSnackbar(SimpleRequestInfoSnackbarActivity.this,
+                        mActionButtonViewTestActBinding.getRoot(), "Success message", SimpleRequestInfoSnackbarTypeEnum.SUCCESS);
+                snackbar.showSnackbar();
             }
         });
+
         mActionButtonViewTestActBinding.actionButtonViewVerticalComponent.setOnClickActionButtonListener(new OnClickActionButtonListener() {
             @Override
             public void onClick() {
-                Toast.makeText(ActionButtonViewActivity.this, "Vertical Component", Toast.LENGTH_SHORT).show();
+                SimpleRequestInfoSnackbar snackbar = new SimpleRequestInfoSnackbar(SimpleRequestInfoSnackbarActivity.this,
+                        mActionButtonViewTestActBinding.getRoot(), "Fail message", SimpleRequestInfoSnackbarTypeEnum.FAILED);
+                snackbar.showSnackbar();
             }
         });
     }

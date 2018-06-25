@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="buttonText"
+            type="String"/>
+
+        <variable
+            name="buttonShape"
+            type="android.graphics.drawable.Drawable"/>
+
+        <variable
+            name="buttonShadowShape"
+            type="android.graphics.drawable.Drawable"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray_bg_light"
+        android:padding="30dp"
+        >
+
+        <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
+            android:id="@+id/button_component_view"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            app:buttonText="@{buttonText}"
+            app:buttonShape="@{buttonShape}"
+            app:buttonShadowShape="@{buttonShadowShape}"
+            />
+
+
+    </LinearLayout>
+</layout>
