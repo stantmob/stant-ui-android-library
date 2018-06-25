@@ -71,6 +71,9 @@
         <activity android:name=".componentsactivities.severitylevelindicatorlateralsideview.SeverityLevelndicatorLateralSideViewActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".componentsactivities.headerentitycardview.HeaderEntityCardViewActivity"
+            android:screenOrientation="portrait" />
+
         <activity android:name=".workspace.WorkspaceActivity"
             android:screenOrientation="portrait"/>
 

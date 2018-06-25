@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.headerentitycardview.HeaderEntityCardView" />
+
+        <variable
+            name="startAt"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="endAt"
+            type="String" />
+
+        <variable
+            name="quantity1"
+            type="String" />
+
+        <variable
+            name="quantity2"
+            type="String" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/gray_text_shape"
+        app:cardCornerRadius="5dp"
+        app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:id="@+id/header_entity_card_view_container_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="20dp">
+
+                            <FrameLayout
+                                android:layout_width="90dp"
+                                android:layout_height="25dp"
+                                android:background="@drawable/shape_round_white">
+
+                                <TextView
+                                    android:id="@+id/header_entity_card_view_start_at_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@{startAt}"
+                                    android:textColor="@color/gray_text_shape"
+                                    android:textStyle="bold"
+                                    tools:text="12/05/2018" />
+
+                            </FrameLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_right"/>
+
+                            <FrameLayout
+                                android:layout_width="90dp"
+                                android:layout_height="25dp"
+                                android:background="@drawable/shape_round_white">
+
+                                <TextView
+                                    android:id="@+id/header_entity_card_view_end_at_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@{endAt}"
+                                    android:textColor="@color/gray_text_shape"
+                                    android:textStyle="bold"
+                                    tools:text="28/09/2018" />
+
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_right"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/header_entity_card_view_type_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@{title}"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:text="Entity Title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/header_entity_card_view.occurrences"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:id="@+id/header_entity_first_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{quantity1}"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:layout_marginTop="2dp"
+                            tools:text="0"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/header_entity_card_view.late"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:id="@+id/header_entity_second_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{quantity2}"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:layout_marginTop="2dp"
+                            tools:text="0"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>
