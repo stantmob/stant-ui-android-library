@@ -57,6 +57,7 @@ public class SampleComponentsListActivity extends AppCompatActivity implements S
         return new ArrayList<UiComponent>() {{
             add(new UiComponent("Action Button View", "https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/actionbuttonview/doc/actionbuttonview.md"));
             add(new UiComponent("Expandable Text View", "https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/expandabletextview/doc/expandabletextview.md"));
+            add(new UiComponent("Button Component View", "https://raw.githubusercontent.com/stantmob/stant-ui-android-library/master/ui-library/src/main/java/br/com/stant/libraries/uilibrary/components/buttoncomponentview/doc/buttoncomponentview.md"));
         }};
     }
 

@@ -54,7 +54,6 @@ public class SimpleInformationsCardView extends CardView implements SimpleInform
         setAttributesIntoView();
     }
 
-    @Override
     public void getAttributesFromView(AttributeSet attrs){
         mFirstTitle = ViewUtils.getStringFromTypedArray(getContext(), R.styleable.SimpleInformationsCardView,
                 attrs, R.styleable.SimpleInformationsCardView_firstTitle);
@@ -64,7 +63,6 @@ public class SimpleInformationsCardView extends CardView implements SimpleInform
                 attrs, R.styleable.SimpleInformationsCardView_informationsColor);
     }
 
-    @Override
     public void setAttributesIntoView() {
         mSimpleInformationsCardViewBinding.setHandler(this);
         mSimpleInformationsCardViewBinding.setInformationsColor(mInformationsColor);

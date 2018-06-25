@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
@@ -14,12 +15,32 @@
             name="executedPercent"
             type="Float" />
 
+        <variable
+            name="test"
+            type="Float" />
+
+        <variable
+            name="buttonText"
+            type="String" />
+
+        <variable
+            name="buttonShape"
+            type="android.graphics.drawable.Drawable"/>
+
+        <variable
+            name="buttonShadowShape"
+            type="android.graphics.drawable.Drawable"/>
+
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray_bg_light"
         android:padding="30dp">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,12 +50,15 @@
             android:layout_marginBottom="50dp"
             />
 
-        <br.com.stant.libraries.uilibrary.components.simplepercentagebarview.SimplePercentageBarView
+        <br.com.stant.libraries.uilibrary.components.buttoncomponentview.ButtonComponentView
+            android:id="@+id/button_component"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            app:selectedPercent="@{selectedPercent}"
-            app:executedPercent="@{executedPercent}"
-            />
+            app:buttonText="@{buttonText}"
+            app:buttonShape="@{buttonShape}"
+            app:buttonShadowShape="@{buttonShadowShape}"
+            android:layout_height="57dp"/>
+
+
 
     </LinearLayout>
 </layout>

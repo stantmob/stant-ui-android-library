@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "br.com.stant.libraries.stant_ui_library"
         minSdkVersion 17
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,6 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -47,6 +49,7 @@ dependencies {
     testCompile "org.powermock:powermock-classloading-xstream:1.6.5"
 
     testCompile 'org.powermock:powermock-api-mockito:1.6.5'
+
     // Espresso UI Testing
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -61,9 +64,10 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
 
     // Resolve conflicts between main and test APK:
-    androidTestCompile "com.android.support:support-annotations:25.3.1"
+    androidTestCompile "com.android.support:support-annotations:27.1.1"
     androidTestCompile 'com.android.support:appcompat-v7:25.3.1'
-    androidTestCompile 'com.android.support:design:25.3.1'
-    androidTestCompile 'com.android.support:support-v4:25.3.1'
-    androidTestCompile 'com.android.support:recyclerview-v7:25.3.1'
+    androidTestCompile 'com.android.support:design:25.4.0'
+    androidTestCompile 'com.android.support:support-v4:25.4.0'
+    androidTestCompile 'com.android.support:recyclerview-v7:25.4.0'
+
 }

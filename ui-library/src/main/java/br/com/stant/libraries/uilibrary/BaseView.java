@@ -7,6 +7,5 @@ import android.util.AttributeSet;
  */
 
 public interface BaseView {
-    void getAttributesFromView(AttributeSet attrs);
-    void setAttributesIntoView();
+
 }

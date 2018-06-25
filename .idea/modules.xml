@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/stant-ui-android-library.iml" filepath="$PROJECT_DIR$/stant-ui-android-library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/stant-ui-library.iml" filepath="$PROJECT_DIR$/stant-ui-library.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui-library/ui-library.iml" filepath="$PROJECT_DIR$/ui-library/ui-library.iml" />
     </modules>
   </component>

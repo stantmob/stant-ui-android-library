@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="buttonText"
+            type="String"/>
+
+        <variable
+            name="buttonShape"
+            type="android.graphics.drawable.Drawable"/>
+
+        <variable
+            name="buttonShadowShape"
+            type="android.graphics.drawable.Drawable"/>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/button_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/button_shadow_shape"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:background="@{buttonShadowShape}"
+            tools:background="@drawable/shape_round_dark_blue"
+            >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_shape"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@{buttonShape}"
+            tools:background="@drawable/shape_round_blue"
+            >
+
+            <TextView
+                android:id="@+id/button_component_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="@{buttonText}"
+                tools:text="Button Text" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</layout>

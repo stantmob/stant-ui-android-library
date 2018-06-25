@@ -1,6 +1,6 @@
 # Stant UI Android Library
 
-## Simple Percentage Bar View
+## Simple Percentage Bar 
 > A custom view show executed quantity and dinamical selected quantity bars.
 
 ### Demo
