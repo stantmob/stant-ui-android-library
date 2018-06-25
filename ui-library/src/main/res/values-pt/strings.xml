@@ -22,4 +22,9 @@
     <string name="information_card_view.deadline">Prazo</string>
     <string name="information_card_view.actions">Ações</string>
     <string name="information_card_view.creator">Criada por: </string>
+
+    <string name="basic_toolbar_view_text_title">Título</string>
+    <string name="basic_toolbar_view_text_subtitle">Subtítulo</string>
+
+    <string name="button_component_text">Texto botão</string>
 </resources>
