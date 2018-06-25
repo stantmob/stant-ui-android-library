@@ -1,10 +1,10 @@
-package br.com.stant.libraries.stantuiandroid.componentsactivities.actionbuttonview;
+package br.com.stant.libraries.stantuiandroid.componentactivities.actionbuttonview;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import br.com.stant.libraries.stantuiandroid.R;
+
 import br.com.stant.libraries.stantuiandroid.databinding.ActionButtonViewTestActBinding;
 import br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonViewContract.OnClickActionButtonListener;
 

@@ -18,4 +18,8 @@
     <string name="select_date_picker_view_date_hint">00/00/00</string>
 
     <string name="select_time_picker_view.rework_time">Tempo de Retrabalho</string>
+
+    <string name="information_card_view.deadline">Prazo</string>
+    <string name="information_card_view.actions">Ações</string>
+    <string name="information_card_view.creator">Criada por: </string>
 </resources>
