@@ -43,12 +43,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelIndicatorLateralSideView
                 android:id="@+id/information_card_view_severity_level"
                 android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape_severity_level"
-                tools:ignore="Orientation" />
+                android:layout_height="match_parent"/>
 
             <LinearLayout
                 android:id="@+id/information_card_view_container_linear_layout"
@@ -118,8 +116,10 @@
                         android:textColor="@color/gray_medium"
                         android:textSize="20dp"
                         android:textStyle="bold"
+                        android:textAlignment="viewEnd"
                         android:text="@{actions}"
-                        tools:text="3/5" />
+                        tools:text="3/5"
+                        tools:ignore="RtlCompat" />
 
                 </LinearLayout>
 
