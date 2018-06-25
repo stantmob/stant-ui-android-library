@@ -3,6 +3,7 @@ package br.com.stant.libraries.uilibrary.components.informationcardview;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.CardView;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
 import br.com.stant.libraries.uilibrary.R;
@@ -18,8 +19,22 @@ public class InformationCardView extends CardView implements InformationCardView
 
     public InformationCardView(Context context) {
         super(context);
-        mInformationCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
-                R.layout.information_card_view, this, true);
+        init(context);
+    }
+
+    public InformationCardView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
+    }
+
+    public InformationCardView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
+
+    private void init(Context context) {
+        mInformationCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.information_card_view, this, true);
+        mInformationCardViewBinding.setHandler(this);
     }
 
     @Override
@@ -29,7 +44,7 @@ public class InformationCardView extends CardView implements InformationCardView
 
     @Override
     public void setType(String type) {
-        mInformationCardViewBinding.setTitle(type);
+        mInformationCardViewBinding.setType(type);
     }
 
     @Override

@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.TestBase;
-import br.com.stant.libraries.stantuiandroid.componentactivities.actionbuttonview.ActionButtonViewActivity;
+import br.com.stant.libraries.stantuiandroid.componentsactivities.actionbuttonview.ActionButtonViewActivity;
 import br.com.stant.libraries.stantuiandroid.testutils.IntentFactory;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -26,7 +26,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.findAndClick;
 import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.AllOf.allOf;

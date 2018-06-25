@@ -88,8 +88,7 @@
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_arrow_right" />
+                            android:layout_height="wrap_content" />
 
                         <FrameLayout
                             android:layout_width="90dp"
@@ -110,7 +109,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/information_card_view_percentage"
+                        android:id="@+id/information_card_view_actions"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="right"
@@ -119,6 +118,7 @@
                         android:textColor="@color/gray_medium"
                         android:textSize="20dp"
                         android:textStyle="bold"
+                        android:text="@{actions}"
                         tools:text="3/5" />
 
                 </LinearLayout>

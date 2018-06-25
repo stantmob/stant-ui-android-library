@@ -24,7 +24,7 @@
                 android:clickable="true"
                 android:layout_gravity="top|right"
                 android:paddingBottom="30dp"
-                android:src="@drawable/ic_close_dialog"
+                app:srcCompat="@drawable/ic_close_dialog"
                 android:onClick="@{handler::closeDialog}"
                 />
 
