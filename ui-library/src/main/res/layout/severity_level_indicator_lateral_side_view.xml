@@ -18,7 +18,7 @@
         <View
             android:id="@+id/severity_level_indicator_lateral_side_view_first_bar_view"
             android:layout_width="5dp"
-            android:layout_height="20dp"
+            android:layout_height="28dp"
             android:background="@drawable/shape_ralf_top_round_gray_bar"
             android:layout_marginBottom="3dp"
             android:onClick="@{handler::setVeryLightSeverityLevelConfiguration}"
@@ -27,7 +27,7 @@
         <View
             android:id="@+id/severity_level_indicator_lateral_side_view_second_bar_view"
             android:layout_width="5dp"
-            android:layout_height="20dp"
+            android:layout_height="28dp"
             android:background="@drawable/shape_rectangular_gray_bar"
             android:layout_marginBottom="3dp"
             android:onClick="@{handler::setLightSeverityLevelConfiguration}"
@@ -36,7 +36,7 @@
         <View
             android:id="@+id/severity_level_indicator_lateral_side_view_third_bar_view"
             android:layout_width="5dp"
-            android:layout_height="20dp"
+            android:layout_height="28dp"
             android:background="@drawable/shape_rectangular_gray_bar"
             android:layout_marginBottom="3dp"
             android:onClick="@{handler::setNormalSeverityLevelConfiguration}"
@@ -45,7 +45,7 @@
         <View
             android:id="@+id/severity_level_indicator_lateral_side_view_fourth_bar_view"
             android:layout_width="5dp"
-            android:layout_height="20dp"
+            android:layout_height="28dp"
             android:background="@drawable/shape_rectangular_gray_bar"
             android:layout_marginBottom="3dp"
             android:onClick="@{handler::setSeriousSeverityLevelConfiguration}"
@@ -54,7 +54,7 @@
         <View
             android:id="@+id/severity_level_indicator_lateral_side_view_fifth_bar_view"
             android:layout_width="5dp"
-            android:layout_height="20dp"
+            android:layout_height="28dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/shape_ralf_bottom_round_gray_bar"
             android:onClick="@{handler::setGraveSeverityLevelConfiguration}"

@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/gray_bg_light"
-        android:padding="30dp"
+        android:padding="16dp"
         >
 
        <br.com.stant.libraries.uilibrary.components.headerentitycardview.HeaderEntityCardView

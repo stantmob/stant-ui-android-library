@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
 import br.com.stant.libraries.uilibrary.R;
+import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelEnum;
 import br.com.stant.libraries.uilibrary.databinding.InformationCardViewBinding;
 
 /**

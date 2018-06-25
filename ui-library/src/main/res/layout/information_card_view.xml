@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp"
-        app:cardPreventCornerOverlap="true">
+        app:cardPreventCornerOverlap="false"
+        app:cardElevation="0dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -46,7 +47,7 @@
             <br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelIndicatorLateralSideView
                 android:id="@+id/information_card_view_severity_level"
                 android:layout_width="5dp"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
             <LinearLayout
                 android:id="@+id/information_card_view_container_linear_layout"
@@ -56,21 +57,21 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    android:paddingTop="5dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:layout_gravity="center_horizontal"
-                        android:paddingLeft="20dp">
+                        android:paddingLeft="24dp"
+                        android:paddingTop="24dp">
 
                         <FrameLayout
-                            android:layout_width="90dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/shape_round_gray_dark">
+                            android:layout_width="89dp"
+                            android:layout_height="26dp"
+                            android:background="@drawable/shape_round_blue02">
 
                             <TextView
                                 android:id="@+id/information_card_view_created_at_date"
@@ -85,14 +86,17 @@
                         </FrameLayout>
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_arrow_right"/>
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_right_arrow"/>
 
                         <FrameLayout
-                            android:layout_width="90dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/shape_round_gray_dark">
+                            android:layout_width="89dp"
+                            android:layout_height="26dp"
+                            android:background="@drawable/shape_round_blue02">
 
                             <TextView
                                 android:id="@+id/information_card_view_deadline_date"
@@ -111,11 +115,11 @@
                         android:id="@+id/information_card_view_actions"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_gravity="right"
                         android:layout_weight="1"
-                        android:paddingRight="10dp"
-                        android:textColor="@color/gray_medium"
-                        android:textSize="20dp"
+                        android:paddingRight="24dp"
+                        android:paddingTop="26dp"
+                        android:textColor="@color/blue_02"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         android:textAlignment="viewEnd"
                         android:text="@{actions}"
@@ -128,25 +132,29 @@
                     android:id="@+id/information_card_view_type_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:text="@{type}"
-                    android:textColor="@color/gray"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
+                    android:textColor="@color/blue_03"
+                    android:textSize="16dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     tools:text="Qualidade" />
 
                 <TextView
                     android:id="@+id/information_card_view_title_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="18dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:text="@{title}"
-                    android:textSize="22dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
+                    android:maxLines="2"
+                    android:ellipsize="end"
                     tools:text="Não estava usando o capacete em serviço" />
 
 

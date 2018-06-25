@@ -19,6 +19,7 @@ import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.TestBase;
 import br.com.stant.libraries.stantuiandroid.componentsactivities.informationcardview.InformationCardViewActivity;
 import br.com.stant.libraries.stantuiandroid.testutils.IntentFactory;
+import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelEnum;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -37,11 +38,11 @@ import static org.hamcrest.Matchers.allOf;
 public class InformationCardViewActivityTest {
     public abstract static class Describe_Information_Card_View_Activity_content extends TestBase {
 
-        static final String TITLE      = "Title";
-        static final String TYPE       = "Type";
-        static final String ACTIONS    = "4/5";
-        static final String CREATED_AT = "01/01/2018";
-        static final String DEADLINE   = "30/12/2018";
+        static final String TITLE                          = "Grade de proteção colocada de forma incorreta";
+        static final String TYPE                           = "Qualidade";
+        static final String ACTIONS                        = "4/5";
+        static final String CREATED_AT                     = "01/01/2018";
+        static final String DEADLINE                       = "30/12/2018";
 
         @Rule
         public ActivityTestRule<InformationCardViewActivity> mActivity = new ActivityTestRule<>(InformationCardViewActivity.class);
