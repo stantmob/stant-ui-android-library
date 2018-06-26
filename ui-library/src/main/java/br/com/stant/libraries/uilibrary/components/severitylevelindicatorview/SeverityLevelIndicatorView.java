@@ -76,59 +76,52 @@ public class SeverityLevelIndicatorView extends LinearLayout implements Severity
 
     @Override
     public void setVeryLightSeverityLevelConfiguration(View view) {
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFirstBallView.setBackground(ContextCompat.getDrawable(getContext(), LIGHT_SEVERITY_SHAPE));
-
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewSecondBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewThirdBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFourthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFifthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
+        setSeverityLevelConfiguration(LIGHT_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE,
+                EMPTY_GREY_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE);
 
         onChangeSeverityLevel(SeverityLevelEnum.VERY_LIGHT);
     }
 
     @Override
     public void setLightSeverityLevelConfiguration(View view) {
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFirstBallView.setBackground(ContextCompat.getDrawable(getContext(), LIGHT_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewSecondBallView.setBackground(ContextCompat.getDrawable(getContext(), LIGHT_SEVERITY_SHAPE));
+        setSeverityLevelConfiguration(LIGHT_SEVERITY_SHAPE, LIGHT_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE,
+                EMPTY_GREY_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE);
 
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewThirdBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFourthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFifthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
         onChangeSeverityLevel(SeverityLevelEnum.LIGHT);
     }
 
     @Override
     public void setNormalSeverityLevelConfiguration(View view) {
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFirstBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewSecondBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewThirdBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
+        setSeverityLevelConfiguration(SERIOUS_SEVERITY_SHAPE, SERIOUS_SEVERITY_SHAPE, SERIOUS_SEVERITY_SHAPE,
+                EMPTY_GREY_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE);
 
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFourthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFifthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
         onChangeSeverityLevel(SeverityLevelEnum.NORMAL);
     }
 
     @Override
     public void setSeriousSeverityLevelConfiguration(View view) {
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFirstBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewSecondBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewThirdBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFourthBallView.setBackground(ContextCompat.getDrawable(getContext(), SERIOUS_SEVERITY_SHAPE));
+        setSeverityLevelConfiguration(SERIOUS_SEVERITY_SHAPE, SERIOUS_SEVERITY_SHAPE, SERIOUS_SEVERITY_SHAPE,
+                SERIOUS_SEVERITY_SHAPE, EMPTY_GREY_SEVERITY_SHAPE);
 
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFifthBallView.setBackground(ContextCompat.getDrawable(getContext(), EMPTY_GREY_SEVERITY_SHAPE));
         onChangeSeverityLevel(SeverityLevelEnum.SERIOUS);
     }
 
     @Override
     public void setGraveSeverityLevelConfiguration(View view) {
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFirstBallView.setBackground(ContextCompat.getDrawable(getContext(), GRAVE_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewSecondBallView.setBackground(ContextCompat.getDrawable(getContext(), GRAVE_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewThirdBallView.setBackground(ContextCompat.getDrawable(getContext(), GRAVE_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFourthBallView.setBackground(ContextCompat.getDrawable(getContext(), GRAVE_SEVERITY_SHAPE));
-        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFifthBallView.setBackground(ContextCompat.getDrawable(getContext(), GRAVE_SEVERITY_SHAPE));
+        setSeverityLevelConfiguration(GRAVE_SEVERITY_SHAPE, GRAVE_SEVERITY_SHAPE, GRAVE_SEVERITY_SHAPE,
+                GRAVE_SEVERITY_SHAPE, GRAVE_SEVERITY_SHAPE);
+
         onChangeSeverityLevel(SeverityLevelEnum.GRAVE);
     }
 
+    private void setSeverityLevelConfiguration(Integer firstBallLevel, Integer secondBallLevel, Integer thirdBallLevel,
+                                               Integer fourthBallLevel, Integer fifthBallLevel) {
+        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFirstBallView.setBackground(ContextCompat.getDrawable(getContext(), firstBallLevel));
+        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewSecondBallView.setBackground(ContextCompat.getDrawable(getContext(), secondBallLevel));
+        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewThirdBallView.setBackground(ContextCompat.getDrawable(getContext(), thirdBallLevel));
+        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFourthBallView.setBackground(ContextCompat.getDrawable(getContext(), fourthBallLevel));
+        mSeverityLevelIndicatorViewBinding.severityLevelIndicatorViewFifthBallView.setBackground(ContextCompat.getDrawable(getContext(), fifthBallLevel));
+    }
     @Override
     public void onChangeSeverityLevel(SeverityLevelEnum severityLevelEnum) {
         if(mOnChangeSeverityLevel != null)

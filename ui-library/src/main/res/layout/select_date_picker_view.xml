@@ -18,8 +18,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/select_date_picker_view_date_text_view"
@@ -28,16 +28,14 @@
             android:layout_gravity="center_vertical"
             android:gravity="right"
             android:text="@{date}"
-            tools:text="@string/select_date_picker_view_date_hint"
-            />
+            tools:text="@string/select_date_picker_view_date_hint" />
 
         <ImageView
             android:id="@+id/inspection_data_card_reprove_general_add_item_inspection_reproved_deadline_calendar_image_view"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginStart="7dp"
-            app:srcCompat="@drawable/ic_weekly_calendar"
-            />
+            app:srcCompat="@drawable/ic_weekly_calendar" />
 
     </LinearLayout>
 </layout>

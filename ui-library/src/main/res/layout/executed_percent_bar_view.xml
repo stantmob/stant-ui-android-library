@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="percentDescriptionPt1"
-            type="String"/>
+            type="String" />
 
         <variable
             name="percentDescriptionPt2"
-            type="String"/>
+            type="String" />
 
         <variable
             name="percentValuePt1"
-            type="String"/>
+            type="String" />
 
         <variable
             name="percentValuePt2"
-            type="String"/>
+            type="String" />
 
     </data>
 
@@ -38,70 +37,68 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                tools:layout_weight="15"
                 android:background="@color/green_base"
                 android:orientation="horizontal"
-                />
+                tools:layout_weight="15" />
 
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="@string/executed_percent_bar.title_pt1"
+                    android:layout_marginLeft="15dp"
                     android:text="@{percentDescriptionPt1}"
-                    android:textSize="18dp"
                     android:textColor="@color/white"
+                    android:textSize="18dp"
+                    tools:text="@string/executed_percent_bar.title_pt1"
                     tools:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="@string/executed_percent_bar.title_pt2"
                     android:text="@{percentDescriptionPt2}"
+                    android:textColor="@color/green_base"
                     android:textSize="18dp"
-                    android:textColor="@color/green_base"/>
+                    tools:text="@string/executed_percent_bar.title_pt2" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="15dp"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true">
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/executed_percent_bar_percent_number_value_pt1_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="6"
                     android:text="@{percentValuePt1}"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
-                    android:textColor="@color/white"/>
+                    tools:text="6" />
 
                 <TextView
                     android:id="@+id/executed_percent_bar_percent_number_value_pt2_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="%"
                     android:text="@{percentValuePt2}"
+                    android:textColor="@color/green_base"
                     android:textSize="18sp"
-                    android:textColor="@color/green_base" />
+                    tools:text="%" />
 
             </LinearLayout>
 

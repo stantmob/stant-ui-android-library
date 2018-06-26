@@ -6,15 +6,15 @@
 
         <variable
             name="handler"
-            type="br.com.stant.libraries.uilibrary.components.infoactioncardview.InfoActionCardView"/>
-        
+            type="br.com.stant.libraries.uilibrary.components.infoactioncardview.InfoActionCardView" />
+
         <variable
             name="infoText"
-            type="String"/>
+            type="String" />
 
         <variable
             name="actionText"
-            type="String"/>
+            type="String" />
 
     </data>
 
@@ -29,18 +29,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textSize = "13sp"
-                android:textStyle="bold"
-                tools:text="@string/info_action_card_view.title_example"
                 android:text="@{infoText}"
-                android:textColor="@color/gray"/>
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="@string/info_action_card_view.title_example" />
 
             <LinearLayout
                 android:id="@+id/info_action_card_action_container_linear_layout"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:onClick="@{handler::onClickActionCard}">
 
                 <TextView
@@ -48,14 +48,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textAllCaps="true"
-                    android:textSize="9sp"
                     android:gravity="center"
-                    tools:text="@string/info_action_card_view.action_name_example"
                     android:text="@{actionText}"
-                    android:textStyle="bold"
+                    android:textAllCaps="true"
                     android:textColor="@color/green_base"
-                    />
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    tools:text="@string/info_action_card_view.action_name_example" />
 
             </LinearLayout>
         </RelativeLayout>

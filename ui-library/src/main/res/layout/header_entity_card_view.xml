@@ -34,8 +34,8 @@
         android:id="@+id/header_entity_card_view_container_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/shape_rounded_blue_for_card">
+        android:background="@drawable/shape_rounded_blue_for_card"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,10 +76,10 @@
                     <ImageView
                         android:layout_width="12dp"
                         android:layout_height="12dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/ic_right_arrow_white"/>
+                        android:background="@drawable/ic_right_arrow_white" />
 
                     <FrameLayout
                         android:layout_width="90dp"
@@ -103,20 +103,21 @@
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="24dp"
-                android:layout_gravity="bottom">
+                android:layout_gravity="bottom"
+                android:layout_marginRight="24dp">
+
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/ic_critical_icon"
-                    />
+                    android:background="@drawable/ic_critical_icon" />
+
                 <TextView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:text="!"
-                    android:textColor="@color/white"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
             </FrameLayout>
 
@@ -126,6 +127,7 @@
             android:id="@+id/header_entity_card_view_type_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:maxLines="1"
             android:paddingBottom="8dp"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
@@ -134,15 +136,14 @@
             android:textColor="@color/white"
             android:textSize="16dp"
             android:textStyle="bold"
-            android:maxLines="1"
             tools:text="Entity Title" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="24dp"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            android:paddingLeft="24dp">
 
             <LinearLayout
                 android:layout_width="match_parent"

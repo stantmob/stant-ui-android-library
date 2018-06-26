@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardElevation="0dp">
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -63,8 +63,8 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
                         android:layout_gravity="center_horizontal"
+                        android:layout_weight="2"
                         android:paddingLeft="24dp"
                         android:paddingTop="24dp">
 
@@ -88,10 +88,10 @@
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@drawable/ic_right_arrow"/>
+                            android:background="@drawable/ic_right_arrow" />
 
                         <FrameLayout
                             android:layout_width="89dp"
@@ -118,13 +118,13 @@
                         android:layout_weight="1"
                         android:paddingRight="24dp"
                         android:paddingTop="26dp"
+                        android:text="@{actions}"
+                        android:textAlignment="viewEnd"
                         android:textColor="@color/blue_02"
                         android:textSize="16dp"
                         android:textStyle="bold"
-                        android:textAlignment="viewEnd"
-                        android:text="@{actions}"
-                        tools:text="3/5"
-                        tools:ignore="RtlCompat" />
+                        tools:ignore="RtlCompat"
+                        tools:text="3/5" />
 
                 </LinearLayout>
 
@@ -132,30 +132,30 @@
                     android:id="@+id/information_card_view_type_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingTop="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
+                    android:paddingTop="15dp"
                     android:text="@{type}"
                     android:textColor="@color/blue_03"
                     android:textSize="16dp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
                     tools:text="Qualidade" />
 
                 <TextView
                     android:id="@+id/information_card_view_title_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="1dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
                     android:paddingBottom="18dp"
                     android:paddingLeft="24dp"
                     android:paddingRight="24dp"
+                    android:paddingTop="1dp"
                     android:text="@{title}"
+                    android:textColor="@color/blue_02"
                     android:textSize="16dp"
                     android:textStyle="bold"
-                    android:textColor="@color/blue_02"
-                    android:maxLines="2"
-                    android:ellipsize="end"
                     tools:text="Não estava usando o capacete em serviço" />
 
 

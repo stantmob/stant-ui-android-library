@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.HeaderEntityCardViewTestActBinding;
+import br.com.stant.libraries.uilibrary.components.headerentitycardview.HeaderEntityCardView;
 import br.com.stant.libraries.uilibrary.databinding.HeaderEntityCardViewBinding;
 
 /**
