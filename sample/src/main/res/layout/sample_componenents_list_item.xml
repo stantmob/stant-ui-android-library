@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -14,36 +15,33 @@
         android:id="@+id/sample_component_list_item_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        style="@style/Hover"
         android:background="@color/white"
-        >
+        android:orientation="vertical"
+        style="@style/Hover">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{componentName}"
-            tools:text="Component Name"
-            android:textColor="@color/black"
             android:layout_margin="20dp"
+            android:text="@{componentName}"
+            android:textColor="@color/black"
             android:textStyle="bold"
-            />
+            tools:text="Component Name" />
 
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@drawable/ic_right_arrow_circular_button"
-            android:tint="@color/black"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="20dp"
-            />
+            android:tint="@color/black"
+            app:srcCompat="@drawable/ic_right_arrow_circular_button" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
 
     </RelativeLayout>
 

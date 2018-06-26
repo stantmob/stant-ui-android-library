@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="buttonText"
-            type="String"/>
+            type="String" />
 
         <variable
             name="buttonShape"
-            type="android.graphics.drawable.Drawable"/>
+            type="android.graphics.drawable.Drawable" />
 
         <variable
             name="buttonShadowShape"
-            type="android.graphics.drawable.Drawable"/>
+            type="android.graphics.drawable.Drawable" />
 
     </data>
 
@@ -29,30 +30,27 @@
             android:layout_width="match_parent"
             android:layout_height="17dp"
             android:layout_marginTop="40dp"
-            android:orientation="vertical"
             android:background="@{buttonShadowShape}"
-            tools:background="@drawable/shape_round_dark_blue"
-            >
-        </LinearLayout>
+            android:orientation="vertical"
+            tools:background="@drawable/shape_round_dark_blue"></LinearLayout>
 
         <LinearLayout
             android:id="@+id/button_shape"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:orientation="vertical"
-            android:gravity="center"
             android:background="@{buttonShape}"
-            tools:background="@drawable/shape_round_blue"
-            >
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:background="@drawable/shape_round_blue">
 
             <TextView
                 android:id="@+id/button_component_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
+                android:text="@{buttonText}"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:text="@{buttonText}"
                 tools:text="Button Text" />
 
         </LinearLayout>

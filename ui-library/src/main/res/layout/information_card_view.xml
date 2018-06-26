@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.com.stant.libraries.uilibrary.components.informationcardview.InformationCardView" />
+
+        <variable
+            name="createdAt"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="type"
+            type="String" />
+
+        <variable
+            name="deadline"
+            type="String" />
+
+        <variable
+            name="actions"
+            type="String" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelIndicatorLateralSideView
+                android:id="@+id/information_card_view_severity_level"
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/information_card_view_container_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="2"
+                        android:paddingLeft="24dp"
+                        android:paddingTop="24dp">
+
+                        <FrameLayout
+                            android:layout_width="89dp"
+                            android:layout_height="26dp"
+                            android:background="@drawable/shape_round_blue02">
+
+                            <TextView
+                                android:id="@+id/information_card_view_created_at_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@{createdAt}"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                tools:text="12/05/2018" />
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/ic_right_arrow" />
+
+                        <FrameLayout
+                            android:layout_width="89dp"
+                            android:layout_height="26dp"
+                            android:background="@drawable/shape_round_blue02">
+
+                            <TextView
+                                android:id="@+id/information_card_view_deadline_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@{deadline}"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                tools:text="28/09/2018" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/information_card_view_actions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="24dp"
+                        android:paddingTop="26dp"
+                        android:text="@{actions}"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/blue_02"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat"
+                        tools:text="3/5" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/information_card_view_type_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="15dp"
+                    android:text="@{type}"
+                    android:textColor="@color/blue_03"
+                    android:textSize="16dp"
+                    tools:text="Qualidade" />
+
+                <TextView
+                    android:id="@+id/information_card_view_title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingBottom="18dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="1dp"
+                    android:text="@{title}"
+                    android:textColor="@color/blue_02"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:text="Não estava usando o capacete em serviço" />
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+</layout>

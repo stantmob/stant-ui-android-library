@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
         <variable
             name="handler"
-            type="br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.SeverityLevelIndicatorView"/>
+            type="br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.SeverityLevelIndicatorView" />
 
     </data>
 
@@ -14,8 +13,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <View
             android:id="@+id/severity_level_indicator_view_first_ball_view"
@@ -23,8 +21,7 @@
             android:layout_height="15dp"
             android:layout_marginEnd="7dp"
             android:background="@drawable/shape_round_gray_little_balls"
-            android:onClick="@{handler::setVeryLightSeverityLevelConfiguration}"
-            />
+            android:onClick="@{handler::setVeryLightSeverityLevelConfiguration}" />
 
         <View
             android:id="@+id/severity_level_indicator_view_second_ball_view"
@@ -32,8 +29,7 @@
             android:layout_height="15dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/shape_round_gray_little_balls"
-            android:onClick="@{handler::setLightSeverityLevelConfiguration}"
-            />
+            android:onClick="@{handler::setLightSeverityLevelConfiguration}" />
 
         <View
             android:id="@+id/severity_level_indicator_view_third_ball_view"
@@ -41,8 +37,7 @@
             android:layout_height="15dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/shape_round_gray_little_balls"
-            android:onClick="@{handler::setNormalSeverityLevelConfiguration}"
-            />
+            android:onClick="@{handler::setNormalSeverityLevelConfiguration}" />
 
         <View
             android:id="@+id/severity_level_indicator_view_fourth_ball_view"
@@ -50,8 +45,7 @@
             android:layout_height="15dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/shape_round_gray_little_balls"
-            android:onClick="@{handler::setSeriousSeverityLevelConfiguration}"
-            />
+            android:onClick="@{handler::setSeriousSeverityLevelConfiguration}" />
 
         <View
             android:id="@+id/severity_level_indicator_view_fifth_ball_view"
@@ -59,8 +53,7 @@
             android:layout_height="15dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/shape_round_gray_little_balls"
-            android:onClick="@{handler::setGraveSeverityLevelConfiguration}"
-            />
+            android:onClick="@{handler::setGraveSeverityLevelConfiguration}" />
 
     </LinearLayout>
 
