@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelEnum;
+import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelIndicatorLateralSideView;
 import br.com.stant.libraries.uilibrary.databinding.InformationCardViewBinding;
 
 /**
@@ -17,6 +18,7 @@ import br.com.stant.libraries.uilibrary.databinding.InformationCardViewBinding;
 public class InformationCardView extends CardView implements InformationCardViewContract {
 
     private InformationCardViewBinding mInformationCardViewBinding;
+    private SeverityLevelIndicatorLateralSideView mSeverityLevelIndicatorLateralSideView;
 
     public InformationCardView(Context context) {
         super(context);
@@ -36,6 +38,7 @@ public class InformationCardView extends CardView implements InformationCardView
     private void init(Context context) {
         mInformationCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.information_card_view, this, true);
         mInformationCardViewBinding.setHandler(this);
+        mSeverityLevelIndicatorLateralSideView = mInformationCardViewBinding.informationCardViewSeverityLevel;
     }
 
     @Override
@@ -61,6 +64,12 @@ public class InformationCardView extends CardView implements InformationCardView
     @Override
     public void setCreatedAt(String createdAt) {
         mInformationCardViewBinding.setCreatedAt(createdAt);
+    }
+
+    @Override
+    public void setSeverityLevel(Integer level) {
+        SeverityLevelEnum severityLevelEnum = SeverityLevelEnum.getEnum(level);
+        mSeverityLevelIndicatorLateralSideView.setSeverityLevel(severityLevelEnum);
     }
 
 }

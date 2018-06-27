@@ -25,12 +25,13 @@ public class InformationCardViewActivity extends AppCompatActivity {
     }
 
     public void setInformation(String title, String type, String actions, String createdAt,
-                               String deadline) {
+                               String deadline, Integer severityLevel) {
         mInformationCardViewTestActBinding.informationCardView.setTitle(title);
         mInformationCardViewTestActBinding.informationCardView.setType(type);
         mInformationCardViewTestActBinding.informationCardView.setActions(actions);
         mInformationCardViewTestActBinding.informationCardView.setCreatedAt(createdAt);
         mInformationCardViewTestActBinding.informationCardView.setDeadline(deadline);
+        mInformationCardViewTestActBinding.informationCardView.setSeverityLevel(severityLevel);
 
     }
 }
