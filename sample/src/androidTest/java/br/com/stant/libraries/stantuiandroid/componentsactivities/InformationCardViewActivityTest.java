@@ -43,6 +43,7 @@ public class InformationCardViewActivityTest {
         static final String ACTIONS                        = "4/5";
         static final String CREATED_AT                     = "01/01/2018";
         static final String DEADLINE                       = "30/12/2018";
+        static final Integer SEVERITY_LEVEL                = 3;
 
         @Rule
         public ActivityTestRule<InformationCardViewActivity> mActivity = new ActivityTestRule<>(InformationCardViewActivity.class);
@@ -60,7 +61,7 @@ public class InformationCardViewActivityTest {
 
         @Before
         public void setCardInformations() {
-            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE);
+            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, SEVERITY_LEVEL);
             waitEspresso(500);
         }
 
