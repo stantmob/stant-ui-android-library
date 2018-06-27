@@ -43,7 +43,7 @@ public class InformationCardViewActivityTest {
         static final String ACTIONS                        = "4/5";
         static final String CREATED_AT                     = "01/01/2018";
         static final String DEADLINE                       = "30/12/2018";
-        static final Integer SEVERITY_LEVEL                = 2;
+        static final Integer SEVERITY_LEVEL                = 3;
 
         @Rule
         public ActivityTestRule<InformationCardViewActivity> mActivity = new ActivityTestRule<>(InformationCardViewActivity.class);

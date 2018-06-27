@@ -5,7 +5,7 @@ package br.com.stant.libraries.uilibrary.components.severitylevelindicatorlatera
  */
 
 public enum SeverityLevelEnum {
-    VERY_LIGHT(0), LIGHT(1), NORMAL(2), SERIOUS(3), GRAVE(4);
+    VERY_LIGHT(1), LIGHT(2), NORMAL(3), SERIOUS(4), GRAVE(5);
 
     private final int mValue;
 
@@ -19,15 +19,15 @@ public enum SeverityLevelEnum {
 
     public static SeverityLevelEnum getEnum(int value) {
         switch (value){
-            case 0:
-                return SeverityLevelEnum.VERY_LIGHT;
             case 1:
-                return SeverityLevelEnum.LIGHT;
+                return SeverityLevelEnum.VERY_LIGHT;
             case 2:
-                return SeverityLevelEnum.NORMAL;
+                return SeverityLevelEnum.LIGHT;
             case 3:
-                return SeverityLevelEnum.SERIOUS;
+                return SeverityLevelEnum.NORMAL;
             case 4:
+                return SeverityLevelEnum.SERIOUS;
+            case 5:
                 return SeverityLevelEnum.GRAVE;
         }
         return null;
