@@ -32,18 +32,18 @@
     </data>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/information_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="5dp"
         app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
         app:cardPreventCornerOverlap="false">
 
         <FrameLayout
-            android:id="@+id/information_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/white">
+            android:orientation="horizontal">
 
             <br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelIndicatorLateralSideView
                 android:id="@+id/information_card_view_severity_level"
@@ -166,3 +166,4 @@
         </FrameLayout>
     </android.support.v7.widget.CardView>
 </layout>
+
