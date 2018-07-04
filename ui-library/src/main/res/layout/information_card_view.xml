@@ -34,15 +34,16 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp"
         app:cardElevation="0dp"
         app:cardPreventCornerOverlap="false">
 
         <FrameLayout
+            android:id="@+id/information_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/white">
 
             <br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelIndicatorLateralSideView
                 android:id="@+id/information_card_view_severity_level"
@@ -69,6 +70,7 @@
                         android:paddingTop="24dp">
 
                         <FrameLayout
+                            android:id="@+id/information_card_date_card"
                             android:layout_width="89dp"
                             android:layout_height="26dp"
                             android:background="@drawable/shape_round_blue02">
@@ -94,6 +96,7 @@
                             android:background="@drawable/ic_right_arrow" />
 
                         <FrameLayout
+                            android:id="@+id/information_card_second_date_card"
                             android:layout_width="89dp"
                             android:layout_height="26dp"
                             android:background="@drawable/shape_round_blue02">

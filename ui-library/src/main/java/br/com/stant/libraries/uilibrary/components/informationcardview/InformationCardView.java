@@ -72,4 +72,14 @@ public class InformationCardView extends CardView implements InformationCardView
         mSeverityLevelIndicatorLateralSideView.setSeverityLevel(severityLevelEnum);
     }
 
+    @Override
+    public void setDarkCardStyle() {
+        mInformationCardViewBinding.informationCard.setBackgroundColor(getResources().getColor(R.color.blue_02));
+        mInformationCardViewBinding.informationCardViewTitleText.setTextColor(getResources().getColor(R.color.white));
+        mInformationCardViewBinding.informationCardViewActions.setTextColor(getResources().getColor(R.color.white));
+        mInformationCardViewBinding.informationCardDateCard.setBackground(getResources().getDrawable(R.drawable.shape_round_white));
+        mInformationCardViewBinding.informationCardSecondDateCard.setBackground(getResources().getDrawable(R.drawable.shape_round_white));
+        mInformationCardViewBinding.informationCardViewCreatedAtDate.setTextColor(getResources().getColor(R.color.blue_02));
+        mInformationCardViewBinding.informationCardViewDeadlineDate.setTextColor(getResources().getColor(R.color.blue_02));
+    }
 }
