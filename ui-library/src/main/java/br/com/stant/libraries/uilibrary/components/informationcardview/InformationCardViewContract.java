@@ -12,5 +12,6 @@ public interface InformationCardViewContract {
     void setCreatedAt(String createdAt);
     void setType(String type);
     void setSeverityLevel(Integer level);
+    void setDarkCardStyle();
 
 }
