@@ -39,7 +39,7 @@ import static org.hamcrest.Matchers.allOf;
 public class UserInformationCardViewActivityTest {
     public abstract static class Describe_User_Information_Card_View_Activity_content extends TestBase {
 
-        static final String USER_PHOTO   = null;
+        static final String USER_PHOTO   = "http://seatotal.com.br/wp-content/uploads/2014/11/imagem_post-construtoras-seatotal.jpg";
         static final String USER_NAME    = "User Name";
         static final String USER_ROLE    = "User Role";
         static final String USER_TYPE    = "C";
