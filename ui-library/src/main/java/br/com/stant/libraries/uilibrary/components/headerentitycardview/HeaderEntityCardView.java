@@ -35,6 +35,7 @@ public class HeaderEntityCardView extends CardView implements HeaderEntityCardVi
     private void init(Context context) {
         mHeaderEntityCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.header_entity_card_view, this, true);
         mHeaderEntityCardViewBinding.setHandler(this);
+        mHeaderEntityCardViewBinding.setCriticalIconVisibility(GONE);
     }
 
     @Override
@@ -62,4 +63,11 @@ public class HeaderEntityCardView extends CardView implements HeaderEntityCardVi
         mHeaderEntityCardViewBinding.setQuantity2(secondQuantity);
     }
 
+    @Override
+    public void setCardCritical() {
+        mHeaderEntityCardViewBinding.setCriticalIconVisibility(VISIBLE);
+    }
+
+
 }
+

@@ -33,4 +33,9 @@ public class HeaderEntityCardViewActivity extends AppCompatActivity {
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setSecondQuantity(secondQuantity);
 
     }
+
+    public void setCritical() {
+        mHeaderEntityCardViewTestActBinding.headerEntityCardView.setCardCritical();
+    }
 }
+
