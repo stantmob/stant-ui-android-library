@@ -11,5 +11,7 @@ public interface HeaderEntityCardViewContract {
     void setStartAt(String startAt);
     void setFirstQuantity(String firstQuantity);
     void setSecondQuantity(String secondQuantity);
+    void setCardCritical();
 
 }
+

@@ -28,6 +28,10 @@
             name="quantity2"
             type="String" />
 
+        <variable
+            name="criticalIconVisibility"
+            type="int" />
+
     </data>
 
     <LinearLayout
@@ -101,10 +105,13 @@
             </LinearLayout>
 
             <FrameLayout
+                android:id="@+id/header_entity_card_critical_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginRight="24dp">
+                android:layout_marginRight="24dp"
+                android:visibility="@{criticalIconVisibility}"
+                tools:visibility="visible">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -197,3 +204,4 @@
 
     </LinearLayout>
 </layout>
+

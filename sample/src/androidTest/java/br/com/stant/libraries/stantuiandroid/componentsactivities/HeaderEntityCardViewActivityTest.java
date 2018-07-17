@@ -99,6 +99,32 @@ public class HeaderEntityCardViewActivityTest {
                     .check(matches(withText(SECOND_QUANTITY)));
         }
 
+        @Test
+        public void It_should_hide_critical_icon() {
+            onView(allOf(withId(R.id.header_entity_card_critical_icon),
+                    isDescendantOfA(withId(R.id.header_entity_card_view))))
+                    .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.GONE)));
+        }
+
+    }
+
+    public static class Context_when_check_header_critical_entity_card_view_content extends Describe_Header_Entity_Card_View_Activity_content {
+
+        @Before
+        public void setCardInformations() {
+            mActivity.getActivity().setInformation(TITLE, END_AT, START_AT, FIRST_QUANTITY, SECOND_QUANTITY);
+            mActivity.getActivity().setCritical();
+            waitEspresso(500);
+        }
+
+        @Test
+        public void It_should_show_critical_icon() {
+            onView(allOf(withId(R.id.header_entity_card_critical_icon),
+                    isDescendantOfA(withId(R.id.header_entity_card_view))))
+                    .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)));
+        }
+
     }
 
 }
+
