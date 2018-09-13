@@ -88,6 +88,7 @@
                         </FrameLayout>
 
                         <ImageView
+                            android:id="@+id/information_card_view_arrow_image_view"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
                             android:layout_gravity="center_vertical"
@@ -112,6 +113,7 @@
                                 tools:text="28/09/2018" />
 
                         </FrameLayout>
+
                     </LinearLayout>
 
                     <TextView

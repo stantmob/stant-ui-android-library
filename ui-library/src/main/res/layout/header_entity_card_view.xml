@@ -78,6 +78,7 @@
                     </FrameLayout>
 
                     <ImageView
+                        android:id="@+id/header_entity_card_arrow_image_view"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:layout_gravity="center_vertical"
@@ -86,6 +87,7 @@
                         android:background="@drawable/ic_right_arrow_white" />
 
                     <FrameLayout
+                        android:id="@+id/header_entity_card_second_date_frame_layout"
                         android:layout_width="90dp"
                         android:layout_height="25dp"
                         android:background="@drawable/shape_round_white">
