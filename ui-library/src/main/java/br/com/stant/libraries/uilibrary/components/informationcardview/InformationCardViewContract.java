@@ -13,5 +13,7 @@ public interface InformationCardViewContract {
     void setType(String type);
     void setSeverityLevel(Integer level);
     void setDarkCardStyle();
+    void setDeadlineVisibility(Integer visibility);
+    void setArrowVisibility(Integer visibility);
 
 }

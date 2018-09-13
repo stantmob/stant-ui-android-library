@@ -68,6 +68,16 @@ public class HeaderEntityCardView extends CardView implements HeaderEntityCardVi
         mHeaderEntityCardViewBinding.setCriticalIconVisibility(VISIBLE);
     }
 
+    @Override
+    public void setEndAtVisibility(Integer visibility) {
+        mHeaderEntityCardViewBinding.headerEntityCardSecondDateFrameLayout.setVisibility(visibility);
+    }
+
+    @Override
+    public void setArrowVisibility(Integer visibility) {
+        mHeaderEntityCardViewBinding.headerEntityCardArrowImageView.setVisibility(visibility);
+    }
+
 
 }
 
