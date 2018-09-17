@@ -60,4 +60,10 @@ public class IncreaseDecreaseButtonsView extends LinearLayout implements Increas
         if(onPressDecreaseButton != null)
             onPressDecreaseButton.onClick(view);
     }
+
+    @Override
+    public void setIncreaseDecreaseTextSize(Integer size) {
+        mIncreaseDecreaseButtonsViewBinding.increaseDecreaseButtonsViewLessButtonTextView.setTextSize(size);
+        mIncreaseDecreaseButtonsViewBinding.increaseDecreaseButtonsViewMoreButtonTextView.setTextSize(size);
+    }
 }

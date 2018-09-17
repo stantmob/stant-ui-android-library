@@ -33,6 +33,7 @@ public class IncreaseDecreaseButtonsViewActivity extends AppCompatActivity {
             }
         });
 
+        mIncreaseDecreaseButtonsViewTestActBinding.increaseDecreaseButtons.setIncreaseDecreaseTextSize(16);
     }
 
 }
