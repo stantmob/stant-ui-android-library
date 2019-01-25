@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.InfoActionCardViewTestActBinding;
-import br.com.stant.libraries.uilibrary.components.infoactioncardview.InfoActionCardViewContract;
 
 public class InfoActionCardViewActivity extends AppCompatActivity {
 
@@ -19,12 +18,9 @@ public class InfoActionCardViewActivity extends AppCompatActivity {
 
         mInfoActionCardViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.info_action_card_view_test_act);
 
-        mInfoActionCardViewTestActBinding.infoActionCard.setOnClickActionCardListener(new InfoActionCardViewContract.OnClickActionCardListener() {
-            @Override
-            public void onClick() {
-                Toast.makeText(InfoActionCardViewActivity.this, "Info card action", Toast.LENGTH_SHORT).show();
-            }
-        });
+        mInfoActionCardViewTestActBinding.infoActionCard.setOnClickActionCardListener(
+                () -> Toast.makeText(InfoActionCardViewActivity.this, "Info card action", Toast.LENGTH_SHORT).show()
+        );
 
     }
 
@@ -32,5 +28,6 @@ public class InfoActionCardViewActivity extends AppCompatActivity {
         mInfoActionCardViewTestActBinding.infoActionCard.setInfoText(infoText);
         mInfoActionCardViewTestActBinding.infoActionCard.setActionText(actionText);
     }
+
 
 }

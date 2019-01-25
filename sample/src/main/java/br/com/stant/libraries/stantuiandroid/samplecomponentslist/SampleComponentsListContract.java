@@ -1,7 +1,5 @@
 package br.com.stant.libraries.stantuiandroid.samplecomponentslist;
 
-import java.util.List;
-
 import br.com.stant.libraries.stantuiandroid.entities.UiComponent;
 
 /**
@@ -12,8 +10,11 @@ public interface SampleComponentsListContract {
 
     interface View {
         void showComponents();
+
         void goToComponentDetail(UiComponent component);
+
         void goToWorkspaceScreen();
     }
+
 
 }

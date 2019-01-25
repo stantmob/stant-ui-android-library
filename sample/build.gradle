@@ -1,11 +1,17 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     compileSdkVersion global_compileSdkVersion
     buildToolsVersion global_buildToolsVersion
 
     defaultConfig {
+        applicationId "br.com.stant.libraries.stant_ui_library"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
         minSdkVersion global_minSdkVersion
         targetSdkVersion global_targetSdkVersion
         versionCode global_versionCode
@@ -25,40 +31,55 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile project(":ui-library")
-    compile 'us.feras.mdv:markdownview:1.1.0'
-//    compile 'com.github.stantmob:stant-ui-android-library:v0.0.5'
-    testCompile 'junit:junit:4.12'
+    implementation project(":ui-library")
+    implementation 'us.feras.mdv:markdownview:1.1.0'
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'com.github.stantmob:stant-ui-android-library:v0.0.5'
+
+    // Support for java 8 features
+    implementation 'com.annimon:stream:1.1.3'
+
+    testImplementation 'junit:junit:4.12'
 
     // Dependencies for local unit tests
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.10.19'
-    testCompile 'com.squareup.retrofit2:retrofit:2.1.0'
-    testCompile 'io.reactivex:rxjava:1.1.8'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    testImplementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    testImplementation 'io.reactivex:rxjava:1.1.8'
 
-    testCompile "org.powermock:powermock-module-junit4:1.6.5"
-    testCompile "org.powermock:powermock-module-junit4-rule:1.6.5"
-    testCompile "org.powermock:powermock-api-mockito:1.6.5"
-    testCompile "org.powermock:powermock-classloading-xstream:1.6.5"
+    testImplementation "org.powermock:powermock-module-junit4:1.6.5"
+    testImplementation "org.powermock:powermock-module-junit4-rule:1.6.5"
+    testImplementation "org.powermock:powermock-api-mockito:1.6.5"
+    testImplementation "org.powermock:powermock-classloading-xstream:1.6.5"
 
-    testCompile 'org.powermock:powermock-api-mockito:1.6.5'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.5'
 
     // Espresso UI Testing
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.guava'
         exclude module: 'espresso-idling-resource'
     })
 
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2') {
+    androidTestImplementation('com.android.support.test.espresso:espresso-contrib:2.2') {
         exclude group: 'com.android.support', module: 'appcompat'
         exclude module: 'support-annotations'
         exclude module: 'support-v4'
@@ -68,13 +89,13 @@ dependencies {
     }
 
 
-    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
 
-    androidTestCompile "com.android.support.test.espresso:espresso-core:3.0.2"
-    androidTestCompile 'com.android.support.test:runner:1.0.2'
-    androidTestCompile 'com.android.support.test.espresso:espresso-intents:3.0.2'
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.2"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
 
-    androidTestCompile("com.android.support.test.espresso:espresso-contrib:3.0.2") {
+    androidTestImplementation("com.android.support.test.espresso:espresso-contrib:3.0.2") {
         exclude group: 'com.android.support', module: 'appcompat'
         exclude group: 'com.android.support', module: 'support-v4'
         exclude group: 'com.android.support', module: 'support-v7'
@@ -82,11 +103,11 @@ dependencies {
     }
 
     // Resolve conflicts between main and test APK:
-    androidTestCompile "com.android.support:support-annotations:27.1.1"
-    androidTestCompile 'com.android.support:appcompat-v7:27.1.1'
-    androidTestCompile 'com.android.support:design:27.1.1'
-    androidTestCompile 'com.android.support:support-v4:27.1.1'
-    androidTestCompile 'com.android.support:recyclerview-v7:27.1.1'
+    androidTestImplementation "com.android.support:support-annotations:28.0.0"
+    androidTestImplementation 'com.android.support:appcompat-v7:28.0.0'
+    androidTestImplementation 'com.android.support:design:28.0.0'
+    androidTestImplementation 'com.android.support:support-v4:28.0.0'
+    androidTestImplementation 'com.android.support:recyclerview-v7:28.0.0'
 
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
 

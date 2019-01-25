@@ -9,10 +9,18 @@ import android.graphics.drawable.Drawable;
 public interface UserInformationCardViewContract {
 
     void setUserName(String name);
+
     void setUserRole(String role);
+
     void setUserType(String type);
+
     void setUserPhoto(String photo);
+
     void setBadgeDisable();
+
     void setBadgeEnable(Drawable badgeIcon);
+
+    void showDoubleBadge();
+
 
 }

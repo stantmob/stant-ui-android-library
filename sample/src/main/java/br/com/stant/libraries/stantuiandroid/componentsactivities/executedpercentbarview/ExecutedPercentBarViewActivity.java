@@ -2,7 +2,6 @@ package br.com.stant.libraries.stantuiandroid.componentsactivities.executedperce
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
@@ -11,7 +10,7 @@ import br.com.stant.libraries.stantuiandroid.databinding.ExecutedPercentBarViewT
 public class ExecutedPercentBarViewActivity extends AppCompatActivity {
 
     private ExecutedPercentBarViewTestActBinding mExecutedPercentBarViewTestActBinding;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +20,7 @@ public class ExecutedPercentBarViewActivity extends AppCompatActivity {
 
     public void setPercentage(Integer percentage) {
         mExecutedPercentBarViewTestActBinding.executedPercentBar.setPercentValue(percentage);
-
-
     }
+
 
 }

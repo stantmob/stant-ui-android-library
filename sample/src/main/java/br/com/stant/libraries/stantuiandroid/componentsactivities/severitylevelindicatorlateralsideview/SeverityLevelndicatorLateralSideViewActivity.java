@@ -11,17 +11,16 @@ import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateral
 public class SeverityLevelndicatorLateralSideViewActivity extends AppCompatActivity {
 
     private SeverityLevelIndicatorLateralSideViewTestActBinding mSeverityLevelIndicatorLateralSideViewTestActBinding;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mSeverityLevelIndicatorLateralSideViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.severity_level_indicator_lateral_side_view_test_act);
-
     }
 
     public void setSeverityLevel(SeverityLevelEnum level) {
         mSeverityLevelIndicatorLateralSideViewTestActBinding.severityLevelIndicatorLateralSideView.setSeverityLevel(level);
     }
+
 
 }

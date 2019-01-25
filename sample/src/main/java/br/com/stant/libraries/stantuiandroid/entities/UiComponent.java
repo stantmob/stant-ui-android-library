@@ -12,7 +12,7 @@ public class UiComponent implements Serializable{
     private final String mMarkdownDocUrl;
 
     public UiComponent(String name, String markdownDocUrl) {
-        this.mName = name;
+        this.mName           = name;
         this.mMarkdownDocUrl = markdownDocUrl;
     }
 
@@ -23,4 +23,6 @@ public class UiComponent implements Serializable{
     public String getMarkdownDocUrl() {
         return mMarkdownDocUrl;
     }
+
+
 }

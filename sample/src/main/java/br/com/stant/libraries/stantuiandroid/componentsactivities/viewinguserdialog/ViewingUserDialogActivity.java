@@ -9,9 +9,6 @@ import java.util.List;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.ActionButtonViewTestActBinding;
-import br.com.stant.libraries.uilibrary.components.actionbuttonview.ActionButtonViewContract.OnClickActionButtonListener;
-import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbar;
-import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbarTypeEnum;
 import br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUserDto;
 import br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUsersDialog;
 
@@ -20,7 +17,7 @@ public class ViewingUserDialogActivity extends AppCompatActivity {
     private ActionButtonViewTestActBinding mActionButtonViewTestActBinding;
     private ViewingUsersDialog mViewingUsersDialog;
     private List<ViewingUserDto> users;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +25,9 @@ public class ViewingUserDialogActivity extends AppCompatActivity {
 
         mActionButtonViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.action_button_view_test_act);
 
-        mActionButtonViewTestActBinding.actionButtonViewHorizontalComponent.setOnClickActionButtonListener(new OnClickActionButtonListener() {
-            @Override
-            public void onClick() {
-                mViewingUsersDialog.show();
-            }
-        });
+        mActionButtonViewTestActBinding.actionButtonViewHorizontalComponent.setOnClickActionButtonListener(
+                () -> mViewingUsersDialog.show()
+        );
 
     }
 
@@ -44,4 +38,6 @@ public class ViewingUserDialogActivity extends AppCompatActivity {
 
         mViewingUsersDialog.setViewingUsers(users);
     }
+
+
 }

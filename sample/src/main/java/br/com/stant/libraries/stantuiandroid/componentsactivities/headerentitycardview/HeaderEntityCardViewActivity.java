@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.HeaderEntityCardViewTestActBinding;
-import br.com.stant.libraries.uilibrary.components.headerentitycardview.HeaderEntityCardView;
-import br.com.stant.libraries.uilibrary.databinding.HeaderEntityCardViewBinding;
 
 /**
  * Created by stant02 on 25/06/18.
@@ -31,11 +29,11 @@ public class HeaderEntityCardViewActivity extends AppCompatActivity {
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setStartAt(startAt);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setFirstQuantity(firstQuantity);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setSecondQuantity(secondQuantity);
-
     }
 
     public void setCritical() {
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setCardCritical();
     }
-}
 
+
+}

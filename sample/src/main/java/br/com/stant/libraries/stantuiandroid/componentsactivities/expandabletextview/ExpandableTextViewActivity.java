@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
-import br.com.stant.libraries.stantuiandroid.databinding.ExecutedPercentBarViewTestActBinding;
 import br.com.stant.libraries.stantuiandroid.databinding.ExpandableTextViewTestActBinding;
 
 public class ExpandableTextViewActivity extends AppCompatActivity {
 
     private ExpandableTextViewTestActBinding mExpandableTextViewTestActBinding;
 
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +22,7 @@ public class ExpandableTextViewActivity extends AppCompatActivity {
 
     private void setExpandableText(String text) {
         mExpandableTextViewTestActBinding.expandableTextView.setExpandableText(text);
-
     }
+
+
 }
