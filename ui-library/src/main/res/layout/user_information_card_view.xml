@@ -46,11 +46,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="4dp">
+            android:layout_height="wrap_content">
 
             <FrameLayout
                 android:id="@+id/user_information_profile_image_container"
@@ -108,18 +104,47 @@
 
             </FrameLayout>
 
+            <FrameLayout
+                android:id="@+id/same_creator_and_responsible_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/user_information_card_badge"
+                app:layout_constraintStart_toEndOf="@+id/user_information_card_badge"
+                app:layout_constraintTop_toTopOf="@+id/user_information_card_badge"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@{badgeIcon}"
+                    tools:background="@drawable/shape_rounded_blue_for_card" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="R"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
             <TextView
                 android:id="@+id/user_information_card_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:ellipsize="end"
+                android:singleLine="true"
                 android:text="@{name}"
                 android:textColor="@color/blue_02"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/user_information_card_badge"
+                app:layout_constraintStart_toEndOf="@+id/same_creator_and_responsible_badge"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="User Name" />
 
@@ -130,6 +155,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:ellipsize="end"
+                android:singleLine="true"
                 android:text="@{role}"
                 android:textColor="@color/blue_03"
                 android:textSize="14sp"
