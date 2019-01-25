@@ -26,6 +26,7 @@ public class IncreaseDecreaseButtonsViewActivity extends AppCompatActivity {
                 (view) -> Toast.makeText(IncreaseDecreaseButtonsViewActivity.this, "Decrease Button Action", Toast.LENGTH_SHORT).show()
         );
 
+        mIncreaseDecreaseButtonsViewTestActBinding.increaseDecreaseButtons.setIncreaseDecreaseTextSize(16);
     }
 
 

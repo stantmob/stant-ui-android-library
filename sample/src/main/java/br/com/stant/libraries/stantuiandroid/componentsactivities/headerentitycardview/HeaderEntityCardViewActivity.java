@@ -20,6 +20,7 @@ public class HeaderEntityCardViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mHeaderEntityCardViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.header_entity_card_view_test_act);
+
     }
 
     public void setInformation(String title, String endAt, String startAt, String firstQuantity, String secondQuantity) {
@@ -28,6 +29,10 @@ public class HeaderEntityCardViewActivity extends AppCompatActivity {
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setStartAt(startAt);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setFirstQuantity(firstQuantity);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setSecondQuantity(secondQuantity);
+    }
+
+    public void setCritical() {
+        mHeaderEntityCardViewTestActBinding.headerEntityCardView.setCardCritical();
     }
 
 

@@ -82,5 +82,17 @@ public class InformationCardView extends CardView implements InformationCardView
         mInformationCardViewBinding.informationCardViewCreatedAtDate.setTextColor(getResources().getColor(R.color.blue_02));
         mInformationCardViewBinding.informationCardViewDeadlineDate.setTextColor(getResources().getColor(R.color.blue_02));
     }
+
+    @Override
+    public void setDeadlineVisibility(Integer visibility) {
+        mInformationCardViewBinding.informationCardSecondDateCard.setVisibility(visibility);
+    }
+
+    @Override
+    public void setArrowVisibility(Integer visibility) {
+        mInformationCardViewBinding.informationCardViewArrowImageView.setVisibility(visibility);
+    }
+
+
 }
 

@@ -11,4 +11,5 @@ public interface IncreaseDecreaseButtonsViewContract {
     void setOnPressDecreaseButton(View.OnClickListener onClickListener);
     void onPressIncreaseButton(View view);
     void onPressDecreaseButton(View view);
+    void setIncreaseDecreaseTextSize(Integer size);
 }

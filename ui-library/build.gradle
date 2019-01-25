@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+
+    compileSdkVersion global_compileSdkVersion
+    buildToolsVersion global_buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 28
-        versionCode 1
-        versionName "0.0.89"
+        minSdkVersion global_minSdkVersion
+        targetSdkVersion global_targetSdkVersion
+        versionCode global_versionCode
+        versionName global_versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true

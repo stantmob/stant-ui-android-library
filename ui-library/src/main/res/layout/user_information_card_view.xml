@@ -71,10 +71,10 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_margin="3dp"
+                    android:src="@drawable/user_photo"
                     app:imgHolder="@{@drawable/user_photo}"
                     app:imgSize="@{`100`}"
-                    app:imgUrl="@{photo}"
-                    tools:src="@drawable/user_photo" />
+                    app:imgUrl="@{photo}" />
 
             </FrameLayout>
 

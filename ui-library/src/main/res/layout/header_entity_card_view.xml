@@ -28,6 +28,10 @@
             name="quantity2"
             type="String" />
 
+        <variable
+            name="criticalIconVisibility"
+            type="int" />
+
     </data>
 
     <LinearLayout
@@ -74,6 +78,7 @@
                     </FrameLayout>
 
                     <ImageView
+                        android:id="@+id/header_entity_card_arrow_image_view"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:layout_gravity="center_vertical"
@@ -82,6 +87,7 @@
                         android:background="@drawable/ic_right_arrow_white" />
 
                     <FrameLayout
+                        android:id="@+id/header_entity_card_second_date_frame_layout"
                         android:layout_width="90dp"
                         android:layout_height="25dp"
                         android:background="@drawable/shape_round_white">
@@ -101,10 +107,13 @@
             </LinearLayout>
 
             <FrameLayout
+                android:id="@+id/header_entity_card_critical_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginRight="24dp">
+                android:layout_marginRight="24dp"
+                android:visibility="@{criticalIconVisibility}"
+                tools:visibility="visible">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -197,3 +206,4 @@
 
     </LinearLayout>
 </layout>
+
