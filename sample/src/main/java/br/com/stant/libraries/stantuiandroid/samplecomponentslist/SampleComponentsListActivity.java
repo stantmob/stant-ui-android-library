@@ -6,10 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,22 +29,21 @@ public class SampleComponentsListActivity extends AppCompatActivity implements S
         configureComponentsListRecycle();
         showComponents();
         mSampleComponentsListActBinding.sampleComponentListMainToolbar.inflateMenu(R.menu.workspace_menu);
-        mSampleComponentsListActBinding.sampleComponentListMainToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_go_to_workspace:
-                        goToWorkspaceScreen();
-                        return true;
-                }
-                return true;
-            }
-        });
+        mSampleComponentsListActBinding.sampleComponentListMainToolbar.setOnMenuItemClickListener(
+                (menuItem) -> {
+                    switch (menuItem.getItemId()) {
+                        case R.id.action_go_to_workspace:
+                            goToWorkspaceScreen();
+                            return true;
+                    }
+                    return true;
+                });
     }
 
-    private void configureComponentsListRecycle(){
-        mSampleComponentsListAdapter = new SampleComponentsListAdapter(getApplicationContext(), new ArrayList<UiComponent>(), this);
+    private void configureComponentsListRecycle() {
+        mSampleComponentsListAdapter      = new SampleComponentsListAdapter(this);
         RecyclerView.LayoutManager layout = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
+
         mSampleComponentsListActBinding.sampleComponentsListMainRecyclerView.setLayoutManager(layout);
         mSampleComponentsListActBinding.sampleComponentsListMainRecyclerView.setAdapter(mSampleComponentsListAdapter);
     }
@@ -78,4 +73,6 @@ public class SampleComponentsListActivity extends AppCompatActivity implements S
         Intent intent = new Intent(getApplicationContext(), WorkspaceActivity.class);
         startActivity(intent);
     }
+
+
 }

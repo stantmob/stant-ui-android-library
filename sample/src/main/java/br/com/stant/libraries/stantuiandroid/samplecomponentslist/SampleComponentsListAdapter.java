@@ -1,12 +1,12 @@
 package br.com.stant.libraries.stantuiandroid.samplecomponentslist;
 
-import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.stant.libraries.stantuiandroid.R;
@@ -19,18 +19,17 @@ import br.com.stant.libraries.stantuiandroid.entities.UiComponent;
 
 public class SampleComponentsListAdapter extends RecyclerView.Adapter<SampleComponentsListAdapter.ViewHolder> {
 
-    private final Context mContext;
     private List<UiComponent> mComponents;
     private SampleComponentsListContract.View mView;
 
-    public SampleComponentsListAdapter(Context context, List<UiComponent> components, SampleComponentsListContract.View view) {
-        mContext    = context;
-        mComponents = components;
+    SampleComponentsListAdapter(SampleComponentsListContract.View view) {
         mView       = view;
+        mComponents = new ArrayList<>();
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         SampleComponenentsListItemBinding binding = DataBindingUtil.inflate(
                 LayoutInflater.from(parent.getContext()),
                 R.layout.sample_componenents_list_item,
@@ -41,17 +40,11 @@ public class SampleComponentsListAdapter extends RecyclerView.Adapter<SampleComp
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        ViewHolder viewHolder = holder;
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         final UiComponent component = mComponents.get(position);
 
         viewHolder.mSampleComponenentsListItemBinding.setComponentName(component.getName());
-        viewHolder.mSampleComponenentsListItemBinding.sampleComponentListItemRelativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mView.goToComponentDetail(component);
-            }
-        });
+        viewHolder.mSampleComponenentsListItemBinding.sampleComponentListItemRelativeLayout.setOnClickListener((view) -> mView.goToComponentDetail(component));
         viewHolder.mSampleComponenentsListItemBinding.executePendingBindings();
     }
 
@@ -60,18 +53,20 @@ public class SampleComponentsListAdapter extends RecyclerView.Adapter<SampleComp
         return mComponents.size();
     }
 
-    public void replaceData(List list) {
+    void replaceData(List<UiComponent>  list) {
         mComponents = list;
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         private SampleComponenentsListItemBinding mSampleComponenentsListItemBinding;
 
-        public ViewHolder(SampleComponenentsListItemBinding sampleComponenentsListItemBinding) {
+        ViewHolder(SampleComponenentsListItemBinding sampleComponenentsListItemBinding) {
             super(sampleComponenentsListItemBinding.getRoot());
 
             this.mSampleComponenentsListItemBinding = sampleComponenentsListItemBinding;
         }
     }
+
+
 }

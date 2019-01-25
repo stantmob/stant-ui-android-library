@@ -19,9 +19,7 @@ public class UserInformationCardViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mUserInformationCardViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.user_information_card_view_test_act);
-
     }
 
     public void setCardWithBadgeEnable(String name, String role, String type, String photo, Drawable badgeIcon) {
@@ -40,4 +38,6 @@ public class UserInformationCardViewActivity extends AppCompatActivity {
         mUserInformationCardViewTestActBinding.userInformationCardView.setUserType(type);
         mUserInformationCardViewTestActBinding.userInformationCardView.setUserPhoto(photo);
     }
+
+
 }

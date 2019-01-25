@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.BasicToolbarViewTestActBinding;
-import br.com.stant.libraries.uilibrary.components.basictoolbarview.BasicToolbarView;
 
 public class BasicToolbarViewActivity extends AppCompatActivity {
 
@@ -24,5 +23,6 @@ public class BasicToolbarViewActivity extends AppCompatActivity {
         mBasicToolbarViewTestActBinding.basicToolbar.setTitle(title);
         mBasicToolbarViewTestActBinding.basicToolbar.setSubtitle(subtitle);
     }
+
 
 }

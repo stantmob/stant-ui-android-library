@@ -11,17 +11,16 @@ import br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.Se
 public class SeverityLevelndicatorViewActivity extends AppCompatActivity {
 
     private SeverityLevelIndicatorViewTestActBinding mSeverityLevelIndicatorViewTestActBinding;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mSeverityLevelIndicatorViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.severity_level_indicator_view_test_act);
-
     }
 
     public void setSeverityLevel(SeverityLevelEnum level) {
         mSeverityLevelIndicatorViewTestActBinding.severityLevelIndicatorView.setSeverityLevel(level);
     }
+
 
 }

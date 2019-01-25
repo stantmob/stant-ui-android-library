@@ -10,17 +10,17 @@ import br.com.stant.libraries.stantuiandroid.databinding.SimplePercentageBarView
 public class SimplePercentageBarViewActivity extends AppCompatActivity {
 
     private SimplePercentageBarViewTestActBinding mSimplePercentageBarViewTestActBinding;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mSimplePercentageBarViewTestActBinding = DataBindingUtil.setContentView(this, R.layout.simple_percentage_bar_view_test_act);
-
     }
 
-    public void setPercentage(int executed, int selected){
+    public void setPercentage(int executed, int selected) {
         mSimplePercentageBarViewTestActBinding.simplePercentageBar.setExecutedPercent(executed);
         mSimplePercentageBarViewTestActBinding.simplePercentageBar.setSelectedPercent(selected);
     }
+
+
 }
