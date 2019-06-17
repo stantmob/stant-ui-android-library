@@ -22,5 +22,7 @@ public interface UserInformationCardViewContract {
 
     void showDoubleBadge();
 
+    void hideDoubleBadge();
+
 
 }

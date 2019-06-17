@@ -76,6 +76,11 @@ public class UserInformationCardView extends CardView implements UserInformation
         mUserInformationCardViewBinding.sameCreatorAndResponsibleBadge.setVisibility(VISIBLE);
     }
 
+    @Override
+    public void hideDoubleBadge() {
+        mUserInformationCardViewBinding.sameCreatorAndResponsibleBadge.setVisibility(GONE);
+    }
+
 
 }
 
