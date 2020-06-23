@@ -20,6 +20,7 @@
     <string name="select_time_picker_view.rework_time">Tempo de Retrabalho</string>
 
     <string name="information_card_view.deadline">Prazo</string>
+    <string name="information_card_view.id_text">ID da ocorrência:</string>
 
     <string name="expandable_text">In lobortis quam sit amet elit cursus cursus. Duis ultrices odio ac sapien vulputate,
         sed blandit felis mattis. Morbi a malesuada augue, quis rutrum est. Vivamus condimentum libero in massa tempor facilisis.
