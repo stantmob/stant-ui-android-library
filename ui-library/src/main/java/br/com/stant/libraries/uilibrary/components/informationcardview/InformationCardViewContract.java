@@ -11,6 +11,7 @@ public interface InformationCardViewContract {
     void setActions(String actions);
     void setCreatedAt(String createdAt);
     void setType(String type);
+    void setOccurrenceID(String occurrenceID);
     void setSeverityLevel(Integer level);
     void setDarkCardStyle();
     void setDeadlineVisibility(Integer visibility);
