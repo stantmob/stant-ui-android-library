@@ -52,6 +52,11 @@ public class InformationCardView extends CardView implements InformationCardView
     }
 
     @Override
+    public void setOccurrenceID(String occurrenceID) {
+        mInformationCardViewBinding.setOccurrenceID(occurrenceID);
+    }
+
+    @Override
     public void setDeadline(String deadline) {
         mInformationCardViewBinding.setDeadline(deadline);
     }

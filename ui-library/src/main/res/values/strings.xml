@@ -33,6 +33,7 @@
     <string name="info_action_card.action_text">Action Text</string>
 
     <string name="information_card_view.deadline">Deadline</string>
+    <string name="information_card_view.id_text">Occurrence ID:</string>
 
     <string name="header_entity_card_view.occurrences">Occurrences</string>
     <string name="header_entity_card_view.late">Late</string>
