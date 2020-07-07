@@ -43,6 +43,7 @@ public class InformationCardViewActivityTest {
         static final String ACTIONS                        = "4/5";
         static final String CREATED_AT                     = "01/01/2018";
         static final String DEADLINE                       = "30/12/2018";
+        static final String OCCURRENCE_ID                  = "333333";
         static final Integer SEVERITY_LEVEL                = 3;
 
         @Rule
@@ -61,7 +62,7 @@ public class InformationCardViewActivityTest {
 
         @Before
         public void setCardInformations() {
-            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, SEVERITY_LEVEL);
+            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, OCCURRENCE_ID, SEVERITY_LEVEL);
             waitEspresso(500);
         }
 
@@ -85,6 +86,13 @@ public class InformationCardViewActivityTest {
             onView(allOf(withId(R.id.information_card_view_deadline_date),
                     isDescendantOfA(withId(R.id.information_card_view))))
                     .check(matches(withText(DEADLINE)));
+        }
+
+        @Test
+        public void It_should_show_occurrence_id_text_correctly() {
+            onView(allOf(withId(R.id.information_card_view_id_value),
+                    isDescendantOfA(withId(R.id.information_card_view))))
+                    .check(matches(withText(OCCURRENCE_ID)));
         }
 
         @Test
