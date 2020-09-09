@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelEnum;
@@ -43,6 +44,7 @@ public class InformationCardView extends CardView implements InformationCardView
 
     @Override
     public void setTitle(String title) {
+        setVisibleOrGoneWarningImageView(title);
         mInformationCardViewBinding.setTitle(title);
     }
 
@@ -96,6 +98,15 @@ public class InformationCardView extends CardView implements InformationCardView
     @Override
     public void setArrowVisibility(Integer visibility) {
         mInformationCardViewBinding.informationCardViewArrowImageView.setVisibility(visibility);
+    }
+
+    @Override
+    public void setVisibleOrGoneWarningImageView(String title) {
+        if(title.equals(getResources().getString(R.string.information_card_view_occurrence_related))) {
+            mInformationCardViewBinding.informationCardViewWarningImageView.setVisibility(View.VISIBLE);
+        } else {
+            mInformationCardViewBinding.informationCardViewWarningImageView.setVisibility(View.GONE);
+        }
     }
 
 
