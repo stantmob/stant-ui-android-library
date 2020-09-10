@@ -105,7 +105,7 @@ public class InformationCardView extends CardView implements InformationCardView
 
     @Override
     public void setServiceInspectionFormFilledId(Integer serviceInspectionFormFilledId) {
-        if(serviceInspectionFormFilledId != null) {
+        if (serviceInspectionFormFilledId != null) {
             setWarningVisibility(View.VISIBLE);
         } else {
             setWarningVisibility(View.GONE);
