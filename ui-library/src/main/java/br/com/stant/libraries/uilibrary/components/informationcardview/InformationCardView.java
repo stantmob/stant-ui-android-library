@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.components.severitylevelindicatorlateralsideview.SeverityLevelEnum;
@@ -39,6 +40,10 @@ public class InformationCardView extends CardView implements InformationCardView
         mInformationCardViewBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.information_card_view, this, true);
         mInformationCardViewBinding.setHandler(this);
         mSeverityLevelIndicatorLateralSideView = mInformationCardViewBinding.informationCardViewSeverityLevel;
+    }
+
+    private void setWarningVisibility(Integer visibility) {
+        mInformationCardViewBinding.informationCardViewWarningImageView.setVisibility(visibility);
     }
 
     @Override
@@ -96,6 +101,15 @@ public class InformationCardView extends CardView implements InformationCardView
     @Override
     public void setArrowVisibility(Integer visibility) {
         mInformationCardViewBinding.informationCardViewArrowImageView.setVisibility(visibility);
+    }
+
+    @Override
+    public void setServiceInspectionFormFilledId(Integer serviceInspectionFormFilledId) {
+        if(serviceInspectionFormFilledId != null) {
+            setWarningVisibility(View.VISIBLE);
+        } else {
+            setWarningVisibility(View.GONE);
+        }
     }
 
 
