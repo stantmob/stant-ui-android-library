@@ -151,21 +151,35 @@
                     android:textSize="16dp"
                     tools:text="Qualidade" />
 
-                <TextView
-                    android:id="@+id/information_card_view_title_text"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="2"
                     android:paddingLeft="24dp"
                     android:paddingTop="2dp"
                     android:paddingRight="24dp"
-                    android:paddingBottom="1dp"
-                    android:text="@{title}"
-                    android:textColor="@color/blue_02"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    tools:text="Não estava usando o capacete em serviço" />
+                    android:paddingBottom="1dp">
+
+                    <ImageView
+                        android:id="@+id/information_card_view_warning_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        app:srcCompat="@drawable/ic_warning" />
+
+                    <TextView
+                        android:id="@+id/information_card_view_title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@{title}"
+                        android:textColor="@color/blue_02"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        tools:text="Não estava usando o capacete em serviço" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -177,20 +191,20 @@
                         android:id="@+id/information_card_view_id_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
                         android:ellipsize="end"
                         android:maxLines="2"
-                        android:layout_marginStart="24dp"
                         android:text="@string/information_card_view.id_text"
                         android:textColor="@color/gray"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/information_card_view_id_value"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
                         android:ellipsize="end"
                         android:maxLines="2"
-                        android:layout_marginStart="4dp"
                         android:text="@{occurrenceID}"
                         android:textColor="@color/gray"
                         android:textSize="12sp"

@@ -16,5 +16,6 @@ public interface InformationCardViewContract {
     void setDarkCardStyle();
     void setDeadlineVisibility(Integer visibility);
     void setArrowVisibility(Integer visibility);
+    void setServiceInspectionFormFilledId(Integer serviceInspectionFormFilledId);
 
 }
