@@ -79,5 +79,6 @@
 
     <color name="blue_02">#55687e</color>
     <color name="blue_03">#b0b9c3</color>
+    <color name="blue_warning">#55687E</color>
 
 </resources>

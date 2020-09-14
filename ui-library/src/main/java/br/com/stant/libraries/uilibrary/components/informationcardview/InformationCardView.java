@@ -84,6 +84,7 @@ public class InformationCardView extends CardView implements InformationCardView
 
     @Override
     public void setDarkCardStyle() {
+        mInformationCardViewBinding.informationCardViewWarningImageView.setBackgroundResource(R.drawable.ic_warning_white);
         mInformationCardViewBinding.informationCard.setCardBackgroundColor(getResources().getColor(R.color.blue_02));
         mInformationCardViewBinding.informationCardViewTitleText.setTextColor(getResources().getColor(R.color.white));
         mInformationCardViewBinding.informationCardViewActions.setTextColor(getResources().getColor(R.color.white));
