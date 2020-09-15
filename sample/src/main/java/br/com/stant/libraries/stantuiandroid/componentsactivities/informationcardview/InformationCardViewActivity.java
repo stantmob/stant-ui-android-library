@@ -23,7 +23,7 @@ public class InformationCardViewActivity extends AppCompatActivity {
     }
 
     public void setInformation(String title, String type, String actions, String createdAt,
-                               String deadline, String occurrenceID, Integer severityLevel, Integer serviceInspectionFormFilled) {
+                               String deadline, String occurrenceID, Integer severityLevel, Long serviceInspectionFormFilled) {
 
         mInformationCardViewTestActBinding.informationCardView.setDarkCardStyle();
         mInformationCardViewTestActBinding.informationCardView.setTitle(title);
