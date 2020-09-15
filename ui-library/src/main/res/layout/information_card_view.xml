@@ -165,6 +165,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginEnd="5dp"
+                        android:visibility="gone"
                         app:srcCompat="@drawable/ic_warning_blue" />
 
                     <TextView
