@@ -38,13 +38,14 @@ import static org.hamcrest.Matchers.allOf;
 public class InformationCardViewActivityTest {
     public abstract static class Describe_Information_Card_View_Activity_content extends TestBase {
 
-        static final String TITLE                          = "Grade de proteção colocada de forma incorreta";
-        static final String TYPE                           = "Qualidade";
-        static final String ACTIONS                        = "4/5";
-        static final String CREATED_AT                     = "01/01/2018";
-        static final String DEADLINE                       = "30/12/2018";
-        static final String OCCURRENCE_ID                  = "333333";
-        static final Integer SEVERITY_LEVEL                = 3;
+        static final String TITLE                           = "Grade de proteção colocada de forma incorreta";
+        static final String TYPE                            = "Qualidade";
+        static final String ACTIONS                         = "4/5";
+        static final String CREATED_AT                      = "01/01/2018";
+        static final String DEADLINE                        = "30/12/2018";
+        static final String OCCURRENCE_ID                   = "333333";
+        static final Integer SEVERITY_LEVEL                 = 3;
+        static final Integer SERVICE_INSPECTION_FORM_FILLED = 4;
 
         @Rule
         public ActivityTestRule<InformationCardViewActivity> mActivity = new ActivityTestRule<>(InformationCardViewActivity.class);
@@ -62,7 +63,7 @@ public class InformationCardViewActivityTest {
 
         @Before
         public void setCardInformations() {
-            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, OCCURRENCE_ID, SEVERITY_LEVEL);
+            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, OCCURRENCE_ID, SEVERITY_LEVEL, SERVICE_INSPECTION_FORM_FILLED);
             waitEspresso(500);
         }
 
