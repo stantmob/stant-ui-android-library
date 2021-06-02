@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/sample_component_list_main_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
                 android:textColor="@color/orange_stant"
                 android:textSize="18dp" />
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
         <View
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:background="@drawable/toolbar_dropshadow"
             android:orientation="horizontal" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/sample_components_list_main_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

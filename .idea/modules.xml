@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/stant-ui-android-library.iml" filepath="$PROJECT_DIR$/stant-ui-android-library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui-library/ui-library.iml" filepath="$PROJECT_DIR$/ui-library/ui-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stant-ui-android-library.iml" filepath="$PROJECT_DIR$/.idea/modules/stant-ui-android-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/stant-ui-android-library.sample.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/stant-ui-android-library.sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui-library/stant-ui-android-library.ui-library.iml" filepath="$PROJECT_DIR$/.idea/modules/ui-library/stant-ui-android-library.ui-library.iml" />
     </modules>
   </component>
 </project>

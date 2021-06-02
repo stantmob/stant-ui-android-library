@@ -1,11 +1,10 @@
 package br.com.stant.libraries.uilibrary.components.simpleinformationscardview;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.v7.widget.CardView;
+import androidx.databinding.DataBindingUtil;
+import androidx.cardview.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.widget.LinearLayout;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.SimpleInformationsCardViewBinding;

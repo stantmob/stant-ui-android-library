@@ -1,9 +1,9 @@
 package br.com.stant.libraries.uilibrary.components.severitylevelindicatorview;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -2,7 +2,7 @@ package br.com.stant.libraries.uilibrary.components.selectdatepickerview;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
