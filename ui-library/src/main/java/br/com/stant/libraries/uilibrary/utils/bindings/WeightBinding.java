@@ -1,6 +1,6 @@
 package br.com.stant.libraries.uilibrary.utils.bindings;
 
-import android.databinding.BindingAdapter;
+import androidx.databinding.BindingAdapter;
 import android.widget.LinearLayout;
 
 /**

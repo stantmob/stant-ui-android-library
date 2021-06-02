@@ -1,8 +1,8 @@
 package br.com.stant.libraries.stantuiandroid.testutils;
 
 import android.graphics.drawable.ColorDrawable;
-import android.support.test.espresso.intent.Checks;
-import android.support.test.espresso.matcher.BoundedMatcher;
+import androidx.test.espresso.intent.Checks;
+import androidx.test.espresso.matcher.BoundedMatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;

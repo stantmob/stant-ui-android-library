@@ -1,13 +1,11 @@
 package br.com.stant.libraries.uilibrary.components.userinformationcardview;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.CardView;
+import androidx.cardview.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-
-import com.squareup.picasso.Picasso;
 
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.UserInformationCardViewBinding;

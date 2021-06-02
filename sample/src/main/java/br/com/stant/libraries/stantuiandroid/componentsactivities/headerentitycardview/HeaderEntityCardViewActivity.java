@@ -1,8 +1,8 @@
 package br.com.stant.libraries.stantuiandroid.componentsactivities.headerentitycardview;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.HeaderEntityCardViewTestActBinding;

@@ -2,39 +2,33 @@ package br.com.stant.libraries.stantuiandroid.componentsactivities;
 
 import android.content.Intent;
 
-import android.support.test.espresso.matcher.ViewMatchers;
-import android.support.test.rule.ActivityTestRule;
+import androidx.test.espresso.matcher.ViewMatchers;
+import androidx.test.rule.ActivityTestRule;
 import android.test.suitebuilder.annotation.LargeTest;
-import android.widget.DatePicker;
 
-import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
-import java.util.Date;
-
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.TestBase;
-import br.com.stant.libraries.stantuiandroid.componentsactivities.selectdatepickerview.SelectDatePickerViewActivity;
 import br.com.stant.libraries.stantuiandroid.componentsactivities.selecttimepickerview.SelectTimePickerViewActivity;
 import br.com.stant.libraries.stantuiandroid.testutils.IntentFactory;
-import br.com.stant.libraries.uilibrary.utils.DateUtils;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.scrollTo;
-import static android.support.test.espresso.action.ViewActions.swipeDown;
-import static android.support.test.espresso.action.ViewActions.swipeUp;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
-import static android.support.test.espresso.matcher.ViewMatchers.isNotChecked;
-import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
-import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.scrollTo;
+import static androidx.test.espresso.action.ViewActions.swipeDown;
+import static androidx.test.espresso.action.ViewActions.swipeUp;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA;
+import static androidx.test.espresso.matcher.ViewMatchers.isNotChecked;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.findAndClick;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.not;

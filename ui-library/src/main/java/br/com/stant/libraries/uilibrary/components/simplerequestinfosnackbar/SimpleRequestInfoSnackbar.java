@@ -2,9 +2,9 @@ package br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.NonNull;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,7 +35,7 @@ public class SimpleRequestInfoSnackbar implements SimpleRequestInfoSnackbarContr
         Snackbar snackbar = Snackbar.make(mView, mInfoText, Snackbar.LENGTH_SHORT);
 
         View snackbarView = snackbar.getView();
-        TextView tv = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+        TextView tv = (TextView) snackbarView.findViewById(R.id.snackbar_text);
         tv.setTextColor(Color.WHITE);
 
         snackbarView.setBackgroundColor(getBgColor());

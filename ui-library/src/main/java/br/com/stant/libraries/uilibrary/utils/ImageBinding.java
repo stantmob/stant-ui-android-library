@@ -1,6 +1,6 @@
 package br.com.stant.libraries.uilibrary.utils;
 
-import android.databinding.BindingAdapter;
+import androidx.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 

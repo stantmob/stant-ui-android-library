@@ -46,7 +46,7 @@
             android:background="@drawable/shape_rounded_white"
             android:orientation="vertical">
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/viewing_users_dialog_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"

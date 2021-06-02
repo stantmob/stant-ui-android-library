@@ -1,29 +1,18 @@
 package br.com.stant.libraries.stantuiandroid.workspace;
 
-import android.app.Dialog;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.databinding.SampleWorkspaceActBinding;
-import br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.SeverityLevelEnum;
-import br.com.stant.libraries.uilibrary.components.severitylevelindicatorview.SeverityLevelIndicatorView;
-import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbar;
-import br.com.stant.libraries.uilibrary.components.simplerequestinfosnackbar.SimpleRequestInfoSnackbarTypeEnum;
 import br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUserDto;
 import br.com.stant.libraries.uilibrary.components.viewinguserdialog.ViewingUsersDialog;
-import br.com.stant.libraries.uilibrary.databinding.ViewingUsersDialogBinding;
 
 /**
  * Created by denisvieira on 29/10/17.

@@ -1,8 +1,8 @@
 package br.com.stant.libraries.uilibrary.components.headerentitycardview;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.v7.widget.CardView;
+import androidx.databinding.DataBindingUtil;
+import androidx.cardview.widget.CardView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 

@@ -3,7 +3,7 @@ package br.com.stant.libraries.stantuiandroid.testutils;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.test.InstrumentationRegistry;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 public class IntentFactory {
 
