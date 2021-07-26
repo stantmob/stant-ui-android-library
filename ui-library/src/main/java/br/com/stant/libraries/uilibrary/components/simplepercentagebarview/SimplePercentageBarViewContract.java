@@ -6,6 +6,6 @@ package br.com.stant.libraries.uilibrary.components.simplepercentagebarview;
 
 public interface SimplePercentageBarViewContract {
 
-    void setSelectedPercent(float percentSelected);
-    void setExecutedPercent(float percentExecuted);
+    void setSelectedPercent(double percentSelected);
+    void setExecutedPercent(double percentExecuted);
 }

@@ -17,8 +17,8 @@ import br.com.stant.libraries.uilibrary.databinding.SimplePercentageBarViewBindi
 public class SimplePercentageBarView extends LinearLayout implements SimplePercentageBarViewContract {
 
     private SimplePercentageBarViewBinding mSimplePercentageBarViewBinding;
-    private float mExecutedPercentage;
-    private float mSelectedPercentage;
+    private double mExecutedPercentage;
+    private double mSelectedPercentage;
 
     public SimplePercentageBarView(Context context) {
         super(context);
@@ -45,22 +45,25 @@ public class SimplePercentageBarView extends LinearLayout implements SimplePerce
     }
 
     @Override
-    public void setSelectedPercent(float selectedPercent) {
-        float percentageTotalSum = mExecutedPercentage + selectedPercent;
+    public void setSelectedPercent(double selectedPercent) {
+        double percentageTotalSum = mExecutedPercentage + selectedPercent;
         if(percentageTotalSum > 100){
-            float remaningValue = 100 - mExecutedPercentage;
+            double remaningValue = 100 - mExecutedPercentage;
             mSelectedPercentage = remaningValue;
-            mSimplePercentageBarViewBinding.setSelectedPercentValue(remaningValue);
+            float remainingValueInFloat = (float) remaningValue;
+            mSimplePercentageBarViewBinding.setSelectedPercentValue(remainingValueInFloat);
         }else{
             mSelectedPercentage = selectedPercent;
-            mSimplePercentageBarViewBinding.setSelectedPercentValue(selectedPercent);
+            float selectedPercentInFloat = (float) selectedPercent;
+            mSimplePercentageBarViewBinding.setSelectedPercentValue(selectedPercentInFloat);
         }
     }
 
     @Override
-    public void setExecutedPercent(float executedPercent) {
+    public void setExecutedPercent(double executedPercent) {
         mExecutedPercentage = executedPercent;
-        mSimplePercentageBarViewBinding.setExecutedPercentValue(executedPercent);
+        float executedPercentInFloat = (float) executedPercent;
+        mSimplePercentageBarViewBinding.setExecutedPercentValue(executedPercentInFloat);
 
         if(mExecutedPercentage == 100){
             mSimplePercentageBarViewBinding.simplePercentageBarViewExecutedLinearLayout.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.shape_rounded_green_strength));
