@@ -7,6 +7,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
+import java.math.BigDecimal;
+
 import br.com.stant.libraries.uilibrary.R;
 import br.com.stant.libraries.uilibrary.databinding.SimplePercentageBarViewBinding;
 
@@ -50,7 +52,8 @@ public class SimplePercentageBarView extends LinearLayout implements SimplePerce
         if(percentageTotalSum > 100){
             double remaningValue = 100 - mExecutedPercentage;
             mSelectedPercentage = remaningValue;
-            float remainingValueInFloat = (float) remaningValue;
+            BigDecimal number = new BigDecimal(mSelectedPercentage);
+            float remainingValueInFloat = number.floatValue();
             mSimplePercentageBarViewBinding.setSelectedPercentValue(remainingValueInFloat);
         }else{
             mSelectedPercentage = selectedPercent;
@@ -62,7 +65,8 @@ public class SimplePercentageBarView extends LinearLayout implements SimplePerce
     @Override
     public void setExecutedPercent(double executedPercent) {
         mExecutedPercentage = executedPercent;
-        float executedPercentInFloat = (float) executedPercent;
+        BigDecimal number = new BigDecimal(mExecutedPercentage);
+        float executedPercentInFloat = number.floatValue();
         mSimplePercentageBarViewBinding.setExecutedPercentValue(executedPercentInFloat);
 
         if(mExecutedPercentage == 100){
