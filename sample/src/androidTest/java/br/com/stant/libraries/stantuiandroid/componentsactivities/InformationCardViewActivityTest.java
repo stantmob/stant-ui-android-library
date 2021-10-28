@@ -46,6 +46,7 @@ public class InformationCardViewActivityTest {
         static final String OCCURRENCE_ID                = "333333";
         static final Integer SEVERITY_LEVEL              = 3;
         static final Long SERVICE_INSPECTION_FORM_FILLED = 4L;
+        static final String EXTERNAL                     = "External";
 
         @Rule
         public ActivityTestRule<InformationCardViewActivity> mActivity = new ActivityTestRule<>(InformationCardViewActivity.class);
@@ -63,7 +64,7 @@ public class InformationCardViewActivityTest {
 
         @Before
         public void setCardInformations() {
-            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, OCCURRENCE_ID, SEVERITY_LEVEL, SERVICE_INSPECTION_FORM_FILLED);
+            mActivity.getActivity().setInformation(TITLE, TYPE, ACTIONS, CREATED_AT, DEADLINE, OCCURRENCE_ID, SEVERITY_LEVEL, SERVICE_INSPECTION_FORM_FILLED, EXTERNAL);
             waitEspresso(500);
         }
 

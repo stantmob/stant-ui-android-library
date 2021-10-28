@@ -17,5 +17,6 @@ public interface InformationCardViewContract {
     void setDeadlineVisibility(Integer visibility);
     void setArrowVisibility(Integer visibility);
     void setServiceInspectionFormFilledId(Long serviceInspectionFormFilledId);
-
+    void setExternal(String external);
+    void setVisibilityExternal(Integer external);
 }
