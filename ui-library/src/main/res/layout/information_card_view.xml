@@ -32,7 +32,9 @@
         <variable
             name="actions"
             type="String" />
-
+        <variable
+            name="external"
+            type="String" />
 
 
     </data>
@@ -122,20 +124,47 @@
 
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/information_card_view_actions"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingTop="26dp"
-                        android:paddingRight="24dp"
-                        android:text="@{actions}"
-                        android:textAlignment="viewEnd"
-                        android:textColor="@color/blue_02"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        tools:ignore="RtlCompat"
-                        tools:text="3/5" />
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2"
+                        android:paddingLeft="24dp"
+                        android:paddingTop="24dp">
+
+                        <TextView
+                            android:id="@+id/information_card_view_external"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@{external}"
+                            android:textColor="@color/blue_02"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:background="@drawable/shape_round_blue_external"
+                            android:paddingEnd="6dp"
+                            android:paddingTop="3dp"
+                            android:paddingStart="7dp"
+                            android:paddingBottom="2dp"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            tools:text="External" />
+
+                        <TextView
+                            android:id="@+id/information_card_view_actions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:text="@{actions}"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/blue_02"
+                            android:layout_marginTop="4dp"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat"
+                            tools:text="3 / 5" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

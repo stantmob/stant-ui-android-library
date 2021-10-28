@@ -83,6 +83,16 @@ public class InformationCardView extends CardView implements InformationCardView
     }
 
     @Override
+    public void setExternal(String external) {
+        mInformationCardViewBinding.setExternal(external);
+    }
+
+    @Override
+    public void setVisibilityExternal(Integer visibilityExternal) {
+    mInformationCardViewBinding.informationCardViewExternal.setVisibility(visibilityExternal);
+    }
+
+    @Override
     public void setDarkCardStyle() {
         mInformationCardViewBinding.informationCard.setCardBackgroundColor(getResources().getColor(R.color.blue_02));
         mInformationCardViewBinding.informationCardViewTitleText.setTextColor(getResources().getColor(R.color.white));
@@ -112,6 +122,8 @@ public class InformationCardView extends CardView implements InformationCardView
             setWarningVisibility(View.GONE);
         }
     }
+
+
 
 
 }
