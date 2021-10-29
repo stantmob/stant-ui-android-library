@@ -83,13 +83,28 @@ public class InformationCardView extends CardView implements InformationCardView
     }
 
     @Override
-    public void setExternal(String external) {
+    public void setTextTagExternal(String external) {
         mInformationCardViewBinding.setExternal(external);
     }
 
     @Override
     public void setVisibilityExternal(Integer visibilityExternal) {
     mInformationCardViewBinding.informationCardViewExternal.setVisibility(visibilityExternal);
+    }
+
+    @Override
+    public void setVisibilityStatusIcon(Integer visibilityStatusIcon) {
+        mInformationCardViewBinding.informationCardViewStatusIcon.setVisibility(visibilityStatusIcon);
+    }
+
+    @Override
+    public void setVisibilityActions(Integer visibilityActions) {
+        mInformationCardViewBinding.informationCardViewActions.setVisibility(visibilityActions);
+    }
+
+    @Override
+    public void setVisibilityContainerExternalActions(Integer visibilityContainerExternalActions) {
+        mInformationCardViewBinding.informationCardViewContainerExternalActions.setVisibility(visibilityContainerExternalActions);
     }
 
     @Override
