@@ -34,7 +34,7 @@ public class InformationCardViewActivity extends AppCompatActivity {
         mInformationCardViewTestActBinding.informationCardView.setOccurrenceID(occurrenceID);
         mInformationCardViewTestActBinding.informationCardView.setSeverityLevel(severityLevel);
         mInformationCardViewTestActBinding.informationCardView.setServiceInspectionFormFilledId(serviceInspectionFormFilled);
-        mInformationCardViewTestActBinding.informationCardView.setExternal(external);
+        mInformationCardViewTestActBinding.informationCardView.setTextTagExternal(external);
     }
 
 
