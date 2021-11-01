@@ -131,13 +131,13 @@
                         android:paddingEnd="8dp"
                         android:paddingStart="24dp"
                         android:paddingTop="24dp">
-                        
+
                         <View
                             android:id="@+id/information_card_view_status_icon"
                             android:layout_width="26dp"
                             android:layout_height="26dp"
                             android:layout_marginEnd="6dp"
-                            tools:background="@drawable/ic_finished_action_dark_style"/>
+                            android:background="@drawable/ic_finished_action_dark_style"/>
 
                         <LinearLayout
                             android:id="@+id/information_card_view_container_external_actions"
