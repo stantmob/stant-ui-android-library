@@ -44,7 +44,7 @@ public class ViewingUsersDialogAdapter extends
     public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ViewingUsersDialogItemBinding viewingUsersDialogItemBinding =
                 DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                        R.layout.viewing_users_dialog_item,
+                        R.layout.viewing_users_days_worked_dialog_item,
                         parent, false);
 
         return new ItemViewHolder(viewingUsersDialogItemBinding);

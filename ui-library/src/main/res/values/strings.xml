@@ -14,6 +14,8 @@
     <string name="viewing_users_dialog._title_text">Team Members</string>
     <string name="viewing_users_dialog.ok_hint">Ok</string>
 
+    <string name="viewing_users_dialog._title_days_Worked_text">Worked days</string>
+
     <string name="select_date_picker_view_date_hint">00/00/00</string>
 
     <string name="select_time_picker_view.rework_time">Rework time</string>

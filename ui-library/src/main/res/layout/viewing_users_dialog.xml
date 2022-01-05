@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,9 +11,7 @@
 
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -28,15 +28,60 @@
             android:paddingBottom="30dp"
             app:srcCompat="@drawable/ic_close_dialog" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <SearchView
+                android:id="@+id/viewing_users_dialog_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:queryHint="Procure por menbros" />
+
+            <View
+                android:id="@+id/viewing_users_dialog_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_02" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewing_users_dialog_text_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:gravity="center"
+            android:layout_marginStart="8dp"
             android:text="@string/viewing_users_dialog._title_text"
             android:textColor="@color/white"
             android:textStyle="bold"
             tools:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="right"
+            android:text="@string/viewing_users_dialog._title_days_Worked_text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:textColor="@color/black" />
+
+    </LinearLayout>
+
+
+
+
 
         <LinearLayout
             android:id="@+id/viewing_users_dialog_search_horizontal_bottom_line_linear_layout"
@@ -50,7 +95,8 @@
                 android:id="@+id/viewing_users_dialog_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:scrollbars="vertical" />
+                android:scrollbars="vertical"
+                tools:listitem="@layout/viewing_users_days_worked_dialog_item"/>
 
         </LinearLayout>
 
