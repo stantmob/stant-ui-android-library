@@ -28,15 +28,56 @@
             android:paddingBottom="30dp"
             app:srcCompat="@drawable/ic_close_dialog" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="@string/viewing_users_dialog._title_text"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:textColor="@color/black" />
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <SearchView
+                android:id="@+id/viewing_users_dialog_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:queryHint="Procure por menbros" />
+
+            <View
+                android:id="@+id/viewing_users_dialog_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_02" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewing_users_dialog_text_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/viewing_users_dialog._title_text"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="right"
+                android:text="Dias trabalhados"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:textColor="@color/black" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/viewing_users_dialog_search_horizontal_bottom_line_linear_layout"
