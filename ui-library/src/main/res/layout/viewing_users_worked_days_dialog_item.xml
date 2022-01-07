@@ -48,9 +48,8 @@
             android:text="-"
             android:textColor="@color/black"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/viewing_users_dialog_item_user_valor"
-            app:layout_constraintHorizontal_bias="0.93"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_name_text_view"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -58,16 +57,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text=""
+            android:digits="0123456789"
             android:gravity="center"
             android:inputType="number"
             android:maxLength="3"
-            android:digits="0123456789"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@+id/viewing_users_dialog_item_user_maior"
+            app:layout_constraintStart_toEndOf="@+id/viewing_users_dialog_item_user_menor"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="0"/>
+            tools:text="0" />
 
         <TextView
             android:id="@+id/viewing_users_dialog_item_user_maior"
