@@ -15,6 +15,9 @@
     <string name="viewing_users_dialog._title_text">Membros da Equipe</string>
     <string name="viewing_users_dialog.ok_hint">Ok</string>
 
+    <string name="viewing_users_dialog._title_days_Worked_text">Dias trabalhados</string>
+    <string name="viewing_users_dialog.search_for_members_hint">Procure por menbros</string>
+
     <string name="select_date_picker_view_date_hint">00/00/00</string>
 
     <string name="select_time_picker_view.rework_time">Tempo de Retrabalho</string>

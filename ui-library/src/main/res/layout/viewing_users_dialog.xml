@@ -40,7 +40,8 @@
                 android:id="@+id/viewing_users_dialog_search_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:queryHint="Procure por menbros" />
+                android:queryHint="@string/viewing_users_dialog.search_for_members_hint"
+                android:iconifiedByDefault="false"/>
 
             <View
                 android:id="@+id/viewing_users_dialog_view"
@@ -81,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:gravity="right"
-                    android:text="Dias trabalhados"
+                    android:text="@string/viewing_users_dialog._title_days_Worked_text"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     tools:textColor="@color/black" />
