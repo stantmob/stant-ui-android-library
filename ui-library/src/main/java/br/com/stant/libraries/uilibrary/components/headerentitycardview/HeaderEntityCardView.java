@@ -64,6 +64,11 @@ public class HeaderEntityCardView extends CardView implements HeaderEntityCardVi
     }
 
     @Override
+    public void setThirdQuantity(String thirdQuantity) {
+        mHeaderEntityCardViewBinding.setQuantity3(thirdQuantity);
+    }
+
+    @Override
     public void setCardCritical() {
         mHeaderEntityCardViewBinding.setCriticalIconVisibility(VISIBLE);
     }
