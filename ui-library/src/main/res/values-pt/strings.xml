@@ -38,7 +38,8 @@
 
     <string name="button_component_text">Texto botão</string>
 
-    <string name="header_entity_card_view.occurrences">Ocorrências</string>
+    <string name="header_entity_card_view.occurrences">Total</string>
+    <string name="header_entity_card_view.progress">Em andamento</string>
     <string name="header_entity_card_view.late">Em atraso</string>
 
 </resources>

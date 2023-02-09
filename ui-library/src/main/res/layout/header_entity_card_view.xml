@@ -29,6 +29,10 @@
             type="String" />
 
         <variable
+            name="quantity3"
+            type="String" />
+
+        <variable
             name="criticalIconVisibility"
             type="int" />
 
@@ -44,21 +48,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="2">
+                android:layout_weight="2"
+                android:baselineAligned="false">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="2"
-                    android:paddingLeft="24dp"
-                    android:paddingTop="24dp">
+                    android:paddingStart="24dp"
+                    android:paddingTop="24dp"
+                    android:paddingEnd="8dp"
+                    tools:ignore="NestedWeights,UselessParent">
 
                     <FrameLayout
                         android:layout_width="89dp"
@@ -84,7 +92,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
-                        android:background="@drawable/ic_right_arrow_white" />
+                        android:background="@drawable/ic_right_arrow_white"
+                        tools:ignore="ContentDescription" />
 
                     <FrameLayout
                         android:id="@+id/header_entity_card_second_date_frame_layout"
@@ -111,14 +120,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginRight="24dp"
+                android:layout_marginEnd="24dp"
                 android:visibility="@{criticalIconVisibility}"
                 tools:visibility="visible">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/ic_critical_icon" />
+                    android:background="@drawable/ic_critical_icon"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="20dp"
@@ -137,22 +147,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:maxLines="1"
-            android:paddingBottom="8dp"
             android:paddingLeft="24dp"
-            android:paddingRight="24dp"
             android:paddingTop="15dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="8dp"
             android:text="@{title}"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Entity Title" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:paddingBottom="16dp"
-            android:paddingLeft="24dp">
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -165,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/header_entity_card_view.occurrences"
                     android:textColor="@color/white"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/header_entity_first_quantity"
@@ -173,7 +185,31 @@
                     android:layout_height="wrap_content"
                     android:text="@{quantity1}"
                     android:textColor="@color/white"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
+                    tools:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_entity_card_view.progress"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/header_entity_second_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{quantity2}"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
                     tools:text="0" />
 
             </LinearLayout>
@@ -189,15 +225,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/header_entity_card_view.late"
                     android:textColor="@color/white"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/header_entity_second_quantity"
+                    android:id="@+id/header_entity_third_quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{quantity2}"
+                    android:text="@{quantity3}"
                     android:textColor="@color/white"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     tools:text="0" />
 
             </LinearLayout>
