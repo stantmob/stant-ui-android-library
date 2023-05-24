@@ -69,9 +69,11 @@
                     tools:ignore="NestedWeights,UselessParent">
 
                     <FrameLayout
-                        android:layout_width="89dp"
-                        android:layout_height="26dp"
-                        android:background="@drawable/shape_round_white">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_round_white"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp">
 
                         <TextView
                             android:id="@+id/header_entity_card_view_start_at_date"
@@ -97,9 +99,11 @@
 
                     <FrameLayout
                         android:id="@+id/header_entity_card_second_date_frame_layout"
-                        android:layout_width="90dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/shape_round_white">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_round_white"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp">
 
                         <TextView
                             android:id="@+id/header_entity_card_view_end_at_date"
@@ -131,8 +135,8 @@
                     tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="!"
                     android:textAlignment="center"

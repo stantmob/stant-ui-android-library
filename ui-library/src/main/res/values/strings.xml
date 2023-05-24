@@ -38,7 +38,7 @@
     <string name="information_card_view.id_text">Occurrence ID:</string>
 
     <string name="header_entity_card_view.occurrences">Total</string>
-    <string name="header_entity_card_view.progress">In progress</string>
+    <string name="header_entity_card_view.progress">Open</string>
     <string name="header_entity_card_view.late">Late</string>
 
 </resources>
