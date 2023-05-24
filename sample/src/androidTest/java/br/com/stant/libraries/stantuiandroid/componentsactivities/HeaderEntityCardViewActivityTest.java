@@ -4,6 +4,15 @@ package br.com.stant.libraries.stantuiandroid.componentsactivities;
  * Created by stant02 on 25/06/18.
  */
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
+import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.allOf;
+import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
+
 import android.content.Intent;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
@@ -18,17 +27,7 @@ import org.junit.runner.RunWith;
 import br.com.stant.libraries.stantuiandroid.R;
 import br.com.stant.libraries.stantuiandroid.TestBase;
 import br.com.stant.libraries.stantuiandroid.componentsactivities.headerentitycardview.HeaderEntityCardViewActivity;
-import br.com.stant.libraries.stantuiandroid.componentsactivities.informationcardview.InformationCardViewActivity;
 import br.com.stant.libraries.stantuiandroid.testutils.IntentFactory;
-
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDescendantOfA;
-import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static br.com.stant.libraries.stantuiandroid.testutils.TestUtils.waitEspresso;
-import static org.hamcrest.Matchers.allOf;
 
 /**
  * Ui tests for the implementation of {@link HeaderEntityCardViewActivity}
@@ -43,6 +42,7 @@ public class HeaderEntityCardViewActivityTest {
         static final String START_AT         = "01/01/2018";
         static final String FIRST_QUANTITY   = "3";
         static final String SECOND_QUANTITY  = "5";
+        static final String THIRD_QUANTITY  = "2";
 
         @Rule
         public ActivityTestRule<HeaderEntityCardViewActivity> mActivity = new ActivityTestRule<>(HeaderEntityCardViewActivity.class);
@@ -60,7 +60,7 @@ public class HeaderEntityCardViewActivityTest {
 
         @Before
         public void setCardInformations() {
-            mActivity.getActivity().setInformation(TITLE, END_AT, START_AT, FIRST_QUANTITY, SECOND_QUANTITY);
+            mActivity.getActivity().setInformation(TITLE, END_AT, START_AT, FIRST_QUANTITY, SECOND_QUANTITY, THIRD_QUANTITY);
             waitEspresso(500);
         }
 
@@ -112,7 +112,7 @@ public class HeaderEntityCardViewActivityTest {
 
         @Before
         public void setCardInformations() {
-            mActivity.getActivity().setInformation(TITLE, END_AT, START_AT, FIRST_QUANTITY, SECOND_QUANTITY);
+            mActivity.getActivity().setInformation(TITLE, END_AT, START_AT, FIRST_QUANTITY, SECOND_QUANTITY, THIRD_QUANTITY);
             mActivity.getActivity().setCritical();
             waitEspresso(500);
         }

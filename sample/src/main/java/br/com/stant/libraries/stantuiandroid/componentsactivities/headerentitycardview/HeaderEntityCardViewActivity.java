@@ -23,12 +23,13 @@ public class HeaderEntityCardViewActivity extends AppCompatActivity {
 
     }
 
-    public void setInformation(String title, String endAt, String startAt, String firstQuantity, String secondQuantity) {
+    public void setInformation(String title, String endAt, String startAt, String firstQuantity, String secondQuantity, String thirdQuantity) {
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setTitle(title);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setEndAt(endAt);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setStartAt(startAt);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setFirstQuantity(firstQuantity);
         mHeaderEntityCardViewTestActBinding.headerEntityCardView.setSecondQuantity(secondQuantity);
+        mHeaderEntityCardViewTestActBinding.headerEntityCardView.setThirdQuantity(thirdQuantity);
     }
 
     public void setCritical() {
