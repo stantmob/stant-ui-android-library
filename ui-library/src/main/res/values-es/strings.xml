@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Biblioteca UI Stant</string>
+
+    <string name="executed_percent_bar.title_pt1">Ej</string>
+    <string name="executed_percent_bar.title_pt2">ecutado</string>
+    <string name="executed_percent_bar.bar_title">Ejecutado</string>
+
+    <string name="action_button_view.text_button_vertical_example">Vista de botón de acción vertical</string>
+    <string name="action_button_view.text_button_horizontal_example">Vista de botón de acción horizontal</string>
+
+    <string name="info_action_card_view.title_example">Formulario de Inspección de Servicio Llenado Finalizado</string>
+    <string name="info_action_card_view.action_name_example">Deshacer</string>
+
+    <string name="viewing_users_dialog._title_text">Miembros del Equipo</string>
+    <string name="viewing_users_dialog.ok_hint">Aceptar</string>
+
+    <string name="viewing_users_dialog._title_days_Worked_text">Días trabajados</string>
+
+    <string name="select_date_picker_view_date_hint">00/00/00</string>
+
+    <string name="select_time_picker_view.rework_time">Tiempo de Retrabajo</string>
+
+    <string name="information_card_view.deadline">Fecha límite</string>
+    <string name="information_card_view.id_text">ID de la ocurrencia:</string>
+
+    <string name="expandable_text">In lobortis quam sit amet elit cursus cursus. Duis ultrices odio ac sapien vulputate,
+        sed blandit felis mattis. Morbi a malesuada augue, quis rutrum est. Vivamus condimentum libero in massa tempor facilisis.
+        Nullam semper a enim at pretium. Nam laoreet velit et sagittis egestas. Nam id metus consequat, iaculis ante nec, ornare lacus.
+        Proin nec diam elit. Nulla sed fringilla nunc, quis pretium justo. Maecenas ultrices neque quis magna pretium porttitor.
+        Nam ex mauris, feugiat id lectus eget, ultricies sodales dolor. Curabitur mollis in justo quis pellentesque."</string>
+
+    <string name="basic_toolbar_view_text_title">Título</string>
+    <string name="basic_toolbar_view_text_subtitle">Subtítulo</string>
+
+    <string name="info_action_card.information_text">Texto informativo</string>
+    <string name="info_action_card.action_text">Texto de la acción</string>
+
+    <string name="button_component_text">Texto botón</string>
+
+    <string name="header_entity_card_view.occurrences">Total</string>
+    <string name="header_entity_card_view.progress">En curso</string>
+    <string name="header_entity_card_view.late">Atrasada</string>
+
+</resources>
